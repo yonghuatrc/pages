@@ -2,6 +2,11 @@
 
 Personal repo for hosting misc HTML files via GitHub Pages.
 
-- `sgh-visit-guide.html` — SGH visit guide for Christine (Yishun MRT → SGH Block 6)
+<!-- AUTO-LIST-START -->
+## Files
 
-All files live at `https://yonghuatrc.github.io/pages/<filename>.html`.
+<!-- AUTO-LIST-END -->
+
+---
+
+Push any `.html` file to this repo and it'll go live at `https://yonghuatrc.github.io/pages/<filename>.html`.
