@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚽ World Cup Daily Briefing — June 20</title>
+<title>⚽ World Cup Daily Briefing — June 21</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -31,8 +31,6 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-
-  /* ===== HERO ===== */
   .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
     padding: 2.5rem 1.5rem;
@@ -79,11 +77,7 @@
     color: var(--text2);
   }
   .hero .countdown strong { color: var(--accent); }
-
-  /* ===== LAYOUT ===== */
   .container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
-
-  /* ===== CARD ===== */
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -102,8 +96,6 @@
     border-bottom: 1px solid var(--border);
   }
   .card-header .icon { font-size: 1.3rem; }
-
-  /* ===== HIGHLIGHTS ===== */
   .highlights-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -181,8 +173,6 @@
     text-decoration: none;
   }
   .highlights-extra ul li a:hover { text-decoration: underline; }
-
-  /* ===== MATCH LIST ===== */
   .match-list { list-style: none; }
   .match-list li {
     padding: 0.5rem 0;
@@ -208,8 +198,6 @@
   .match-score { font-weight: 700; }
   .match-detail { color: var(--text2); font-size: 0.85rem; width: 100%; }
   .team-star { color: var(--accent); }
-
-  /* ===== GROUP STANDINGS ===== */
   .group-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -247,8 +235,6 @@
   .group-table .qualified { color: var(--green); }
   .group-table .eliminated { color: var(--red); }
   .group-table tr.top td { border-top: 1px solid var(--border); }
-
-  /* ===== STATS BAR ===== */
   .stats-list { list-style: none; }
   .stats-list li {
     padding: 0.4rem 0;
@@ -273,8 +259,6 @@
     flex-shrink: 0;
   }
   .stats-goals { font-weight: 700; color: var(--accent); margin-left: auto; padding-left: 0.5rem; }
-
-  /* ===== ODDS ===== */
   .odds-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -294,8 +278,6 @@
     color: var(--accent);
     font-size: 0.95rem;
   }
-
-  /* ===== TEAM WATCH ===== */
   .team-watch-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -311,8 +293,6 @@
   .team-card h4 { font-size: 1rem; margin-bottom: 0.4rem; }
   .team-card p { font-size: 0.85rem; color: var(--text2); line-height: 1.5; }
   .team-card .label { color: var(--text); font-weight: 500; }
-
-  /* ===== COUNTDOWN ===== */
   .countdown-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -336,8 +316,6 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
-
-  /* ===== FOOTER ===== */
   .footer {
     text-align: center;
     padding: 2rem 1.5rem;
@@ -346,8 +324,6 @@
     border-top: 1px solid var(--border);
     margin-top: 0.5rem;
   }
-
-  /* ===== RESPONSIVE ===== */
   @media (max-width: 700px) {
     .container { padding: 0.75rem; }
     .card { padding: 1rem; }
@@ -365,8 +341,8 @@
 <header class="hero">
   <div class="hero-badge">🌍 2026 World Cup</div>
   <h1><span class="wc">⚽ Daily Briefing</span></h1>
-  <p class="date">Saturday, June 20, 2026 (SGT)</p>
-  <p class="countdown">Matchday 9 &middot; <strong>8 days</strong> until knockouts</p>
+  <p class="date">Sunday, June 21, 2026 (SGT)</p>
+  <p class="countdown">Matchday 11 &middot; <strong>7 days</strong> until Round of 32</p>
 </header>
 
 <!-- ===== CONTENT ===== -->
@@ -376,92 +352,94 @@
   <div class="card">
     <div class="card-header"><span class="icon">🎬</span> Matchday Highlights</div>
     <div class="highlights-grid">
-      <!-- VIDEO: Click to watch highlights on YouTube (populated by 6am cron) -->
-      <a href="https://www.youtube.com/watch?v=ynqGWHJPkuQ" target="_blank" rel="noopener" class="highlight-video" style="text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://placehold.co/640x360/1a2332/e8b830?text=Watch+Highlights');background-size:cover;background-position:center;border-radius:8px;aspect-ratio:16/9;">
+      <!-- VIDEO: Netherlands 5-1 Sweden Highlights -->
+      <a href="https://www.youtube.com/watch?v=IRllRLrG7Sg" target="_blank" rel="noopener" class="highlight-video" style="text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://placehold.co/640x360/1a2332/e8b830?text=Watch+Highlights');background-size:cover;background-position:center;border-radius:8px;aspect-ratio:16/9;">
         <div style="text-align:center;">
           <div style="font-size:3rem;margin-bottom:0.3rem;">▶️</div>
           <div style="font-size:1rem;font-weight:700;color:#fff;">Watch on YouTube</div>
-          <div style="font-size:0.75rem;color:#94a3b8;margin-top:0.2rem;">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England 4-2 Croatia 🇭🇷</div>
+          <div style="font-size:0.75rem;color:#94a3b8;margin-top:0.2rem;">🇳🇱 Netherlands 5-1 Sweden 🇸🇪</div>
         </div>
       </a>
-      <!-- IMAGE: Headline match — click to watch highlights (populated by 6am cron) -->
-      <a href="https://www.youtube.com/watch?v=ynqGWHJPkuQ" target="_blank" rel="noopener" class="highlight-image" style="text-decoration:none;color:inherit;">
-        <img src="https://placehold.co/640x360/1a2332/94a3b8?text=Match+of+the+Day" alt="Match of the day" loading="lazy">
-        <div class="caption">▶️ 🇺🇸 USA 2-0 Australia 🇦🇺 — Click to watch highlights</div>
+      <!-- IMAGE: Germany 2-1 Ivory Coast dramatic comeback -->
+      <a href="https://www.youtube.com/results?search_query=germany+ivory+coast+world+cup+2026+highlights" target="_blank" rel="noopener" class="highlight-image" style="text-decoration:none;color:inherit;">
+        <img src="https://placehold.co/640x360/1a2332/94a3b8?text=Germany+2-1+Ivory+Coast" alt="Germany 2-1 Ivory Coast" loading="lazy">
+        <div class="caption">▶️ 🇩🇪 Germany 2-1 Ivory Coast 🇨🇮 — Undav double snatches late win! Click to watch</div>
       </a>
     </div>
     <!-- EXTRA LINKS -->
     <div class="highlights-extra">
       <h4>📺 More highlights</h4>
       <ul>
-        <li>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland 0-1 Morocco — <a href="https://www.youtube.com/results?search_query=scotland+morocco+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
-        <li>🇨🇿 Czechia 1-1 South Africa — <a href="https://www.youtube.com/results?search_query=czechia+south+africa+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
-        <li>🇨🇭 Switzerland 4-1 Bosnia — <a href="https://www.youtube.com/results?search_query=switzerland+bosnia+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
-        <li>🇨🇦 Canada 6-0 Qatar — <a href="https://www.youtube.com/results?search_query=canada+qatar+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
+        <li>🇧🇷 Brazil 3-0 Haiti — <a href="https://www.youtube.com/results?search_query=brazil+haiti+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
+        <li>🇹🇷 Türkiye 0-1 Paraguay — <a href="https://www.youtube.com/results?search_query=turkiye+paraguay+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
+        <li>🇳🇱 Netherlands 5-1 Sweden — <a href="https://www.youtube.com/results?search_query=netherlands+sweden+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
+        <li>🇩🇪 Germany 2-1 Ivory Coast — <a href="https://www.youtube.com/results?search_query=germany+ivory+coast+world+cup+2026+highlights" target="_blank" rel="noopener">Watch →</a></li>
       </ul>
     </div>
   </div>
 
   <!-- ===== YESTERDAY'S RESULTS ===== -->
   <div class="card">
-    <div class="card-header"><span class="icon">⚽</span> Yesterday's Results <span style="font-size:0.7rem;font-weight:400;color:var(--text2);">Matchday 9 — Fri June 19 NA</span></div>
+    <div class="card-header"><span class="icon">⚽</span> Yesterday's Results <span style="font-size:0.7rem;font-weight:400;color:var(--text2);">Sat June 20 NA — Matchday 10</span></div>
     <ul class="match-list">
       <li>
         <span class="result-badge result-win">✅ FINAL</span>
-        <span class="match-score">🇺🇸 USA 2-0 Australia 🇦🇺</span>
-        <span style="color:var(--text2);">— Group D</span>
-        <span class="match-detail">Freeman (43'), Balogun (89'). USA first team to qualify for knockouts! 🇺🇸</span>
+        <span class="match-score">🇧🇷 Brazil 3-0 Haiti 🇭🇹</span>
+        <span style="color:var(--text2);">— Group C</span>
+        <span class="match-detail">Cunha double (2', 78'), Endrick (45+2'). Brazil move top of Group C.</span>
       </li>
       <li>
         <span class="result-badge result-win">✅ FINAL</span>
-        <span class="match-score">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland 0-1 Morocco 🇲🇦</span>
-        <span style="color:var(--text2);">— Group C</span>
-        <span class="match-detail">Saibari goal gives Morocco crucial win. Scotland's first loss.</span>
-      </li>
-      <li>
-        <span class="result-badge result-live">🔄 8:30AM</span>
-        <span class="match-score">🇧🇷 Brazil vs Haiti 🇭🇹</span>
-        <span style="color:var(--text2);">— Group C</span>
-      </li>
-      <li>
-        <span class="result-badge result-live">🔄 11:00AM</span>
-        <span class="match-score">🇹🇷 Türkiye vs Paraguay 🇵🇾</span>
+        <span class="match-score">🇹🇷 Türkiye 0-1 Paraguay 🇵🇾</span>
         <span style="color:var(--text2);">— Group D</span>
+        <span class="match-detail">Mauricio (53'). Paraguay stay alive; Türkiye eliminated.</span>
       </li>
-      <li style="color:var(--text2);font-size:0.8rem;padding-top:0.3rem;">
-        ⏪ Earlier Fri SGT: Czechia 1-1 SA &bull; Switzerland 4-1 Bosnia &bull; Canada 6-0 Qatar &bull; Mexico 1-0 Korea <span style="color:var(--text2);opacity:0.6;">(MD8 carryover from Thurs NA)</span>
+      <li>
+        <span class="result-badge result-win">✅ FINAL</span>
+        <span class="match-score">🇳🇱 Netherlands 5-1 Sweden 🇸🇪</span>
+        <span style="color:var(--text2);">— Group F</span>
+        <span class="match-detail">Brobbey 2', Gakpo 2', Summerville. Dutch run riot in Houston! 🟠</span>
+      </li>
+      <li>
+        <span class="result-badge result-win">✅ FINAL</span>
+        <span class="match-score">🇩🇪 Germany 2-1 Ivory Coast 🇨🇮</span>
+        <span style="color:var(--text2);">— Group E</span>
+        <span class="match-detail">Undav 67', 90+7' brace snatches late win. Kessié (45+7') scored for Ivory Coast.</span>
       </li>
     </ul>
+    <div style="margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid var(--border);font-size:0.8rem;color:var(--text2);">
+      ⏪ Fri June 19 NA carryover: Czechia 1-1 South Africa &bull; Switzerland 4-1 Bosnia &bull; Canada 6-0 Qatar &bull; Mexico 1-0 South Korea &bull; USA 2-0 Australia &bull; Scotland 0-1 Morocco
+    </div>
   </div>
 
   <!-- ===== TODAY'S FIXTURES ===== -->
   <div class="card">
-    <div class="card-header"><span class="icon">📅</span> Today's Fixtures <span style="font-size:0.7rem;font-weight:400;color:var(--text2);">Sat June 20 SGT</span></div>
+    <div class="card-header"><span class="icon">📅</span> Today's Fixtures <span style="font-size:0.7rem;font-weight:400;color:var(--text2);">Sun June 21 SGT</span></div>
     <ul class="match-list">
       <li>
-        <span class="result-badge result-live" style="background:rgba(234,179,8,0.2);color:#eab308;">🔴 LIVE</span>
-        <span class="match-score">🇧🇷 Brazil vs Haiti 🇭🇹</span>
-        <span style="color:var(--text2);">— Group C — <strong>8:30am SGT</strong></span>
+        <span class="result-badge result-live">🔄 1PM</span>
+        <span class="match-score">🇪🇨 Ecuador vs 🇨🇼 Curaçao</span>
+        <span style="color:var(--text2);">— Group E — <strong>1:00pm SGT</strong></span>
       </li>
       <li>
-        <span class="result-badge result-info">⏳ 11AM</span>
-        <span class="match-score">🇹🇷 Türkiye vs Paraguay 🇵🇾</span>
-        <span style="color:var(--text2);">— Group D — <strong>11:00am SGT</strong></span>
+        <span class="result-badge result-live">🔄 5PM</span>
+        <span class="match-score">🇹🇳 Tunisia vs 🇯🇵 Japan</span>
+        <span style="color:var(--text2);">— Group F — <strong>5:00pm SGT</strong></span>
       </li>
     </ul>
     <div style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border);">
-      <p style="font-size:0.8rem;font-weight:600;color:var(--text2);margin-bottom:0.3rem;">🌙 Overnight → Sun June 21 SGT</p>
+      <p style="font-size:0.8rem;font-weight:600;color:var(--text2);margin-bottom:0.3rem;">🌙 Overnight → Mon June 22 SGT</p>
       <ul class="match-list">
-        <li><span class="match-score">🇳🇱 Netherlands vs 🇸🇪 Sweden</span> <span style="color:var(--text2);font-size:0.85rem;">— 1:00am</span></li>
-        <li><span class="match-score">🇩🇪 Germany vs 🇨🇮 Ivory Coast</span> <span style="color:var(--text2);font-size:0.85rem;">— 4:00am</span></li>
-        <li><span class="match-score">🇪🇨 Ecuador vs 🇨🇼 Curaçao</span> <span style="color:var(--text2);font-size:0.85rem;">— 8:00am</span></li>
-        <li><span class="match-score">🇹🇳 Tunisia vs 🇯🇵 Japan</span> <span style="color:var(--text2);font-size:0.85rem;">— 12:00pm</span></li>
+        <li><span class="match-score">⭐ 🇪🇸 Spain vs 🇸🇦 Saudi Arabia</span> <span style="color:var(--text2);font-size:0.85rem;">— Group H — <strong>4:00am</strong></span></li>
+        <li><span class="match-score">🇧🇪 Belgium vs 🇮🇷 Iran</span> <span style="color:var(--text2);font-size:0.85rem;">— Group G — <strong>10:00am</strong></span></li>
+        <li><span class="match-score">🇺🇾 Uruguay vs 🇨🇻 Cape Verde</span> <span style="color:var(--text2);font-size:0.85rem;">— Group H — <strong>10:00am</strong></span></li>
+        <li><span class="match-score">🇳🇿 New Zealand vs 🇪🇬 Egypt</span> <span style="color:var(--text2);font-size:0.85rem;">— Group G — <strong>4:00pm</strong></span></li>
       </ul>
     </div>
     <div style="margin-top:0.75rem;padding-top:0.75rem;border-top:2px solid var(--accent);">
       <p style="font-size:0.8rem;font-weight:600;color:var(--accent);margin-bottom:0.3rem;">⭐ Boss's Teams — Coming Up</p>
       <ul class="match-list">
-        <li><span class="result-badge result-info">⭐</span> <span class="match-score">🇪🇸 Spain vs 🇸🇦 Saudi Arabia</span> <span style="color:var(--text2);font-size:0.85rem;">— Sun 21 Jun, <strong>12:00pm SGT</strong> (Group H)</span></li>
+        <li><span class="result-badge result-info">⭐</span> <span class="match-score">🇪🇸 Spain vs 🇸🇦 Saudi Arabia</span> <span style="color:var(--text2);font-size:0.85rem;">— <strong>Tonight 4:00am</strong> SGT (Group H)</span></li>
         <li><span class="result-badge result-info">⭐</span> <span class="match-score">🇦🇷 Argentina vs 🇦🇹 Austria</span> <span style="color:var(--text2);font-size:0.85rem;">— Tue 23 Jun, <strong>1:00am SGT</strong> (Group J)</span></li>
         <li><span class="result-badge result-info">⭐</span> <span class="match-score">🇵🇹 Portugal vs 🇺🇿 Uzbekistan</span> <span style="color:var(--text2);font-size:0.85rem;">— Wed 24 Jun, <strong>1:00am SGT</strong> (Group K)</span></li>
       </ul>
@@ -470,7 +448,7 @@
 
   <!-- ===== GROUP STANDINGS ===== -->
   <div class="card">
-    <div class="card-header"><span class="icon">📊</span> Group Standings <span style="font-size:0.7rem;font-weight:400;color:var(--text2);">before today's matches</span></div>
+    <div class="card-header"><span class="icon">📊</span> Group Standings <span style="font-size:0.7rem;font-weight:400;color:var(--text2);">after MD 10 — Sat June 20 NA</span></div>
     <div class="group-grid">
       <div class="group-card">
         <div class="group-title">Group A</div>
@@ -496,10 +474,10 @@
         <div class="group-title">Group C</div>
         <table class="group-table">
           <tr><th></th><th>Team</th><th style="text-align:center">Pts</th><th style="text-align:center">GD</th></tr>
-          <tr class="top"><td class="rank">1</td><td class="team-name">🇲🇦 Morocco</td><td class="pts">4</td><td class="gd">+1</td></tr>
-          <tr><td class="rank">2</td><td class="team-name">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</td><td class="pts">3</td><td class="gd">0</td></tr>
-          <tr><td class="rank">3</td><td class="team-name">🇧🇷 Brazil</td><td class="pts">1</td><td class="gd">0</td></tr>
-          <tr><td class="rank">4</td><td class="team-name">🇭🇹 Haiti</td><td class="pts">0</td><td class="gd">-1</td></tr>
+          <tr class="top"><td class="rank">1</td><td class="team-name">🇧🇷 Brazil</td><td class="pts">4</td><td class="gd">+3</td></tr>
+          <tr><td class="rank">2</td><td class="team-name">🇲🇦 Morocco</td><td class="pts">4</td><td class="gd">+1</td></tr>
+          <tr><td class="rank">3</td><td class="team-name">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</td><td class="pts">3</td><td class="gd">0</td></tr>
+          <tr><td class="rank">4</td><td class="team-name">🇭🇹 Haiti</td><td class="pts eliminated">0 ❌</td><td class="gd">-4</td></tr>
         </table>
       </div>
       <div class="group-card">
@@ -508,16 +486,16 @@
           <tr><th></th><th>Team</th><th style="text-align:center">Pts</th><th style="text-align:center">GD</th></tr>
           <tr class="top"><td class="rank">1</td><td class="team-name">🇺🇸 USA</td><td class="pts qualified">6 ✅</td><td class="gd">+5</td></tr>
           <tr><td class="rank">2</td><td class="team-name">🇦🇺 Australia</td><td class="pts">3</td><td class="gd">0</td></tr>
-          <tr><td class="rank">3</td><td class="team-name">🇹🇷 Türkiye</td><td class="pts">0</td><td class="gd">-2</td></tr>
-          <tr><td class="rank">4</td><td class="team-name">🇵🇾 Paraguay</td><td class="pts">0</td><td class="gd">-3</td></tr>
+          <tr><td class="rank">3</td><td class="team-name">🇵🇾 Paraguay</td><td class="pts">3</td><td class="gd">-2</td></tr>
+          <tr><td class="rank">4</td><td class="team-name">🇹🇷 Türkiye</td><td class="pts eliminated">0 ❌</td><td class="gd">-3</td></tr>
         </table>
       </div>
       <div class="group-card">
         <div class="group-title">Group E</div>
         <table class="group-table">
           <tr><th></th><th>Team</th><th style="text-align:center">Pts</th><th style="text-align:center">GD</th></tr>
-          <tr class="top"><td class="rank">1</td><td class="team-name">🇩🇪 Germany</td><td class="pts">3</td><td class="gd">+6</td></tr>
-          <tr><td class="rank">2</td><td class="team-name">🇨🇮 Ivory Coast</td><td class="pts">3</td><td class="gd">+1</td></tr>
+          <tr class="top"><td class="rank">1</td><td class="team-name">🇩🇪 Germany</td><td class="pts">6</td><td class="gd">+7</td></tr>
+          <tr><td class="rank">2</td><td class="team-name">🇨🇮 Ivory Coast</td><td class="pts">3</td><td class="gd">0</td></tr>
           <tr><td class="rank">3</td><td class="team-name">🇪🇨 Ecuador</td><td class="pts">0</td><td class="gd">-1</td></tr>
           <tr><td class="rank">4</td><td class="team-name">🇨🇼 Curaçao</td><td class="pts">0</td><td class="gd">-6</td></tr>
         </table>
@@ -526,9 +504,9 @@
         <div class="group-title">Group F</div>
         <table class="group-table">
           <tr><th></th><th>Team</th><th style="text-align:center">Pts</th><th style="text-align:center">GD</th></tr>
-          <tr class="top"><td class="rank">1</td><td class="team-name">🇸🇪 Sweden</td><td class="pts">3</td><td class="gd">+4</td></tr>
-          <tr><td class="rank">2</td><td class="team-name">🇯🇵 Japan</td><td class="pts">1</td><td class="gd">0</td></tr>
-          <tr><td class="rank">3</td><td class="team-name">🇳🇱 Netherlands</td><td class="pts">1</td><td class="gd">0</td></tr>
+          <tr class="top"><td class="rank">1</td><td class="team-name">🇳🇱 Netherlands</td><td class="pts">4</td><td class="gd">+4</td></tr>
+          <tr><td class="rank">2</td><td class="team-name">🇸🇪 Sweden</td><td class="pts">3</td><td class="gd">0</td></tr>
+          <tr><td class="rank">3</td><td class="team-name">🇯🇵 Japan</td><td class="pts">1</td><td class="gd">0</td></tr>
           <tr><td class="rank">4</td><td class="team-name">🇹🇳 Tunisia</td><td class="pts">0</td><td class="gd">-4</td></tr>
         </table>
       </div>
@@ -594,8 +572,8 @@
       </div>
     </div>
     <div style="margin-top:0.75rem;padding-top:0.5rem;font-size:0.8rem;color:var(--text2);border-top:1px solid var(--border);">
-      <p>✅ = Qualified &middot; ⭐ = Boss's team</p>
-      <p style="margin-top:0.3rem;">📌 Mexico & USA first two teams into knockout stage. Groups G & H wide open — all on 1pt!</p>
+      <p>✅ = Qualified &middot; ❌ = Eliminated &middot; ⭐ = Boss's team</p>
+      <p style="margin-top:0.3rem;">📌 Mexico & USA through. Haiti & Türkiye eliminated. Groups G & H wide open — all teams on 1pt!</p>
     </div>
   </div>
 
@@ -604,43 +582,47 @@
     <div class="card-header"><span class="icon">🥇</span> Golden Boot Race</div>
     <ul class="stats-list">
       <li><span class="stats-rank">1</span> 🇦🇷 <strong>Lionel Messi</strong> <span class="stats-goals">3 ⚽</span></li>
+      <li><span class="stats-rank">1</span> 🇨🇦 <strong>Jonathan David</strong> <span class="stats-goals">3 ⚽</span></li>
       <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇺🇸 Folarin Balogun <span class="stats-goals">2 ⚽</span></li>
       <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇸🇪 Yasin Ayari <span class="stats-goals">2 ⚽</span></li>
       <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇩🇪 Kai Havertz <span class="stats-goals">2 ⚽</span></li>
       <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇳🇿 Elijah Just <span class="stats-goals">2 ⚽</span></li>
+      <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Harry Kane <span class="stats-goals">2 ⚽</span></li>
       <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇳🇴 Erling Haaland <span class="stats-goals">2 ⚽</span></li>
       <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇫🇷 Kylian Mbappé <span class="stats-goals">2 ⚽</span></li>
+      <li><span class="stats-rank" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);">2</span> 🇳🇱 Cody Gakpo <span class="stats-goals">2 ⚽</span></li>
     </ul>
-    <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--text2);">Boss's teams: Messi leads. CR7 has 1 goal for Portugal.</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--text2);">Boss's teams: Messi leads with 3. CR7 has 1 goal for Portugal.</p>
   </div>
 
   <!-- ===== BETTING ODDS ===== -->
   <div class="card">
     <div class="card-header"><span class="icon">💰</span> Betting Odds</div>
-    <p style="font-size:0.75rem;color:var(--text2);margin-bottom:0.5rem;">Title Favourites — FOX Sports / Oddschecker</p>
+    <p style="font-size:0.75rem;color:var(--text2);margin-bottom:0.5rem;">Title Favourites — Oddschecker / FOX Sports</p>
     <div class="odds-grid">
-      <div class="odds-item"><span>🇫🇷 France</span> <span class="odds-value">+500</span></div>
+      <div class="odds-item"><span>🇫🇷 France</span> <span class="odds-value">+400</span></div>
       <div class="odds-item" style="border-left-color:var(--accent);border-left-width:3px;"><span>⭐ 🇪🇸 Spain</span> <span class="odds-value">+500</span></div>
       <div class="odds-item"><span>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span> <span class="odds-value">+700</span></div>
-      <div class="odds-item" style="border-left-color:var(--accent);border-left-width:3px;"><span>⭐ 🇦🇷 Argentina</span> <span class="odds-value">+850</span></div>
-      <div class="odds-item"><span>🇧🇷 Brazil</span> <span class="odds-value">+900</span></div>
+      <div class="odds-item" style="border-left-color:var(--accent);border-left-width:3px;"><span>⭐ 🇦🇷 Argentina</span> <span class="odds-value">+900</span></div>
+      <div class="odds-item"><span>🇧🇷 Brazil</span> <span class="odds-value">+1000</span></div>
     </div>
-    <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--text2);">🥇 Golden Boot: Mbappé +650, Kane +700, Oyarzabal +950, Havertz +950, Haaland +1400</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--text2);">🥇 Golden Boot: Mbappé +600, Kane +700, Havertz +950, Haaland +1400, Messi +1600</p>
   </div>
 
   <!-- ===== TOURNAMENT COUNTDOWN ===== -->
   <div class="card">
     <div class="card-header"><span class="icon">📆</span> Tournament Countdown</div>
     <div class="countdown-grid">
-      <div class="countdown-item"><span class="num">Matchday 9</span><span class="label">Group Stage — 10 matchdays</span></div>
-      <div class="countdown-item"><span class="num">8 days</span><span class="label">Until Round of 32</span></div>
+      <div class="countdown-item"><span class="num">Matchday 11</span><span class="label">Group Stage — 16 matchdays</span></div>
+      <div class="countdown-item"><span class="num">7 days</span><span class="label">Until Round of 32</span></div>
       <div class="countdown-item" style="border:1px solid var(--green);"><span class="num" style="color:var(--green);">2 ✅</span><span class="label">Teams Qualified</span></div>
-      <div class="countdown-item"><span class="num" style="color:var(--text);">0 ❌</span><span class="label">Teams Eliminated</span></div>
+      <div class="countdown-item" style="border:1px solid var(--red);"><span class="num" style="color:var(--red);">2 ❌</span><span class="label">Teams Eliminated</span></div>
     </div>
     <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--text2);">
       <p><strong>Qualified:</strong> 🇲🇽 Mexico (A), 🇺🇸 USA (D)</p>
-      <p><strong>Scenarios today:</strong> Brazil can go top of Group C with a win; Türkiye-Paraguay loser faces elimination</p>
-      <p style="margin-top:0.3rem;">Knockout stage (Round of 32) starts <strong>June 28</strong></p>
+      <p><strong>Eliminated:</strong> 🇭🇹 Haiti (C), 🇹🇷 Türkiye (D)</p>
+      <p style="margin-top:0.3rem;"><strong>Next stage:</strong> Round of 32 starts <strong>June 28</strong> (Sun) — 7 days away</p>
+      <p>Third-placed teams also advance (8 best). Most groups still wide open!</p>
     </div>
   </div>
 
@@ -653,21 +635,21 @@
         <p><span class="label">Position:</span> 3rd (1pt, GD 0)</p>
         <p><span class="label">Last:</span> 1-1 draw vs Congo DR (Ronaldo goal cancelled out)</p>
         <p><span class="label">Next:</span> vs 🇺🇿 Uzbekistan — Wed 24 Jun, <strong>1:00am SGT</strong></p>
-        <p style="margin-top:0.3rem;color:var(--accent);">Need a win to challenge for top 2. Colombia lead with 3pts.</p>
+        <p style="margin-top:0.3rem;color:var(--accent);">Must-win to stay in top-2 race. Colombia lead with 3pts.</p>
       </div>
       <div class="team-card" style="border-left-color:var(--red);">
         <h4>⭐ 🇪🇸 Spain — Group H</h4>
         <p><span class="label">Position:</span> 3rd (1pt, GD 0)</p>
-        <p><span class="label">Last:</span> 0-0 stalemate vs Cape Verde</p>
-        <p><span class="label">Next:</span> vs 🇸🇦 Saudi Arabia — <strong>Sun 21 Jun, 12:00pm SGT</strong> ⏰</p>
-        <p style="margin-top:0.3rem;color:var(--accent);">All tied on 1pt. Massive match — a win sets up Uruguay clash.</p>
+        <p><span class="label">Last:</span> 0-0 stalemate vs Cape Verde (opener)</p>
+        <p><span class="label">Next:</span> vs 🇸🇦 Saudi Arabia — <strong>Tonight 4:00am SGT</strong> ⏰</p>
+        <p style="margin-top:0.3rem;color:var(--accent);">All tied on 1pt. Win here sets up Uruguay showdown.</p>
       </div>
       <div class="team-card" style="border-left-color:var(--blue);">
         <h4>⭐ 🇦🇷 Argentina — Group J</h4>
         <p><span class="label">Position:</span> 1st (3pt, GD +3)</p>
         <p><span class="label">Last:</span> 3-0 demolition of Algeria (Messi hat-trick 🎩)</p>
         <p><span class="label">Next:</span> vs 🇦🇹 Austria — Tue 23 Jun, <strong>1:00am SGT</strong></p>
-        <p style="margin-top:0.3rem;color:var(--green);">Top of the group. Win seals knockout spot!</p>
+        <p style="margin-top:0.3rem;color:var(--green);">Top of the group. A win seals knockout spot!</p>
       </div>
     </div>
   </div>
@@ -676,7 +658,7 @@
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <p>⚽ World Cup 2026 · Generated from Daily Briefing · June 20, 2026</p>
+  <p>⚽ World Cup 2026 · Generated from Daily Briefing · June 21, 2026</p>
   <p style="margin-top:0.25rem;">Updated daily — bookmark and check in for the latest</p>
 </footer>
 
