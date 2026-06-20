@@ -110,16 +110,15 @@
     gap: 1rem;
   }
   .highlight-video {
-    position: relative;
     border-radius: 8px;
     overflow: hidden;
-    background: #000;
+    background: var(--surface2);
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
   }
-  .highlight-video iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border: 0;
-    display: block;
+  .highlight-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(232,184,48,0.2);
   }
   .highlight-image {
     border-radius: 8px;
@@ -377,10 +376,14 @@
   <div class="card">
     <div class="card-header"><span class="icon">🎬</span> Matchday Highlights</div>
     <div class="highlights-grid">
-      <!-- VIDEO: Best match highlight (populated by 6am cron) -->
-      <div class="highlight-video">
-        <iframe src="https://www.youtube.com/embed/ynqGWHJPkuQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Match highlights"></iframe>
-      </div>
+      <!-- VIDEO: Click to watch highlights on YouTube (populated by 6am cron) -->
+      <a href="https://www.youtube.com/watch?v=ynqGWHJPkuQ" target="_blank" rel="noopener" class="highlight-video" style="text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://placehold.co/640x360/1a2332/e8b830?text=Watch+Highlights');background-size:cover;background-position:center;border-radius:8px;aspect-ratio:16/9;">
+        <div style="text-align:center;">
+          <div style="font-size:3rem;margin-bottom:0.3rem;">▶️</div>
+          <div style="font-size:1rem;font-weight:700;color:#fff;">Watch on YouTube</div>
+          <div style="font-size:0.75rem;color:#94a3b8;margin-top:0.2rem;">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England 4-2 Croatia 🇭🇷</div>
+        </div>
+      </a>
       <!-- IMAGE: Headline match — click to watch highlights (populated by 6am cron) -->
       <a href="https://www.youtube.com/watch?v=ynqGWHJPkuQ" target="_blank" rel="noopener" class="highlight-image" style="text-decoration:none;color:inherit;">
         <img src="https://placehold.co/640x360/1a2332/94a3b8?text=Match+of+the+Day" alt="Match of the day" loading="lazy">
