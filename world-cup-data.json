@@ -1,0 +1,179 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "phase": "Round of 32",
+  "updated": "2026-06-30T22:00:00+08:00",
+  "matches": [
+    {
+      "id": 73,
+      "date": "2026-06-28",
+      "home": {"name": "South Africa", "flag": "🇿🇦", "goals": 0, "qualified": false},
+      "away": {"name": "Canada", "flag": "🇨🇦", "goals": 1, "qualified": true},
+      "status": "FT",
+      "venue": "Los Angeles Stadium, Inglewood",
+      "scorers": "Eustaquio 90+2'",
+      "note": "Canada's first-ever World Cup knockout win. Alphonso Davies returned from injury."
+    },
+    {
+      "id": 74,
+      "date": "2026-06-29",
+      "home": {"name": "Germany", "flag": "🇩🇪", "goals": 1, "qualified": false},
+      "away": {"name": "Paraguay", "flag": "🇵🇾", "goals": 1, "qualified": true},
+      "status": "FT-pens",
+      "penalty_winner": "Paraguay",
+      "venue": "Boston Stadium, Foxborough",
+      "scorers": "Enciso 42'; Havertz 54'",
+      "note": "Paraguay won 4-2 on penalties. Jonathan Tah missed decisive spot-kick. Germany's Havertz equaliser cancelled Enciso's opener. VAR disallowed a late Germany winner in extra time."
+    },
+    {
+      "id": 75,
+      "date": "2026-06-29",
+      "home": {"name": "Netherlands", "flag": "🇳🇱", "goals": 1, "qualified": false},
+      "away": {"name": "Morocco", "flag": "🇲🇦", "goals": 1, "qualified": true},
+      "status": "FT-pens",
+      "penalty_winner": "Morocco",
+      "venue": "Estadio Monterrey, Guadalupe",
+      "scorers": "Gakpo 72'; Diop 90+1'",
+      "note": "Morocco won 3-2 on penalties. Gakpo scored an emotional goal (recent personal tragedy). Diop's 91st-minute equaliser forced extra time."
+    },
+    {
+      "id": 76,
+      "date": "2026-06-29",
+      "home": {"name": "Brazil", "flag": "🇧🇷", "goals": 2, "qualified": true},
+      "away": {"name": "Japan", "flag": "🇯🇵", "goals": 1, "qualified": false},
+      "status": "FT",
+      "venue": "Houston Stadium, Houston",
+      "scorers": "Casemiro 56', Martinelli 90+6'; Sano 29'",
+      "note": "Japan took a shock lead through Sano's 40-yard solo golazo. Casemiro headed the equaliser. Martinelli's 96th-minute winner saved Brazil."
+    },
+    {
+      "id": 77,
+      "date": "2026-06-30",
+      "home": {"name": "France", "flag": "🇫🇷", "goals": null, "qualified": null},
+      "away": {"name": "Sweden", "flag": "🇸🇪", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "New York New Jersey Stadium, East Rutherford",
+      "scorers": "",
+      "note": "France topped Group I (9pts). Sweden advanced as best 3rd-place from Group F. Mbappé vs Gyökeres showdown."
+    },
+    {
+      "id": 78,
+      "date": "2026-06-30",
+      "home": {"name": "Ivory Coast", "flag": "🇨🇮", "goals": null, "qualified": null},
+      "away": {"name": "Norway", "flag": "🇳🇴", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Dallas Stadium, Arlington",
+      "scorers": "",
+      "note": "Ivory Coast finished 2nd in Group E. Norway 2nd in Group I. Haaland leads Norway's attack."
+    },
+    {
+      "id": 79,
+      "date": "2026-06-30",
+      "home": {"name": "Mexico", "flag": "🇲🇽", "goals": null, "qualified": null},
+      "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Mexico City Stadium, Mexico City",
+      "scorers": "",
+      "note": "Mexico topped Group A with perfect 9/9 points. Ecuador finished 3rd in Group E. Home crowd advantage for El Tri."
+    },
+    {
+      "id": 80,
+      "date": "2026-07-01",
+      "home": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": null, "qualified": null},
+      "away": {"name": "DR Congo", "flag": "🇨🇩", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Atlanta Stadium, Atlanta",
+      "scorers": "",
+      "note": "England won Group L (5pts). DR Congo advanced as 3rd in Group K. Kane vs powerful Congolese defence."
+    },
+    {
+      "id": 81,
+      "date": "2026-07-01",
+      "home": {"name": "USA", "flag": "🇺🇸", "goals": null, "qualified": null},
+      "away": {"name": "Bosnia & Herzegovina", "flag": "🇧🇦", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "San Francisco Bay Area Stadium, Santa Clara",
+      "scorers": "",
+      "note": "USA won Group D. Bosnia 3rd in Group B. Co-hosts USA aim for deep run."
+    },
+    {
+      "id": 82,
+      "date": "2026-07-01",
+      "home": {"name": "Belgium", "flag": "🇧🇪", "goals": null, "qualified": null},
+      "away": {"name": "Senegal", "flag": "🇸🇳", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Seattle Stadium, Seattle",
+      "scorers": "",
+      "note": "Belgium won Group G. Senegal advanced as 3rd in Group I. Belgium's golden generation seeking redemption."
+    },
+    {
+      "id": 83,
+      "date": "2026-07-02",
+      "home": {"name": "Portugal", "flag": "🇵🇹", "goals": null, "qualified": null},
+      "away": {"name": "Croatia", "flag": "🇭🇷", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Toronto Stadium, Toronto",
+      "scorers": "",
+      "note": "⭐ BOSS TEAM. Portugal 2nd in Group K. Croatia 2nd in Group L. Ronaldo vs Modrić — legends collide."
+    },
+    {
+      "id": 84,
+      "date": "2026-07-02",
+      "home": {"name": "Spain", "flag": "🇪🇸", "goals": null, "qualified": null},
+      "away": {"name": "Austria", "flag": "🇦🇹", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Los Angeles Stadium, Inglewood",
+      "scorers": "",
+      "note": "⭐ BOSS TEAM. Spain won Group H with 7pts — only 1 goal conceded all tournament. Austria 2nd in Group J."
+    },
+    {
+      "id": 85,
+      "date": "2026-07-02",
+      "home": {"name": "Switzerland", "flag": "🇨🇭", "goals": null, "qualified": null},
+      "away": {"name": "Algeria", "flag": "🇩🇿", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "BC Place Vancouver, Vancouver",
+      "scorers": "",
+      "note": "Switzerland won Group B (7pts). Algeria advanced as 3rd in Group J."
+    },
+    {
+      "id": 86,
+      "date": "2026-07-03",
+      "home": {"name": "Australia", "flag": "🇦🇺", "goals": null, "qualified": null},
+      "away": {"name": "Egypt", "flag": "🇪🇬", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Dallas Stadium, Arlington",
+      "scorers": "",
+      "note": "Australia 2nd in Group D. Egypt 2nd in Group G. Salah vs Australian resilience."
+    },
+    {
+      "id": 87,
+      "date": "2026-07-03",
+      "home": {"name": "Argentina", "flag": "🇦🇷", "goals": null, "qualified": null},
+      "away": {"name": "Cape Verde", "flag": "🇨🇻", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Miami Stadium, Miami",
+      "scorers": "",
+      "note": "⭐ BOSS TEAM. Argentina PERFECT group stage (9/9pts). Cape Verde's historic first R32 — fairy tale continues."
+    },
+    {
+      "id": 88,
+      "date": "2026-07-03",
+      "home": {"name": "Colombia", "flag": "🇨🇴", "goals": null, "qualified": null},
+      "away": {"name": "Ghana", "flag": "🇬🇭", "goals": null, "qualified": null},
+      "status": "upcoming",
+      "venue": "Kansas City Stadium, Kansas City",
+      "scorers": "",
+      "note": "Colombia won Group K (7pts). Ghana 2nd in Group L."
+    }
+  ],
+  "r16_path": [
+    {"match": "R16-1", "date": "Jul 4", "venue": "Houston", "teams": "Canada vs Morocco"},
+    {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs TBD (Winner M77)"},
+    {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs TBD (Winner M78)"},
+    {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal/Croatia vs Spain/Austria"},
+    {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "TBD vs TBD"},
+    {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "TBD vs TBD"},
+    {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "TBD vs TBD"},
+    {"match": "R16-8", "date": "Jul 5", "venue": "Miami", "teams": "Argentina/Cape Verde vs Colombia/Ghana"}
+  ]
+}
