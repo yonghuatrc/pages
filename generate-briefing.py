@@ -191,6 +191,20 @@ html = f"""<!DOCTYPE html>
   .vs {{ font-weight: 600; font-size: 0.8rem; color: var(--text2); }}
   .match-detail {{ font-size: 0.75rem; color: var(--text2); margin-top: 0.3rem; line-height: 1.4; }}
   .match-scorers {{ font-size: 0.7rem; color: var(--accent); margin-top: 0.15rem; }}
+  .match-highlights {{ margin-top: 0.35rem; }}
+  .match-highlights a {{
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    background: rgba(232,184,48,0.1);
+    border: 1px solid rgba(232,184,48,0.25);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }}
+  .match-highlights a:hover {{ background: rgba(232,184,48,0.2); }}
 
   .badge {{ font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 4px; text-transform: uppercase; }}
   .badge-ft {{ background: rgba(34,197,94,0.2); color: var(--green); }}
@@ -276,6 +290,9 @@ for m in top_half_matches:
     if m.get("note"):
         html += f"""      <div class="match-detail">{m["note"]}</div>
 """
+    if m.get("highlights"):
+        html += f"""      <div class="match-highlights"><a href="{m["highlights"]}" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
+"""
     html += f"""    </div>
 """
 
@@ -316,6 +333,9 @@ for m in lower_half_matches:
 """
     if m.get("note"):
         html += f"""      <div class="match-detail">{m["note"]}</div>
+"""
+    if m.get("highlights"):
+        html += f"""      <div class="match-highlights"><a href="{m["highlights"]}" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
 """
     html += f"""    </div>
 """
