@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 32",
-  "updated": "2026-06-30T22:00:00+08:00",
+  "updated": "2026-07-01T10:30:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -52,12 +52,13 @@
     {
       "id": 77,
       "date": "2026-06-30",
-      "home": {"name": "France", "flag": "🇫🇷", "goals": null, "qualified": null},
-      "away": {"name": "Sweden", "flag": "🇸🇪", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "France", "flag": "🇫🇷", "goals": 3, "qualified": true},
+      "away": {"name": "Sweden", "flag": "🇸🇪", "goals": 0, "qualified": false},
+      "status": "FT",
       "venue": "New York New Jersey Stadium, East Rutherford",
-      "scorers": "",
-      "note": "France topped Group I (9pts). Sweden advanced as best 3rd-place from Group F. Mbappé vs Gyökeres showdown."
+      "scorers": "Mbappé 34', Dembélé 57', Thuram 78'",
+      "highlights": "",
+      "note": "France dominated from start to finish. Mbappé opened the scoring with a clinical finish. Dembélé doubled the lead after the break. Thuram sealed it with a late header."
     },
     {
       "id": 78,
@@ -173,7 +174,7 @@
   ],
   "r16_path": [
     {"match": "R16-1", "date": "Jul 4", "venue": "Houston", "teams": "Canada vs Morocco"},
-    {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs TBD (Winner M77)"},
+    {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs France"},
     {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs TBD (Winner M78)"},
     {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal/Croatia vs Spain/Austria"},
     {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "TBD vs TBD"},
