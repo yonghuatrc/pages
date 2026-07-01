@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 32",
-  "updated": "2026-07-01T10:30:00+08:00",
+  "updated": "2026-07-02T06:01:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -81,23 +81,25 @@
       "id": 79,
       "date": "2026-06-30",
       "kickoff_et": "9:00 PM",
-      "home": {"name": "Mexico", "flag": "🇲🇽", "goals": null, "qualified": null},
-      "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "Mexico", "flag": "🇲🇽", "goals": 2, "qualified": true},
+      "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": 0, "qualified": false},
+      "status": "FT",
       "venue": "Mexico City Stadium, Mexico City",
-      "scorers": "",
-      "note": "Mexico topped Group A with perfect 9/9 points. Ecuador finished 3rd in Group E. Home crowd advantage for El Tri."
+      "scorers": "Quiñones 39'; Jiménez 90+2'",
+      "highlights": "",
+      "note": "Mexico's clinical finishing at home secured a comfortable win. Ecuador had no answer to El Tri's attacks in the second half."
     },
     {
       "id": 80,
       "date": "2026-07-01",
       "kickoff_et": "12:00 PM",
-      "home": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": null, "qualified": null},
-      "away": {"name": "DR Congo", "flag": "🇨🇩", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": 2, "qualified": true},
+      "away": {"name": "DR Congo", "flag": "🇨🇩", "goals": 1, "qualified": false},
+      "status": "FT",
       "venue": "Atlanta Stadium, Atlanta",
-      "scorers": "",
-      "note": "England won Group L (5pts). DR Congo advanced as 3rd in Group K. Kane vs powerful Congolese defence."
+      "scorers": "Kane 75', 86'; Cipenga 7'",
+      "highlights": "",
+      "note": "DR Congo stunned England with an early Cipenga goal. Kane's late brace completed the comeback — DR Congo were seconds from a famous upset."
     },
     {
       "id": 81,
@@ -114,12 +116,13 @@
       "id": 82,
       "date": "2026-07-01",
       "kickoff_et": "4:00 PM",
-      "home": {"name": "Belgium", "flag": "🇧🇪", "goals": null, "qualified": null},
-      "away": {"name": "Senegal", "flag": "🇸🇳", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "Belgium", "flag": "🇧🇪", "goals": 0, "qualified": false},
+      "away": {"name": "Senegal", "flag": "🇸🇳", "goals": 2, "qualified": true},
+      "status": "FT",
       "venue": "Seattle Stadium, Seattle",
-      "scorers": "",
-      "note": "Belgium won Group G. Senegal advanced as 3rd in Group I. Belgium's golden generation seeking redemption."
+      "scorers": "Diarra 25'; Sarr 51'",
+      "highlights": "",
+      "note": "Senegal stunned Belgium with a dominant 2-0 win. Diarra's rebound goal and Sarr's thumping second-half strike sealed a famous upset. Belgium's golden generation crashes out."
     },
     {
       "id": 83,
@@ -193,8 +196,8 @@
     {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs France"},
     {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs TBD (Winner M78)"},
     {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal/Croatia vs Spain/Austria"},
-    {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "TBD vs TBD"},
-    {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "TBD vs TBD"},
+    {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Senegal"},
+    {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA/Bosnia"},
     {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "TBD vs TBD"},
     {"match": "R16-8", "date": "Jul 5", "venue": "Miami", "teams": "Argentina/Cape Verde vs Colombia/Ghana"}
   ],
