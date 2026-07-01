@@ -165,6 +165,30 @@
   }
   .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.75rem; color: var(--text2); margin-bottom: 1rem; }
   .legend span { display: flex; align-items: center; gap: 0.3rem; }
+
+  /* GOLDEN BOOT */
+  .gb-grid { display: flex; flex-direction: column; gap: 0.35rem; }
+  .gb-row {
+    display: grid;
+    grid-template-columns: 2rem 1.8rem 1fr 1.2fr 4.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    background: var(--surface2);
+    font-size: 0.85rem;
+  }
+  .gb-row.gb-gold { background: rgba(232,184,48,0.12); border: 1px solid rgba(232,184,48,0.25); }
+  .gb-row.gb-silver { background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.15); }
+  .gb-rank { font-size: 0.8rem; font-weight: 700; color: var(--text2); text-align: center; }
+  .gb-flag { font-size: 1.1rem; }
+  .gb-name { font-weight: 600; }
+  .gb-country { font-size: 0.75rem; color: var(--text2); }
+  .gb-goals { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-align: right; }
+  @media (max-width: 500px) {
+    .gb-row { grid-template-columns: 1.6rem 1.4rem 1fr 3.5rem; }
+    .gb-country { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -428,6 +452,83 @@
     <li><span class="r16-slot">R16-7 (Jul 6, Seattle)</span> Winner M85 (🇨🇭 Switzerland / 🇩🇿 Algeria) vs Winner M86 (🇦🇺 Australia / 🇪🇬 Egypt)</li>
     <li><span class="r16-slot">R16-8 (Jul 5, Miami)</span> Winner M87 (🇦🇷 Argentina / 🇨🇻 Cape Verde) vs Winner M88 (🇨🇴 Colombia / 🇬🇭 Ghana)</li>
   </ul>
+</div>
+
+<!-- ===== GOLDEN BOOT ===== -->
+<div class="card">
+  <div class="card-header"><span class="icon">⚽</span> Golden Boot — Top Scorers</div>
+  <div class="gb-grid">
+    <div class="gb-row gb-gold">
+      <span class="gb-rank">🥇</span>
+      <span class="gb-flag">🇫🇷</span>
+      <span class="gb-name">Kylian Mbappé</span>
+      <span class="gb-country">France</span>
+      <span class="gb-goals">6⚽ (2A)</span>
+    </div>
+    <div class="gb-row gb-gold">
+      <span class="gb-rank">🥈</span>
+      <span class="gb-flag">🇦🇷</span>
+      <span class="gb-name">Lionel Messi</span>
+      <span class="gb-country">Argentina</span>
+      <span class="gb-goals">6⚽</span>
+    </div>
+    <div class="gb-row gb-silver">
+      <span class="gb-rank">🥉</span>
+      <span class="gb-flag">🇳🇴</span>
+      <span class="gb-name">Erling Haaland</span>
+      <span class="gb-country">Norway</span>
+      <span class="gb-goals">5⚽</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#4</span>
+      <span class="gb-flag">🇫🇷</span>
+      <span class="gb-name">Ousmane Dembélé</span>
+      <span class="gb-country">France</span>
+      <span class="gb-goals">4⚽ (2A)</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#5</span>
+      <span class="gb-flag">🇧🇷</span>
+      <span class="gb-name">Vinícius Jr</span>
+      <span class="gb-country">Brazil</span>
+      <span class="gb-goals">4⚽ (1A)</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#6</span>
+      <span class="gb-flag">🇩🇪</span>
+      <span class="gb-name">Deniz Undav</span>
+      <span class="gb-country">Germany</span>
+      <span class="gb-goals">3⚽ (2A)</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#7</span>
+      <span class="gb-flag">🇨🇭</span>
+      <span class="gb-name">Johan Manzambi</span>
+      <span class="gb-country">Switzerland</span>
+      <span class="gb-goals">3⚽ (1A)</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#7</span>
+      <span class="gb-flag">🇸🇳</span>
+      <span class="gb-name">Ismaila Sarr</span>
+      <span class="gb-country">Senegal</span>
+      <span class="gb-goals">3⚽ (1A)</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#7</span>
+      <span class="gb-flag">🇳🇱</span>
+      <span class="gb-name">Cody Gakpo</span>
+      <span class="gb-country">Netherlands</span>
+      <span class="gb-goals">3⚽ (1A)</span>
+    </div>
+    <div class="gb-row ">
+      <span class="gb-rank">#10</span>
+      <span class="gb-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+      <span class="gb-name">Harry Kane</span>
+      <span class="gb-country">England</span>
+      <span class="gb-goals">3⚽</span>
+    </div>
+  </div>
 </div>
 
 </main>

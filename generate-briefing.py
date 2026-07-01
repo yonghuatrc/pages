@@ -282,6 +282,30 @@ html = f"""<!DOCTYPE html>
   }}
   .legend {{ display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.75rem; color: var(--text2); margin-bottom: 1rem; }}
   .legend span {{ display: flex; align-items: center; gap: 0.3rem; }}
+
+  /* GOLDEN BOOT */
+  .gb-grid {{ display: flex; flex-direction: column; gap: 0.35rem; }}
+  .gb-row {{
+    display: grid;
+    grid-template-columns: 2rem 1.8rem 1fr 1.2fr 4.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    background: var(--surface2);
+    font-size: 0.85rem;
+  }}
+  .gb-row.gb-gold {{ background: rgba(232,184,48,0.12); border: 1px solid rgba(232,184,48,0.25); }}
+  .gb-row.gb-silver {{ background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.15); }}
+  .gb-rank {{ font-size: 0.8rem; font-weight: 700; color: var(--text2); text-align: center; }}
+  .gb-flag {{ font-size: 1.1rem; }}
+  .gb-name {{ font-weight: 600; }}
+  .gb-country {{ font-size: 0.75rem; color: var(--text2); }}
+  .gb-goals {{ font-size: 0.85rem; font-weight: 700; color: var(--accent); text-align: right; }}
+  @media (max-width: 500px) {{
+    .gb-row {{ grid-template-columns: 1.6rem 1.4rem 1fr 3.5rem; }}
+    .gb-country {{ display: none; }}
+  }}
 </style>
 </head>
 <body>
@@ -430,6 +454,26 @@ for r in r16_bracket:
 """
 
 html += """  </ul>
+</div>
+
+<!-- ===== GOLDEN BOOT ===== -->
+<div class="card">
+  <div class="card-header"><span class="icon">⚽</span> Golden Boot — Top Scorers</div>
+  <div class="gb-grid">
+"""
+for p in data.get("golden_boot", []):
+    rank_cls = "gb-gold" if p["rank"] <= 2 else ("gb-silver" if p["rank"] == 3 else "")
+    medal = {"1": "🥇", "2": "🥈", "3": "🥉"}.get(str(p["rank"]), "")
+    assists_str = f" ({p['assists']}A)" if p["assists"] else ""
+    html += f"""    <div class="gb-row {rank_cls}">
+      <span class="gb-rank">{medal or f'#{p["rank"]}'}</span>
+      <span class="gb-flag">{p["flag"]}</span>
+      <span class="gb-name">{p["player"]}</span>
+      <span class="gb-country">{p["country"]}</span>
+      <span class="gb-goals">{p["goals"]}⚽{assists_str}</span>
+    </div>
+"""
+html += """  </div>
 </div>
 
 </main>

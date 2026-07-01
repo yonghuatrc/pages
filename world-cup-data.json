@@ -197,5 +197,17 @@
     {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "TBD vs TBD"},
     {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "TBD vs TBD"},
     {"match": "R16-8", "date": "Jul 5", "venue": "Miami", "teams": "Argentina/Cape Verde vs Colombia/Ghana"}
+  ],
+  "golden_boot": [
+    {"rank": 1, "player": "Kylian Mbappé", "country": "France", "flag": "🇫🇷", "goals": 6, "assists": 2},
+    {"rank": 2, "player": "Lionel Messi", "country": "Argentina", "flag": "🇦🇷", "goals": 6, "assists": 0},
+    {"rank": 3, "player": "Erling Haaland", "country": "Norway", "flag": "🇳🇴", "goals": 5, "assists": 0},
+    {"rank": 4, "player": "Ousmane Dembélé", "country": "France", "flag": "🇫🇷", "goals": 4, "assists": 2},
+    {"rank": 5, "player": "Vinícius Jr", "country": "Brazil", "flag": "🇧🇷", "goals": 4, "assists": 1},
+    {"rank": 6, "player": "Deniz Undav", "country": "Germany", "flag": "🇩🇪", "goals": 3, "assists": 2},
+    {"rank": 7, "player": "Johan Manzambi", "country": "Switzerland", "flag": "🇨🇭", "goals": 3, "assists": 1},
+    {"rank": 7, "player": "Ismaila Sarr", "country": "Senegal", "flag": "🇸🇳", "goals": 3, "assists": 1},
+    {"rank": 7, "player": "Cody Gakpo", "country": "Netherlands", "flag": "🇳🇱", "goals": 3, "assists": 1},
+    {"rank": 10, "player": "Harry Kane", "country": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": 3, "assists": 0}
   ]
 }
