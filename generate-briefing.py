@@ -4,7 +4,7 @@ World Cup Briefing HTML Generator — DATA-DRIVEN
 Reads world-cup-data.json → generates world-cup.html
 No LLM touches score data. Every number comes from the JSON.
 """
-import json, datetime, os
+import json, datetime, os, re
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "world-cup-data.json")
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "world-cup.html")
@@ -13,6 +13,59 @@ with open(DATA_PATH) as f:
     data = json.load(f)
 
 matches = data["matches"]
+
+# --- ET → SGT conversion ---
+def et_to_sgt(et_str):
+    """Convert '12:00 PM' ET to 'Jul 2, 12:00 AM' SGT display."""
+    if not et_str:
+        return ""
+    parts = et_str.strip().split()
+    time_part = parts[0]  # "12:00"
+    ampm = parts[1].upper() if len(parts) > 1 else "AM"
+    hour_str, minute_str = time_part.split(":")
+    hour = int(hour_str)
+    minute = minute_str
+    if ampm == "PM" and hour != 12:
+        hour += 12
+    elif ampm == "AM" and hour == 12:
+        hour = 0
+    # SGT = ET + 12 hours
+    sgt_hour = (hour + 12) % 24
+    # Determine SGT date: add 1 day if hour >= 12 (i.e. ET noon onwards)
+    # Et date is in the JSON "date" field, passed separately
+    sgt_ampm = "AM"
+    sgt_hour12 = sgt_hour
+    if sgt_hour >= 12:
+        sgt_ampm = "PM"
+        if sgt_hour > 12:
+            sgt_hour12 = sgt_hour - 12
+    else:
+        sgt_hour12 = sgt_hour if sgt_hour != 0 else 12
+    return f"{sgt_hour12}:{minute} {sgt_ampm} SGT"
+
+def sgt_date_offset(et_date_str, et_time_str):
+    """Return SGT date label. If SGT date differs from ET date, show it."""
+    if not et_date_str or not et_time_str:
+        return ""
+    parts = et_time_str.strip().split()
+    time_part = parts[0]
+    ampm = parts[1].upper() if len(parts) > 1 else "AM"
+    hour_str = time_part.split(":")[0]
+    hour = int(hour_str)
+    if ampm == "PM" and hour != 12:
+        hour += 12
+    elif ampm == "AM" and hour == 12:
+        hour = 0
+    # If ET is noon or later, SGT is next day
+    if hour >= 12:
+        # Match date in JSON is ET date; SGT is +1 day
+        try:
+            d = datetime.datetime.strptime(et_date_str, "%Y-%m-%d")
+            d += datetime.timedelta(days=1)
+            return d.strftime("%b %d")
+        except:
+            pass
+    return ""
 
 # --- Status display helpers ---
 def status_badge(m):
@@ -236,7 +289,7 @@ html = f"""<!DOCTYPE html>
 <header class="hero">
   <div class="hero-badge">🌍 2026 World Cup</div>
   <h1><span class="wc">⚽ Knockout Bracket</span></h1>
-  <p class="date">Tuesday, June 30, 2026 (SGT) · Round of 32 underway 🔥</p>
+  <p class="date">{datetime.datetime.now().strftime("%A, %B %d, %Y")} (SGT) · Round of 32 underway 🔥</p>
 </header>
 
 <main class="container">
@@ -272,9 +325,19 @@ for m in top_half_matches:
     h_cls = "winner" if h_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
     a_cls = "winner" if a_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
 
+    # Build match-meta with SGT time for upcoming matches
+    sgt_str = ""
+    if m["status"] == "upcoming" and m.get("kickoff_et"):
+        sgt_extra = et_to_sgt(m["kickoff_et"])
+        sgt_date = sgt_date_offset(m["date"], m["kickoff_et"])
+        if sgt_date:
+            sgt_str = f" · 🕐 {sgt_date}, {sgt_extra}"
+        else:
+            sgt_str = f" · 🕐 {sgt_extra}"
+
     html += f"""    <div class="match-card {cls}">
       <div class="match-top">
-        <span class="match-meta">Match {m["id"]} · {m["venue"]}</span>
+        <span class="match-meta">Match {m["id"]} · {m["venue"]}{sgt_str}</span>
         {status_badge(m)}
       </div>
       <div class="match-teams">
@@ -282,8 +345,8 @@ for m in top_half_matches:
         {score_display(m)}
         <span class="team {a_cls}">{a_name}</span>
       </div>
-"""
 
+"""
     if m.get("scorers"):
         html += f"""      <div class="match-scorers">⚽ {m["scorers"]}</div>
 """
@@ -317,9 +380,19 @@ for m in lower_half_matches:
     h_cls = "winner" if h_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
     a_cls = "winner" if a_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
 
+    # Build match-meta with SGT time for upcoming matches
+    sgt_str = ""
+    if m["status"] == "upcoming" and m.get("kickoff_et"):
+        sgt_extra = et_to_sgt(m["kickoff_et"])
+        sgt_date = sgt_date_offset(m["date"], m["kickoff_et"])
+        if sgt_date:
+            sgt_str = f" · 🕐 {sgt_date}, {sgt_extra}"
+        else:
+            sgt_str = f" · 🕐 {sgt_extra}"
+
     html += f"""    <div class="match-card {cls}">
       <div class="match-top">
-        <span class="match-meta">Match {m["id"]} · {m["venue"]}</span>
+        <span class="match-meta">Match {m["id"]} · {m["venue"]}{sgt_str}</span>
         {status_badge(m)}
       </div>
       <div class="match-teams">
@@ -327,6 +400,7 @@ for m in lower_half_matches:
         {score_display(m)}
         <span class="team {a_cls}">{a_name}</span>
       </div>
+
 """
     if m.get("scorers"):
         html += f"""      <div class="match-scorers">⚽ {m["scorers"]}</div>

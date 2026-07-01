@@ -6,6 +6,7 @@
     {
       "id": 73,
       "date": "2026-06-28",
+      "kickoff_et": "3:00 PM",
       "home": {"name": "South Africa", "flag": "🇿🇦", "goals": 0, "qualified": false},
       "away": {"name": "Canada", "flag": "🇨🇦", "goals": 1, "qualified": true},
       "status": "FT",
@@ -17,6 +18,7 @@
     {
       "id": 74,
       "date": "2026-06-29",
+      "kickoff_et": "4:30 PM",
       "home": {"name": "Germany", "flag": "🇩🇪", "goals": 1, "qualified": false},
       "away": {"name": "Paraguay", "flag": "🇵🇾", "goals": 1, "qualified": true},
       "status": "FT-pens",
@@ -29,6 +31,7 @@
     {
       "id": 75,
       "date": "2026-06-29",
+      "kickoff_et": "9:00 PM",
       "home": {"name": "Netherlands", "flag": "🇳🇱", "goals": 1, "qualified": false},
       "away": {"name": "Morocco", "flag": "🇲🇦", "goals": 1, "qualified": true},
       "status": "FT-pens",
@@ -41,6 +44,7 @@
     {
       "id": 76,
       "date": "2026-06-29",
+      "kickoff_et": "1:00 PM",
       "home": {"name": "Brazil", "flag": "🇧🇷", "goals": 2, "qualified": true},
       "away": {"name": "Japan", "flag": "🇯🇵", "goals": 1, "qualified": false},
       "status": "FT",
@@ -52,6 +56,7 @@
     {
       "id": 77,
       "date": "2026-06-30",
+      "kickoff_et": "5:00 PM",
       "home": {"name": "France", "flag": "🇫🇷", "goals": 3, "qualified": true},
       "away": {"name": "Sweden", "flag": "🇸🇪", "goals": 0, "qualified": false},
       "status": "FT",
@@ -63,6 +68,7 @@
     {
       "id": 78,
       "date": "2026-06-30",
+      "kickoff_et": "1:00 PM",
       "home": {"name": "Ivory Coast", "flag": "🇨🇮", "goals": 1, "qualified": false},
       "away": {"name": "Norway", "flag": "🇳🇴", "goals": 2, "qualified": true},
       "status": "FT",
@@ -74,6 +80,7 @@
     {
       "id": 79,
       "date": "2026-06-30",
+      "kickoff_et": "9:00 PM",
       "home": {"name": "Mexico", "flag": "🇲🇽", "goals": null, "qualified": null},
       "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -84,6 +91,7 @@
     {
       "id": 80,
       "date": "2026-07-01",
+      "kickoff_et": "12:00 PM",
       "home": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": null, "qualified": null},
       "away": {"name": "DR Congo", "flag": "🇨🇩", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -94,6 +102,7 @@
     {
       "id": 81,
       "date": "2026-07-01",
+      "kickoff_et": "8:00 PM",
       "home": {"name": "USA", "flag": "🇺🇸", "goals": null, "qualified": null},
       "away": {"name": "Bosnia & Herzegovina", "flag": "🇧🇦", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -104,6 +113,7 @@
     {
       "id": 82,
       "date": "2026-07-01",
+      "kickoff_et": "4:00 PM",
       "home": {"name": "Belgium", "flag": "🇧🇪", "goals": null, "qualified": null},
       "away": {"name": "Senegal", "flag": "🇸🇳", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -114,6 +124,7 @@
     {
       "id": 83,
       "date": "2026-07-02",
+      "kickoff_et": "7:00 PM",
       "home": {"name": "Portugal", "flag": "🇵🇹", "goals": null, "qualified": null},
       "away": {"name": "Croatia", "flag": "🇭🇷", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -124,6 +135,7 @@
     {
       "id": 84,
       "date": "2026-07-02",
+      "kickoff_et": "3:00 PM",
       "home": {"name": "Spain", "flag": "🇪🇸", "goals": null, "qualified": null},
       "away": {"name": "Austria", "flag": "🇦🇹", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -134,6 +146,7 @@
     {
       "id": 85,
       "date": "2026-07-02",
+      "kickoff_et": "11:00 PM",
       "home": {"name": "Switzerland", "flag": "🇨🇭", "goals": null, "qualified": null},
       "away": {"name": "Algeria", "flag": "🇩🇿", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -144,6 +157,7 @@
     {
       "id": 86,
       "date": "2026-07-03",
+      "kickoff_et": "6:00 PM",
       "home": {"name": "Australia", "flag": "🇦🇺", "goals": null, "qualified": null},
       "away": {"name": "Egypt", "flag": "🇪🇬", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -154,6 +168,7 @@
     {
       "id": 87,
       "date": "2026-07-03",
+      "kickoff_et": "9:30 PM",
       "home": {"name": "Argentina", "flag": "🇦🇷", "goals": null, "qualified": null},
       "away": {"name": "Cape Verde", "flag": "🇨🇻", "goals": null, "qualified": null},
       "status": "upcoming",
@@ -164,6 +179,7 @@
     {
       "id": 88,
       "date": "2026-07-03",
+      "kickoff_et": "2:00 PM",
       "home": {"name": "Colombia", "flag": "🇨🇴", "goals": null, "qualified": null},
       "away": {"name": "Ghana", "flag": "🇬🇭", "goals": null, "qualified": null},
       "status": "upcoming",
