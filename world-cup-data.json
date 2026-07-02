@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 32",
-  "updated": "2026-07-02T06:01:00+08:00",
+  "updated": "2026-07-03T09:30:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -105,12 +105,13 @@
       "id": 81,
       "date": "2026-07-01",
       "kickoff_et": "8:00 PM",
-      "home": {"name": "USA", "flag": "🇺🇸", "goals": null, "qualified": null},
-      "away": {"name": "Bosnia & Herzegovina", "flag": "🇧🇦", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "USA", "flag": "🇺🇸", "goals": 2, "qualified": true},
+      "away": {"name": "Bosnia & Herzegovina", "flag": "🇧🇦", "goals": 0, "qualified": false},
+      "status": "FT",
       "venue": "San Francisco Bay Area Stadium, Santa Clara",
-      "scorers": "",
-      "note": "USA won Group D. Bosnia 3rd in Group B. Co-hosts USA aim for deep run."
+      "scorers": "Balogun 45', Tillman 82'",
+      "highlights": "",
+      "note": "USA's first knockout win since 2002! Balogun's early goal + Tillman seal it. Next: Belgium in R16."
     },
     {
       "id": 82,
@@ -140,12 +141,13 @@
       "id": 84,
       "date": "2026-07-02",
       "kickoff_et": "3:00 PM",
-      "home": {"name": "Spain", "flag": "🇪🇸", "goals": null, "qualified": null},
-      "away": {"name": "Austria", "flag": "🇦🇹", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "Spain", "flag": "🇪🇸", "goals": 3, "qualified": true},
+      "away": {"name": "Austria", "flag": "🇦🇹", "goals": 0, "qualified": false},
+      "status": "FT",
       "venue": "Los Angeles Stadium, Inglewood",
-      "scorers": "",
-      "note": "⭐ BOSS TEAM. Spain won Group H with 7pts — only 1 goal conceded all tournament. Austria 2nd in Group J."
+      "scorers": "Oyarzabal 15', 66', Porro 76'",
+      "highlights": "",
+      "note": "⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal/Croatia winner."
     },
     {
       "id": 85,
