@@ -24,9 +24,9 @@
       "status": "FT-pens",
       "penalty_winner": "Paraguay",
       "venue": "Boston Stadium, Foxborough",
-      "scorers": "Enciso 42'; Havertz 54'",
+      "scorers": "Enciso 42'; Havertz 54' (pens: Germany 3-4 Paraguay — Tah missed)",
       "highlights": "https://www.youtube.com/watch?v=-gtI96YhJek",
-      "note": "Paraguay won 4-2 on penalties. Jonathan Tah missed decisive spot-kick. Germany's Havertz equaliser cancelled Enciso's opener. VAR disallowed a late Germany winner in extra time."
+      "note": "Paraguay won 3-4 on penalties. Jonathan Tah missed the decisive spot-kick. Germany's Havertz equaliser cancelled Enciso's opener. VAR disallowed a late Germany winner in extra time."
     },
     {
       "id": 75,
@@ -37,9 +37,9 @@
       "status": "FT-pens",
       "penalty_winner": "Morocco",
       "venue": "Estadio Monterrey, Guadalupe",
-      "scorers": "Gakpo 72'; Diop 90+1'",
+      "scorers": "Gakpo 72'; Diop 90+1' (pens: Netherlands 2-3 Morocco)",
       "highlights": "https://www.youtube.com/watch?v=IVIGSA6N1e8",
-      "note": "Morocco won 3-2 on penalties. Gakpo scored an emotional goal (recent personal tragedy). Diop's 91st-minute equaliser forced extra time."
+      "note": "Morocco won 2-3 on penalties. Gakpo scored an emotional goal (recent personal tragedy). Diop's 91st-minute equaliser forced extra time."
     },
     {
       "id": 76,
@@ -49,7 +49,7 @@
       "away": {"name": "Japan", "flag": "🇯🇵", "goals": 1, "qualified": false},
       "status": "FT",
       "venue": "Houston Stadium, Houston",
-      "scorers": "Casemiro 56', Martinelli 90+6'; Sano 29'",
+      "scorers": "Casemiro 56', Martinelli 90+5'; Sano 29'",
       "highlights": "https://www.foxsports.com/watch/fmc-ee336b37dd7a7bc3",
       "note": "Japan took a shock lead through Sano's 40-yard solo golazo. Casemiro headed the equaliser. Martinelli's 96th-minute winner saved Brazil."
     },
@@ -61,9 +61,9 @@
       "away": {"name": "Sweden", "flag": "🇸🇪", "goals": 0, "qualified": false},
       "status": "FT",
       "venue": "New York New Jersey Stadium, East Rutherford",
-      "scorers": "Mbappé 34', Dembélé 57', Thuram 78'",
+      "scorers": "Mbappé 45', 74', Barcola 53'",
       "highlights": "",
-      "note": "France dominated from start to finish. Mbappé opened the scoring with a clinical finish. Dembélé doubled the lead after the break. Thuram sealed it with a late header."
+      "note": "France dominated from start to finish. Mbappé opened the scoring with a clinical finish before the break, then doubled his tally after the restart. Barcola added a third to complete a comfortable win."
     },
     {
       "id": 78,
@@ -85,7 +85,7 @@
       "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": 0, "qualified": false},
       "status": "FT",
       "venue": "Mexico City Stadium, Mexico City",
-      "scorers": "Quiñones 39'; Jiménez 90+2'",
+      "scorers": "Quiñones 22'; Jiménez 31'",
       "highlights": "",
       "note": "Mexico's clinical finishing at home secured a comfortable win. Ecuador had no answer to El Tri's attacks in the second half."
     },
@@ -116,13 +116,14 @@
       "id": 82,
       "date": "2026-07-01",
       "kickoff_et": "4:00 PM",
-      "home": {"name": "Belgium", "flag": "🇧🇪", "goals": 0, "qualified": false},
-      "away": {"name": "Senegal", "flag": "🇸🇳", "goals": 2, "qualified": true},
-      "status": "FT",
+      "home": {"name": "Belgium", "flag": "🇧🇪", "goals": 3, "qualified": true},
+      "away": {"name": "Senegal", "flag": "🇸🇳", "goals": 2, "qualified": false},
+      "status": "FT-pens",
+      "penalty_winner": "Belgium",
       "venue": "Seattle Stadium, Seattle",
-      "scorers": "Diarra 25'; Sarr 51'",
+      "scorers": "Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'",
       "highlights": "",
-      "note": "Senegal stunned Belgium with a dominant 2-0 win. Diarra's rebound goal and Sarr's thumping second-half strike sealed a famous upset. Belgium's golden generation crashes out."
+      "note": "Belgium produced a stunning extra-time comeback from 2-0 down. Diarra and Sarr had Senegal cruising, but Lukaku's 86th-minute strike and Tielemans' late brace (including a 120+5' penalty) flipped the tie. Senegal eliminated despite leading for most of the match."
     },
     {
       "id": 83,
@@ -196,7 +197,7 @@
     {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs France"},
     {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs TBD (Winner M78)"},
     {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal/Croatia vs Spain/Austria"},
-    {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Senegal"},
+    {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Belgium"},
     {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA/Bosnia"},
     {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "TBD vs TBD"},
     {"match": "R16-8", "date": "Jul 5", "venue": "Miami", "teams": "Argentina/Cape Verde vs Colombia/Ghana"}
@@ -211,6 +212,6 @@
     {"rank": 7, "player": "Johan Manzambi", "country": "Switzerland", "flag": "🇨🇭", "goals": 3, "assists": 1},
     {"rank": 7, "player": "Ismaila Sarr", "country": "Senegal", "flag": "🇸🇳", "goals": 3, "assists": 1},
     {"rank": 7, "player": "Cody Gakpo", "country": "Netherlands", "flag": "🇳🇱", "goals": 3, "assists": 1},
-    {"rank": 10, "player": "Harry Kane", "country": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": 3, "assists": 0}
+    {"rank": 10, "player": "Harry Kane", "country": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": 5, "assists": 0}
   ]
 }
