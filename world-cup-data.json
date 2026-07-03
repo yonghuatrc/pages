@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 32",
-  "updated": "2026-07-03T09:30:00+08:00",
+  "updated": "2026-07-03T22:46:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -130,12 +130,12 @@
       "id": 83,
       "date": "2026-07-02",
       "kickoff_et": "7:00 PM",
-      "home": {"name": "Portugal", "flag": "🇵🇹", "goals": null, "qualified": null},
-      "away": {"name": "Croatia", "flag": "🇭🇷", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "Portugal", "flag": "🇵🇹", "goals": 2, "qualified": true},
+      "away": {"name": "Croatia", "flag": "🇭🇷", "goals": 1, "qualified": false},
+      "status": "FT",
       "venue": "Toronto Stadium, Toronto",
-      "scorers": "",
-      "note": "⭐ BOSS TEAM. Portugal 2nd in Group K. Croatia 2nd in Group L. Ronaldo vs Modrić — legends collide."
+      "scorers": "Perisic 53'; Ronaldo 68' (pen), Ramos 90+4'",
+      "note": "⭐ BOSS TEAM. Ronaldo's first-ever World Cup knockout goal. Ramos headed stoppage-time winner. VAR controversially disallowed Gvardiol's late equaliser. Portugal faces Spain in R16."
     },
     {
       "id": 84,
@@ -147,18 +147,18 @@
       "venue": "Los Angeles Stadium, Inglewood",
       "scorers": "Oyarzabal 15', 66', Porro 76'",
       "highlights": "",
-      "note": "⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal/Croatia winner."
+      "note": "⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal in R16 — Nations League final rematch."
     },
     {
       "id": 85,
       "date": "2026-07-02",
       "kickoff_et": "11:00 PM",
-      "home": {"name": "Switzerland", "flag": "🇨🇭", "goals": null, "qualified": null},
-      "away": {"name": "Algeria", "flag": "🇩🇿", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "Switzerland", "flag": "🇨🇭", "goals": 2, "qualified": true},
+      "away": {"name": "Algeria", "flag": "🇩🇿", "goals": 0, "qualified": false},
+      "status": "FT",
       "venue": "BC Place Vancouver, Vancouver",
-      "scorers": "",
-      "note": "Switzerland won Group B (7pts). Algeria advanced as 3rd in Group J."
+      "scorers": "Embolo 10', Ndoye 46'",
+      "note": "Embolo scored with Manzambi assist. Ndoye blasted in just after HT. Switzerland's first knockout win since 1938. Next: Colombia/Ghana winner."
     },
     {
       "id": 86,
@@ -197,11 +197,11 @@
   "r16_path": [
     {"match": "R16-1", "date": "Jul 4", "venue": "Houston", "teams": "Canada vs Morocco"},
     {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs France"},
-    {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs TBD (Winner M78)"},
-    {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal/Croatia vs Spain/Austria"},
+    {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs Norway"},
+    {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal vs Spain"},
     {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Belgium"},
-    {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA/Bosnia"},
-    {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "TBD vs TBD"},
+    {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA"},
+    {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "Switzerland vs TBD"},
     {"match": "R16-8", "date": "Jul 5", "venue": "Miami", "teams": "Argentina/Cape Verde vs Colombia/Ghana"}
   ],
   "golden_boot": [
