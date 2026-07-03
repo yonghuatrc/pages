@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 32",
-  "updated": "2026-07-03T22:46:00+08:00",
+  "updated": "2026-07-04T06:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -163,12 +163,14 @@
       "id": 86,
       "date": "2026-07-03",
       "kickoff_et": "6:00 PM",
-      "home": {"name": "Australia", "flag": "🇦🇺", "goals": null, "qualified": null},
-      "away": {"name": "Egypt", "flag": "🇪🇬", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "home": {"name": "Australia", "flag": "🇦🇺", "goals": 1, "qualified": false},
+      "away": {"name": "Egypt", "flag": "🇪🇬", "goals": 1, "qualified": true},
+      "status": "FT-pens",
+      "penalty_winner": "Egypt",
       "venue": "Dallas Stadium, Arlington",
-      "scorers": "",
-      "note": "Australia 2nd in Group D. Egypt 2nd in Group G. Salah vs Australian resilience."
+      "scorers": "Hany OG 55'; Ashour 13' (pens: Australia 2-4 Egypt — Soutar & Herrington missed)",
+      "note": "Egypt won 4-2 on penalties for their first-ever World Cup knockout win. Ashour headed Egypt ahead from a Hafez cross. Hany's 55th-minute OG (becoming first player to score two OGs in one World Cup) levelled for the Socceroos. Soutar skied his pen, Herrington hit the bar; Abdelmaguid clinched for the Pharaohs.",
+      "sources": ["https://www.espn.com/soccer/report/_/gameId/760499", "https://apnews.com/article/australia-egypt-world-cup-score-f5640adedb40ad59632598610e9382b8", "https://www.aljazeera.com/sports/2026/7/3/egypt-beat-australia-on-penalties-to-win-first-world-cup-knockout-match"]
     },
     {
       "id": 87,
@@ -176,21 +178,21 @@
       "kickoff_et": "9:30 PM",
       "home": {"name": "Argentina", "flag": "🇦🇷", "goals": null, "qualified": null},
       "away": {"name": "Cape Verde", "flag": "🇨🇻", "goals": null, "qualified": null},
-      "status": "upcoming",
+      "status": "live",
       "venue": "Miami Stadium, Miami",
       "scorers": "",
-      "note": "⭐ BOSS TEAM. Argentina PERFECT group stage (9/9pts). Cape Verde's historic first R32 — fairy tale continues."
+      "note": "⭐ BOSS TEAM. Argentina PERFECT group stage (9/9pts). Cape Verde's historic first R32 — fairy tale continues. Match in progress — awaiting final result."
     },
     {
       "id": 88,
       "date": "2026-07-03",
-      "kickoff_et": "2:00 PM",
+      "kickoff_et": "9:30 PM",
       "home": {"name": "Colombia", "flag": "🇨🇴", "goals": null, "qualified": null},
       "away": {"name": "Ghana", "flag": "🇬🇭", "goals": null, "qualified": null},
       "status": "upcoming",
       "venue": "Kansas City Stadium, Kansas City",
       "scorers": "",
-      "note": "Colombia won Group K (7pts). Ghana 2nd in Group L."
+      "note": "Colombia won Group K (7pts). Ghana 2nd in Group L. Kicks off Jul 4 09:30 SGT."
     }
   ],
   "r16_path": [
@@ -201,7 +203,7 @@
     {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Belgium"},
     {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA"},
     {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "Switzerland vs TBD"},
-    {"match": "R16-8", "date": "Jul 5", "venue": "Miami", "teams": "Argentina/Cape Verde vs Colombia/Ghana"}
+    {"match": "R16-8", "date": "Jul 7", "venue": "Atlanta", "teams": "Argentina/Cape Verde vs Egypt"}
   ],
   "golden_boot": [
     {"rank": 1, "player": "Kylian Mbappé", "country": "France", "flag": "🇫🇷", "goals": 6, "assists": 2},
