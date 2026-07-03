@@ -39,6 +39,10 @@ DEFAULT_JSON = Path(__file__).parent / "world-cup-data.json"
 WIKI_URL = "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
 USER_AGENT = "Mozilla/5.0 (compatible; hermes-cron/1.0)"
 
+# Secondary source: ESPN API. Public free endpoint, no auth needed.
+# Returns JSON with scoreboard data including completed R32 matches.
+ESPN_API_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
+
 
 def fetch_wiki():
     """Fetch the 2026 WC Wikipedia page and strip to plain text."""
@@ -295,6 +299,116 @@ def parse_scorer_list(text):
             "raw": sm.group(0).strip(),
         })
     return out
+
+
+def fetch_espn(date_str=None):
+    """
+    Fetch ESPN scoreboard API for a given date (YYYY-MM-DD) or current if None.
+    Returns list of completed matches with team names, scores, and scorers.
+    """
+    url = ESPN_API_URL
+    if date_str:
+        # Convert YYYY-MM-DD to YYYYMMDD-YYYYMMDD range
+        compact = date_str.replace("-", "")
+        url = f"{ESPN_API_URL}?dates={compact}-{compact}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        print(f"   ⚠️  Could not fetch ESPN: {e}", file=sys.stderr)
+        return []
+    matches = []
+    for ev in data.get("events", []):
+        comp = ev.get("competitions", [{}])[0]
+        status = comp.get("status", {}).get("type", {})
+        if not status.get("completed"):
+            continue
+        competitors = comp.get("competitors", [])
+        if len(competitors) < 2:
+            continue
+        home_c = next((c for c in competitors if c.get("homeAway") == "home"), competitors[0])
+        away_c = next((c for c in competitors if c.get("homeAway") == "away"), competitors[1])
+        match = {
+            "name": ev.get("name", ""),
+            "home_name": home_c.get("team", {}).get("displayName", ""),
+            "away_name": away_c.get("team", {}).get("displayName", ""),
+            "home_score": int(home_c.get("score", 0)),
+            "away_score": int(away_c.get("score", 0)),
+            "status": status.get("description", ""),
+            "details": [],
+        }
+        for d in comp.get("details", []):
+            if not d.get("scoringPlay"):
+                continue
+            clock = d.get("clock", {}).get("displayValue", "")
+            # Extract minute from "39'" or "90'+5'"
+            minute_match = re.match(r"(\d+)", clock)
+            minute = int(minute_match.group(1)) if minute_match else 0
+            for ath in d.get("athletesInvolved", []):
+                match["details"].append({
+                    "name": ath.get("displayName", ath.get("shortName", "")),
+                    "minute": minute,
+                    "team_id": str(ath.get("team", {}).get("id", "")),
+                })
+        # Sort details by minute for readability
+        match["details"].sort(key=lambda d: d["minute"])
+        matches.append(match)
+    return matches
+
+
+def crossref_with_espn(json_matches, json_path):
+    """
+    Secondary cross-reference against ESPN scoreboard API.
+    Fetches all match dates from the JSON and compares scores.
+
+    Returns list of error strings. Empty = pass.
+    """
+    # Collect all match dates from JSON
+    dates = set()
+    for m in json_matches:
+        d = m.get("date", "")
+        if d:
+            dates.add(d)
+    if not dates:
+        return []
+    print(f"   Cross-referencing {len(json_matches)} matches against ESPN "
+          f"({len(dates)} dates)...")
+    espn_matches_by_date = {}
+    for date in sorted(dates):
+        espn_matches_by_date[date] = fetch_espn(date)
+        print(f"   ESPN {date}: {len(espn_matches_by_date[date])} completed matches")
+    errors = []
+    for jm in json_matches:
+        if jm["status"] not in ("FT", "FT-pens", "FT-aet"):
+            continue
+        h_name = jm["home"]["name"]
+        a_name = jm["away"]["name"]
+        h_goals = jm["home"]["goals"]
+        a_goals = jm["away"]["goals"]
+        # Find ESPN match
+        espn_list = espn_matches_by_date.get(jm.get("date", ""), [])
+        espn_match = None
+        for em in espn_list:
+            if ((team_matches(em["home_name"], h_name) and team_matches(em["away_name"], a_name)) or
+                (team_matches(em["home_name"], a_name) and team_matches(em["away_name"], h_name))):
+                espn_match = em
+                break
+        if not espn_match:
+            # ESPN missing — don't error (could be API hasn't updated, or
+            # match not yet indexed). Warn only.
+            print(f"   ⚠️  M{jm['id']}: {h_name} vs {a_name} not found in ESPN",
+                  file=sys.stderr)
+            continue
+        # Compare score (accept either direction)
+        if not ((espn_match["home_score"] == h_goals and espn_match["away_score"] == a_goals) or
+                (espn_match["home_score"] == a_goals and espn_match["away_score"] == h_goals)):
+            errors.append(
+                f"M{jm['id']}: {h_name} {h_goals}-{a_goals} {a_name} \u2014 "
+                f"ESPN SAYS {espn_match['home_score']}-{espn_match['away_score']} "
+                f"({espn_match['home_name']} v {espn_match['away_name']})"
+            )
+    return errors
 
 
 def team_matches(a, b):
@@ -582,6 +696,21 @@ def main():
     print()
     print(f"\u2705  All {len(json_matches)} completed matches verified against Wikipedia")
     print(f"   Source: {WIKI_URL}")
+
+    # SECONDARY: ESPN API cross-reference (triangulation)
+    print()
+    print("Fetching ESPN secondary source...")
+    espn_errors = crossref_with_espn(json_matches, json_path)
+    if espn_errors:
+        print()
+        print("\u274C  ESPN DATA MISMATCH \u2014 push blocked", file=sys.stderr)
+        for e in espn_errors:
+            print(f"  \u2022 {e}", file=sys.stderr)
+        print()
+        print("Wikipedia passed but ESPN disagrees. Investigate before pushing.",
+              file=sys.stderr)
+        return 1
+    print("   \u2705  ESPN cross-reference passed")
     return 0
 
 
