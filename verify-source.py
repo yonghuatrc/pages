@@ -70,17 +70,24 @@ def parse_match_reports(section_text):
     """
     Parse every "TeamA H-A TeamB" detailed match report.
 
-    Returns a list of dicts: {home, away, h_goals, a_goals, is_aet}
+    Returns a list of dicts:
+        {home, away, h_goals, a_goals, is_aet,
+         home_scorers: [{name, minute}, ...],
+         away_scorers: [{name, minute}, ...],
+         pens_score: (h, a) or None,
+         pens_winner: home|away or None}
     """
     # Normalise en-dash to ASCII hyphen for easier regex
     norm = section_text.replace("\u2013", "-").replace("\u2014", "-")
 
     # Team name: 1-4 capitalised words (handles "Ivory Coast", "DR Congo",
     # "Bosnia & Herzegovina", "Cape Verde" etc.)
-    # Allow ampersand, hyphen, period, apostrophe within words
-    # Use a word-class that's safe across all unicode ranges
+    # Team name: 1-4 words. Capitalized words always; lowercase connectors
+    # "and", "of", "the" allowed between them (handles "Bosnia and Herzegovina",
+    # "Ivory Coast", "DR Congo", "Cape Verde", "São Tomé and Príncipe").
     word = r"[A-Z][A-Za-z\u00c0-\u017f'\.\-]+"
-    team = rf"{word}(?:\s+(?:[&\-]|{word}))*"
+    connector = r"(?:and|of|the|de|du|la|le)"
+    team = rf"{word}(?:\s+(?:[&\-]|{word}|{connector}))*"
 
     # Score: H-A
     score = r"(\d+)\s*-\s*(\d+)"
@@ -101,23 +108,41 @@ def parse_match_reports(section_text):
         home, h, a, away = m.group(1).strip(), m.group(2), m.group(3), m.group(4).strip()
         is_aet = "a.e.t." in m.group(0)
 
-        # Filter false positives:
-        # - Penalty-shooter lists look like "Penalties Havertz Kimmich 3-4 Maurício"
-        #   The "home" team would be "Penalties" — filter by checking
-        #   that home/away don't start with a non-team word.
+        # Filter false positives
         non_team = {
             "Penalties", "Statistics", "Goalscorers", "See also",
             "Award", "Awards", "Source", "Referee",
         }
         if home in non_team or away in non_team:
             continue
-        # Penalty score entries like "Tah 3-4 Maurício" — away starts with a single word
-        # that's not a team. Filter by requiring home to be 2+ chars AND no digit
         if any(c.isdigit() for c in home) or any(c.isdigit() for c in away):
             continue
-        # Heuristic: a team name should have at most 4 words
         if len(home.split()) > 4 or len(away.split()) > 4:
             continue
+
+        # Extract scorer block: home scorers + [Report N] + away scorers
+        # Format: "Home_Scorers [ Report N ] Away_Scorers Stadium..."
+        # Boundaries: end is "Stadium" or "Attendance" or "Source:" or "Penalties"
+        #             (we stop BEFORE the penalty list for FT-pens matches)
+        start_pos = m.end()
+        # Walk forward finding each Report marker and the away scorers after it
+        boundary = None
+        for marker in [r"\s+Source:\s*FIFA",
+                       r"\s+[A-Z][a-z]+\s+Stadium",
+                       r"\s+Attendance"]:
+            mm = re.search(marker, norm[start_pos:])
+            if mm:
+                pos = start_pos + mm.start()
+                if boundary is None or pos < boundary:
+                    boundary = pos
+        if boundary is None:
+            scorer_block = norm[start_pos:start_pos + 500]
+        else:
+            scorer_block = norm[start_pos:boundary]
+
+        home_scorers, away_scorers, pens_score, pens_winner = parse_scorers_and_pens(
+            scorer_block, is_aet
+        )
 
         results.append({
             "home": home,
@@ -125,6 +150,10 @@ def parse_match_reports(section_text):
             "h_goals": int(h),
             "a_goals": int(a),
             "is_aet": is_aet,
+            "home_scorers": home_scorers,
+            "away_scorers": away_scorers,
+            "pens_score": pens_score,
+            "pens_winner": pens_winner,
         })
 
     # Dedupe
@@ -138,8 +167,138 @@ def parse_match_reports(section_text):
     return deduped
 
 
+def parse_scorers_and_pens(scorer_block, is_aet):
+    """
+    Parse scorer names + minute marks from a match report scorer block.
+
+    Format examples (before [Report N]):
+        "Mbappé 45' , 74' Barcola 53'"
+        "Havertz 54' (pen.)" — note penalty marker on minute
+    After [Report N]:
+        "Mbaye 90+5'"
+        "Diarra 25' I. Sarr 51'"
+        "Perišić 53'"
+
+    Returns: (home_scorers, away_scorers, pens_score, pens_winner)
+      home_scorers = list of {"name": str, "minute": int, "pen": bool}
+      away_scorers = same
+      pens_score = (home_pen_goals, away_pen_goals) or None
+      pens_winner = "home" | "away" | None
+    """
+    # Scorer pattern: Name 45' (optional (pen.)) — comma-separated minutes
+    # Examples: "Mbappé 45'", "Mbappé 45', 74'", "Havertz 54' (pen.)"
+    # Handle names with diacritics, apostrophes, hyphens, periods
+    name_pat = r"[A-Z][\w\u00c0-\u017f'\.\-]+(?:\s+[A-Z][\w\u00c0-\u017f'\.\-]+)*"
+    minute_pat = r"\s*(\d+)\s*(\+\s*\d+)?\s*'(?:\s*\(\s*pen\.?\s*\))?"
+    scorer_pat = rf"({name_pat}){minute_pat}"
+
+    scorers = []
+    for sm in re.finditer(scorer_pat, scorer_block):
+        name = sm.group(1).strip()
+        minute = int(sm.group(2))
+        if sm.group(3):  # "+NN" present
+            minute_str = sm.group(2) + sm.group(3).replace(" ", "").replace("+", "+")
+            # Keep base minute for comparison; full string available if needed
+        pen = "pen" in sm.group(0).lower()
+        scorers.append({
+            "name": name,
+            "minute": minute,
+            "pen": pen,
+            "raw": sm.group(0).strip(),
+        })
+
+    # Check for penalty shootout result at end: "Tah 3-4 Maurício" pattern
+    pens_score = None
+    pens_winner = None
+    pens_match = re.search(r"\b(\d+)\s*-\s*(\d+)\s*$", scorer_block.rstrip().rstrip("."))
+    # Better: look for the pattern after "Penalties" or last digit-only pair
+    if is_aet:
+        # Look for the penalty score pattern. Format:
+        # "Names Names Names H-A Names Names" or just "H-A" within the Penalties section.
+        # The H-A is preceded by at least one name and followed by names (or end).
+        # Find the last "N-N" in the Penalties section.
+        pen_idx = scorer_block.find("Penalties")
+        if pen_idx >= 0:
+            pen_section = scorer_block[pen_idx:]
+            # Find last "N-N" in the Penalties section (the actual shootout score)
+            # Avoid matching minute marks like "90+1'"
+            # Match a digit pair separated by hyphen, surrounded by name-like context
+            scores = re.findall(r"(?:^|\s)(\d+)\s*-\s*(\d+)(?:\s|$)", pen_section)
+            # Filter out numbers that look like stoppage times (e.g. "90-5" doesn't apply,
+            # but "5-4" in "Summerville 2-3 El Aynaoui" is a penalty score)
+            if scores:
+                # Take the LAST score (the actual shootout result)
+                last = scores[-1]
+                h_pens = int(last[0])
+                a_pens = int(last[1])
+                pens_score = (h_pens, a_pens)
+                pens_winner = "home" if h_pens > a_pens else "away" if a_pens > h_pens else None
+
+    # Split scorers by "[ Report N ]" — everything before is home, after is away.
+    # In the scorer_block passed in, the [Report N] marker is the boundary.
+    report_split = re.search(r"\[\s*Report\s+\d+\s*\]", scorer_block)
+    if report_split:
+        home_block = scorer_block[:report_split.start()]
+        away_block = scorer_block[report_split.end():]
+    else:
+        # No [Report N] — assume all scorers are home (no away goal section)
+        home_block = scorer_block
+        away_block = ""
+
+    home_scorers = parse_scorer_list(home_block)
+    away_scorers = parse_scorer_list(away_block)
+
+    return home_scorers, away_scorers, pens_score, pens_winner
+
+
+def parse_scorer_list(text):
+    """
+    Parse a list of scorers.
+
+    Format examples:
+        "Mbappé 45' , 74' Barcola 53'"
+        "Casemiro 56' Martinelli 90+5'"
+        "Havertz 54' (pen.)"
+        "Kane 75' , 86'"
+
+    Returns list of {"name": str, "minute": int, "pen": bool, "raw": str}
+    Note: a single player with multiple minutes (Mbappé 45' , 74') is recorded
+    ONCE per name with the first minute; the additional minutes are tracked
+    as "+ N', M'..." in raw.
+    """
+    if not text:
+        return []
+    name_pat = r"[A-Z][\w\u00c0-\u017f'\.\-]+(?:\s+[A-Z][\w\u00c0-\u017f'\.\-]+)*"
+    # Single minute pattern (with optional +NN stoppage time and optional (pen.))
+    single_minute = r"(\d+)(?:\s*\+\s*\d+)?\s*'(?:\s*\(\s*pen\.?\s*\))?"
+    # A scorer entry: Name followed by 1+ minute marks separated by comma+space
+    entry_pat = rf"({name_pat})\s+({single_minute}(?:\s*,\s*{single_minute})*)"
+    out = []
+    seen_names = set()
+    for sm in re.finditer(entry_pat, text):
+        name = sm.group(1).strip()
+        if name in seen_names:
+            # Already recorded; but collect additional minutes
+            for entry in out:
+                if entry["name"] == name:
+                    entry["raw"] = sm.group(0).strip()
+                    break
+            continue
+        seen_names.add(name)
+        first_minute_match = re.match(single_minute, sm.group(2).split(",")[0].strip())
+        minute = int(first_minute_match.group(1)) if first_minute_match else 0
+        pen = "pen" in sm.group(0).lower()
+        out.append({
+            "name": name,
+            "minute": minute,
+            "pen": pen,
+            "raw": sm.group(0).strip(),
+        })
+    return out
+
+
 def team_matches(a, b):
-    """Loose team-name match (handles DR Congo, Côte d'Ivoire, etc.)."""
+    """Loose team-name match (handles DR Congo, Côte d'Ivoire, USA/United States, etc.)."""
     a_norm = re.sub(r"[^a-z]", "", a.lower())
     b_norm = re.sub(r"[^a-z]", "", b.lower())
     if a_norm == b_norm:
@@ -153,6 +312,27 @@ def team_matches(a, b):
         "congo": "drcongo",
         "capeverde": "caboverde",
         "caboverde": "capeverde",
+        # Bosnia: "and" vs "&" differ — handle explicitly
+        "bosniaandherzegovina": "bosniaherzegovina",
+        "bosniaherzegovina": "bosniaandherzegovina",
+        # Abbreviations
+        "usa": "unitedstates",
+        "unitedstates": "usa",
+        "uae": "unitedarabemirates",
+        "unitedarabemirates": "uae",
+        "uk": "unitedkingdom",
+        "unitedkingdom": "uk",
+        # Trinidad: "and" vs "&" differ
+        "trinidadandtobago": "trinidadtobago",
+        "trinidadtobago": "trinidadandtobago",
+        # Antigua: same
+        "antiguaandbarbuda": "antiguabarbuda",
+        "antiguabarbuda": "antiguaandbarbuda",
+        # St. variations
+        "stkittsandnevis": "stkittsnevis",
+        "stkittsnevis": "stkittsandnevis",
+        "saintkittsandnevis": "saintkittsnevis",
+        "saintkittsnevis": "saintkittsandnevis",
     }
     if alternates.get(a_norm) == b_norm or alternates.get(b_norm) == a_norm:
         return True
@@ -161,6 +341,106 @@ def team_matches(a, b):
         if a_norm in b_norm or b_norm in a_norm:
             return True
     return False
+
+
+def parse_json_scorers(scorers_field):
+    """
+    Parse the JSON "scorers" field.
+
+    Format examples:
+        "Mbappé 45', 74', Barcola 53'"        -> home all, away empty
+        "Casemiro 56', Martinelli 90+5'; Sano 29'"  -> home before ';' / away after
+        "Kane 75', 86'; Cipenga 7'"           -> home before ';' / away after
+        "(pens: Germany 3-4 Paraguay — Tah missed)" -> pens only, no scorers
+
+    Returns: (home_scorers, away_scorers) where each is a list of
+        {"name": str, "minute": int, "pen": bool}
+    """
+    if not scorers_field:
+        return [], []
+
+    # Split on ';' (semicolon-with-space separator used between home and away)
+    # Strip parenthetical "(pens: ...)" annotations — they're not scorers
+    cleaned = re.sub(r"\([^)]*pens[^)]*\)", "", scorers_field).strip()
+    if not cleaned:
+        return [], []
+
+    parts = re.split(r";\s*", cleaned, maxsplit=1)
+    home_part = parts[0]
+    away_part = parts[1] if len(parts) > 1 else ""
+
+    return parse_scorer_list(home_part), parse_scorer_list(away_part)
+
+
+def scorer_name_matches(json_name, wiki_name):
+    """Loose match for scorer names (handles diacritics, hyphens, accents)."""
+    def norm(s):
+        # Remove diacritics, lowercase, strip punctuation
+        import unicodedata
+        nfkd = unicodedata.normalize("NFKD", s)
+        return re.sub(r"[^a-z]", "", nfkd.encode("ascii", "ignore").decode().lower())
+    a, b = norm(json_name), norm(wiki_name)
+    if a == b:
+        return True
+    # Allow one initial-only match (e.g. "I. Sarr" vs "Ismaila Sarr")
+    if len(a) >= 2 and len(b) >= 2:
+        if a in b or b in a:
+            return True
+    return False
+
+
+def crossref_scorers(home_name, away_name, json_home, json_away, wiki_home, wiki_away):
+    """
+    Compare JSON scorers vs Wikipedia scorers.
+
+    Returns list of error strings (empty = pass). Tolerance: ±2 minutes.
+    Each JSON scorer must find a matching Wikipedia scorer (same name + close minute).
+    Extra wiki scorers not in JSON are warnings (not errors) — JSON may legitimately
+    omit a scorer's name even when Wikipedia lists it.
+    """
+    errors = []
+
+    def _check_team(team_name, json_list, wiki_list):
+        matched_wiki_idxs = set()
+        for js in json_list:
+            # Try to find a matching wiki scorer (name + close minute)
+            found = False
+            for i, ws in enumerate(wiki_list):
+                if i in matched_wiki_idxs:
+                    continue
+                if not scorer_name_matches(js["name"], ws["name"]):
+                    continue
+                # Within ±2 minutes tolerance
+                if abs(js["minute"] - ws["minute"]) <= 2:
+                    found = True
+                    matched_wiki_idxs.add(i)
+                    break
+            if not found:
+                # Try just name match (minute too far off)
+                name_only = False
+                for i, ws in enumerate(wiki_list):
+                    if scorer_name_matches(js["name"], ws["name"]):
+                        # Name matches but minute is way off
+                        errors.append(
+                            f"  {team_name}: scorer '{js['name']}' minute {js['minute']}' "
+                            f"\u2014 Wikipedia says minute {ws['minute']}' "
+                            f"(diff {abs(js['minute'] - ws['minute'])} min)"
+                        )
+                        matched_wiki_idxs.add(i)
+                        name_only = True
+                        break
+                if not name_only:
+                    wiki_names = [ws['name'] + ' ' + str(ws['minute']) + "'" for ws in wiki_list]
+                    errors.append(
+                        f"  {team_name}: scorer '{js['name']}' {js['minute']}' "
+                        f"\u2014 NOT FOUND in Wikipedia (wiki has: {wiki_names})"
+                    )
+        # Note: extra wiki scorers not flagged as errors — JSON may legitimately
+        # abbreviate. Just a silent warning.
+
+    _check_team(home_name, json_home, wiki_home)
+    _check_team(away_name, json_away, wiki_away)
+    return errors
 
 
 def main():
@@ -195,7 +475,7 @@ def main():
 
     # Cross-reference each completed match in our JSON
     errors = []
-    json_matches = [m for m in data["matches"] if m["status"] in ("FT", "FT-pens")]
+    json_matches = [m for m in data["matches"] if m["status"] in ("FT", "FT-pens", "FT-aet")]
     print(f"   Cross-referencing {len(json_matches)} completed matches in JSON...")
 
     for jm in json_matches:
@@ -229,6 +509,62 @@ def main():
                 f"WIKIPEDIA SAYS {match['h_goals']}-{match['a_goals']} "
                 f"({match['home']} v {match['away']})"
             )
+            continue  # Skip scorer/pens checks if score itself is wrong
+
+        # Cross-reference scorer names + minute marks
+        # Match may have home/away swapped vs JSON, so build a canonical
+        # scorer pair using whichever direction matches.
+        if team_matches(match["home"], h_name):
+            wiki_home_scorers = match["home_scorers"]
+            wiki_away_scorers = match["away_scorers"]
+            wiki_pens_winner = match["pens_winner"]
+            wiki_pens_score = match["pens_score"]
+        else:
+            wiki_home_scorers = match["away_scorers"]
+            wiki_away_scorers = match["home_scorers"]
+            wiki_pens_winner = "home" if match["pens_winner"] == "away" else "away" if match["pens_winner"] == "home" else None
+            wiki_pens_score = (match["pens_score"][1], match["pens_score"][0]) if match["pens_score"] else None
+
+        # Parse JSON scorers from "scorers" field like
+        # "Mbappé 45', 74', Barcola 53'" or
+        # "Casemiro 56', Martinelli 90+5'; Sano 29'"
+        json_scorers_field = jm.get("scorers", "") or ""
+        json_home, json_away = parse_json_scorers(json_scorers_field)
+
+        scorer_errors = crossref_scorers(
+            h_name, a_name,
+            json_home, json_away,
+            wiki_home_scorers, wiki_away_scorers,
+        )
+        errors.extend(scorer_errors)
+
+        # Cross-reference penalty shootout winner for FT-pens matches
+        if jm["status"] == "FT-pens":
+            claimed_pens_winner = jm.get("penalty_winner", "").strip()
+            if wiki_pens_winner and claimed_pens_winner:
+                wiki_winner_name = h_name if wiki_pens_winner == "home" else a_name
+                if not team_matches(wiki_winner_name, claimed_pens_winner):
+                    errors.append(
+                        f"M{jm['id']}: penalty winner '{claimed_pens_winner}' \u2014 "
+                        f"WIKIPEDIA SAYS '{wiki_winner_name}' won "
+                        f"({wiki_pens_score[0]}-{wiki_pens_score[1]} on pens)"
+                    )
+            elif wiki_pens_winner and not claimed_pens_winner:
+                wiki_winner_name = h_name if wiki_pens_winner == "home" else a_name
+                errors.append(
+                    f"M{jm['id']}: penalty_winner missing \u2014 "
+                    f"WIKIPEDIA SAYS '{wiki_winner_name}' won on pens"
+                )
+            elif not wiki_pens_winner and claimed_pens_winner:
+                # JSON claims FT-pens but Wikipedia doesn't show a Penalties
+                # section. This could mean (a) Wikipedia hasn't updated yet,
+                # or (b) the match was actually FT-aet, not FT-pens.
+                # Flag for manual review.
+                errors.append(
+                    f"M{jm['id']}: claims FT-pens (winner '{claimed_pens_winner}') "
+                    f"\u2014 WIKIPEDIA HAS NO PENALTIES SECTION "
+                    f"(match may be FT-aet, not FT-pens; verify)"
+                )
 
     if errors:
         print()

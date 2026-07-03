@@ -11,7 +11,7 @@
       "away": {"name": "Canada", "flag": "🇨🇦", "goals": 1, "qualified": true},
       "status": "FT",
       "venue": "Los Angeles Stadium, Inglewood",
-      "scorers": "Eustaquio 90+2'",
+      "scorers": "; Eustáquio 90+2'",
       "highlights": "https://www.youtube.com/watch?v=uv-FSqzHXAo",
       "note": "Canada's first-ever World Cup knockout win. Alphonso Davies returned from injury."
     },
@@ -24,7 +24,7 @@
       "status": "FT-pens",
       "penalty_winner": "Paraguay",
       "venue": "Boston Stadium, Foxborough",
-      "scorers": "Enciso 42'; Havertz 54' (pens: Germany 3-4 Paraguay — Tah missed)",
+      "scorers": "Havertz 54'; Enciso 42' (pens: Germany 3-4 Paraguay — Tah missed)",
       "highlights": "https://www.youtube.com/watch?v=-gtI96YhJek",
       "note": "Paraguay won 3-4 on penalties. Jonathan Tah missed the decisive spot-kick. Germany's Havertz equaliser cancelled Enciso's opener. VAR disallowed a late Germany winner in extra time."
     },
@@ -73,7 +73,7 @@
       "away": {"name": "Norway", "flag": "🇳🇴", "goals": 2, "qualified": true},
       "status": "FT",
       "venue": "Dallas Stadium, Arlington",
-      "scorers": "Nusa 39'; Diallo 74'; Haaland 86'",
+      "scorers": "Diallo 74'; Nusa 39', Haaland 86'",
       "highlights": "",
       "note": "Haaland's 86th-minute winner sent Norway through to face Brazil in R16. Nusa's curling opener; Diallo's equaliser. Norway's first-ever World Cup knockout win."
     },
@@ -85,7 +85,7 @@
       "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": 0, "qualified": false},
       "status": "FT",
       "venue": "Mexico City Stadium, Mexico City",
-      "scorers": "Quiñones 22'; Jiménez 31'",
+      "scorers": "Quiñones 22', Jiménez 31';",
       "highlights": "",
       "note": "Mexico's clinical finishing at home secured a comfortable win. Ecuador had no answer to El Tri's attacks in the second half."
     },
@@ -119,8 +119,7 @@
       "kickoff_et": "4:00 PM",
       "home": {"name": "Belgium", "flag": "🇧🇪", "goals": 3, "qualified": true},
       "away": {"name": "Senegal", "flag": "🇸🇳", "goals": 2, "qualified": false},
-      "status": "FT-pens",
-      "penalty_winner": "Belgium",
+      "status": "FT-aet",
       "venue": "Seattle Stadium, Seattle",
       "scorers": "Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'",
       "highlights": "",
@@ -134,7 +133,7 @@
       "away": {"name": "Croatia", "flag": "🇭🇷", "goals": 1, "qualified": false},
       "status": "FT",
       "venue": "Toronto Stadium, Toronto",
-      "scorers": "Perisic 53'; Ronaldo 68' (pen), Ramos 90+4'",
+      "scorers": "Ronaldo 68' (pen), Ramos 90+4'; Perišić 53'",
       "note": "⭐ BOSS TEAM. Ronaldo's first-ever World Cup knockout goal. Ramos headed stoppage-time winner. VAR controversially disallowed Gvardiol's late equaliser. Portugal faces Spain in R16."
     },
     {
@@ -145,7 +144,7 @@
       "away": {"name": "Austria", "flag": "🇦🇹", "goals": 0, "qualified": false},
       "status": "FT",
       "venue": "Los Angeles Stadium, Inglewood",
-      "scorers": "Oyarzabal 15', 66', Porro 76'",
+      "scorers": "Oyarzabal 36', 89', Porro 66'",
       "highlights": "",
       "note": "⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal in R16 — Nations League final rematch."
     },
