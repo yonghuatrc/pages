@@ -54,20 +54,60 @@ def fetch_wiki():
     return text
 
 
-def extract_r32_section(wiki_text):
-    """
-    Return the text of the R32 detailed match reports section.
+PHASE_ANCHORS = {
+    "Round of 32": "Round of 32 Main article",
+    "Round of 16": "Round of 16 Main article",
+    "Quarter-finals": "Quarter-finals Main article",
+    "Semi-finals": "Semi-finals Main article",
+    "Third place play-off": "Third place play-off Main article",
+    "Final": "Final Main article",
+}
 
-    Bounded by "Round of 32 Main article" (start) and either
-    "Round of 16 Main article" (end) or the next major section.
+
+def extract_phase_section(wiki_text, phase=None):
     """
-    start = wiki_text.find("Round of 32 Main article")
-    if start == -1:
-        return None
-    end = wiki_text.find("Round of 16 Main article", start + 1)
-    if end == -1:
+    Return the text of a phase's detailed match reports section.
+
+    Bounded by the phase's "Main article" anchor (start) and the next phase's
+    anchor (end). If phase is None, auto-detect the first phase with matches.
+
+    Returns (section_text, phase_name) or (None, None) if no phases found.
+    """
+    # Build ordered list of phases present in the wiki text
+    found_phases = []
+    for phase_name, anchor in PHASE_ANCHORS.items():
+        idx = wiki_text.find(anchor)
+        if idx >= 0:
+            found_phases.append((phase_name, anchor, idx))
+    # Sort by position in text (chronological order)
+    found_phases.sort(key=lambda x: x[2])
+    if not found_phases:
+        return None, None
+    # If a specific phase requested, find it; else use the first
+    if phase:
+        for phase_name, anchor, start in found_phases:
+            if phase_name == phase:
+                # End = next phase's anchor position
+                idx_in_list = found_phases.index((phase_name, anchor, start))
+                if idx_in_list + 1 < len(found_phases):
+                    end = found_phases[idx_in_list + 1][2]
+                else:
+                    end = start + 15000
+                return wiki_text[start:end], phase_name
+        return None, None
+    # Default: use the first phase
+    phase_name, anchor, start = found_phases[0]
+    if len(found_phases) > 1:
+        end = found_phases[1][2]
+    else:
         end = start + 15000
-    return wiki_text[start:end]
+    return wiki_text[start:end], phase_name
+
+
+def extract_r32_section(wiki_text):
+    """Legacy wrapper — uses extract_phase_section with no specific phase."""
+    section, _ = extract_phase_section(wiki_text)
+    return section
 
 
 def parse_match_reports(section_text):
@@ -573,19 +613,20 @@ def main():
         print(f"\u274C  Could not fetch Wikipedia: {e}", file=sys.stderr)
         return 2
 
-    section = extract_r32_section(wiki_text)
+    section, phase_name = extract_phase_section(wiki_text)
     if section is None:
-        print("\u274C  Could not find 'Round of 32 Main article' section in Wikipedia", file=sys.stderr)
-        print("    The page structure may have changed \u2014 update this script.", file=sys.stderr)
+        print("❌  Could not find any phase section in Wikipedia", file=sys.stderr)
+        print("    The page structure may have changed — update this script.", file=sys.stderr)
         return 3
+    print(f"   Phase detected: {phase_name}")
 
     matches = parse_match_reports(section)
     if not matches:
-        print("\u274C  Parsed 0 match reports from R32 section", file=sys.stderr)
-        print("    The page structure may have changed \u2014 update this script.", file=sys.stderr)
+        print(f"❌  Parsed 0 match reports from {phase_name} section", file=sys.stderr)
+        print("    The page structure may have changed — update this script.", file=sys.stderr)
         return 3
 
-    print(f"   Found {len(matches)} unique R32 match reports from Wikipedia")
+    print(f"   Found {len(matches)} unique {phase_name} match reports from Wikipedia")
 
     # Cross-reference each completed match in our JSON
     errors = []
@@ -651,6 +692,30 @@ def main():
             wiki_home_scorers, wiki_away_scorers,
         )
         errors.extend(scorer_errors)
+
+        # CROSS-CHECK: if a team scored 0 goals, they MUST have 0 scorers.
+        # This catches "scorers assigned to wrong team" bugs even when
+        # the score is just reversed (3-0 vs 0-3 with swapped scorer field).
+        if h_goals == 0 and json_home:
+            errors.append(
+                f"M{jm['id']}: {h_name} scored 0 goals but JSON lists "
+                f"scorers: {[s['name'] for s in json_home]}"
+            )
+        if a_goals == 0 and json_away:
+            errors.append(
+                f"M{jm['id']}: {a_name} scored 0 goals but JSON lists "
+                f"scorers: {[s['name'] for s in json_away]}"
+            )
+        # Conversely: if a team scored N>0 goals, JSON should have N scorers
+        if h_goals > 0 and len(json_home) != h_goals:
+            # Allow some slack for own goals or aggregated scorer entries
+            # (e.g. "Mbappé 45', 74'" is 1 entry but 2 goals). So check
+            # at least 1 scorer is present, but don't require exact count.
+            if len(json_home) == 0:
+                errors.append(
+                    f"M{jm['id']}: {h_name} scored {h_goals} goals but JSON "
+                    f"lists no home scorers"
+                )
 
         # Cross-reference penalty shootout winner for FT-pens matches
         if jm["status"] == "FT-pens":
