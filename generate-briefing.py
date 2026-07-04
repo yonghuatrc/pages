@@ -103,18 +103,28 @@ def winner_flag(m):
 def is_boss_team(name):
     return name in ["Portugal", "Spain", "Argentina"]
 
-# --- Build R16 bracket path ---
-# Based on verified bracket from FIFA
-r16_bracket = [
-    {"slot": "R16-1 (Jul 4, Houston)", "teams": "🇨🇦 Canada vs 🇲🇦 Morocco"},
-    {"slot": "R16-2 (Jul 4, Philadelphia)", "teams": "🇵🇾 Paraguay vs Winner M77 (🇫🇷 France / 🇸🇪 Sweden)"},
-    {"slot": "R16-3 (Jul 5, TBD)", "teams": "🇧🇷 Brazil vs Winner M78 (🇨🇮 Ivory Coast / 🇳🇴 Norway)"},
-    {"slot": "R16-4 (Jul 6, Arlington)", "teams": "🇵🇹 Portugal / 🇭🇷 Croatia vs 🇪🇸 Spain / 🇦🇹 Austria"},
-    {"slot": "R16-5 (Jul 4, TBD)", "teams": "Winner M79 (🇲🇽 Mexico / 🇪🇨 Ecuador) vs Winner M80 (🏴󠁧󠁢󠁥󠁮󠁧󠁿 England / 🇨🇩 DR Congo)"},
-    {"slot": "R16-6 (Jul 5, TBD)", "teams": "Winner M81 (🇺🇸 USA / 🇧🇦 Bosnia) vs Winner M82 (🇧🇪 Belgium / 🇸🇳 Senegal)"},
-    {"slot": "R16-7 (Jul 6, Seattle)", "teams": "Winner M85 (🇨🇭 Switzerland / 🇩🇿 Algeria) vs Winner M86 (🇦🇺 Australia / 🇪🇬 Egypt)"},
-    {"slot": "R16-8 (Jul 5, Miami)", "teams": "Winner M87 (🇦🇷 Argentina / 🇨🇻 Cape Verde) vs Winner M88 (🇨🇴 Colombia / 🇬🇭 Ghana)"}
-]
+# --- Build R16 bracket path from data['r16_path'] (confirmed R32 winners) ---
+# Build flag map from matches
+_flag_map = {}
+for _m in matches:
+    _flag_map[_m["home"]["name"]] = _m["home"]["flag"]
+    _flag_map[_m["away"]["name"]] = _m["away"]["flag"]
+
+r16_bracket = []
+for _r in data.get("r16_path", []):
+    _teams = _r["teams"]
+    # Add flag emoji to each team name if missing
+    _parts = []
+    for _t in _teams.split(" vs "):
+        _t = _t.strip()
+        # If already has a flag (emoji at start), leave it
+        _flag = _flag_map.get(_t, "")
+        if _flag and not _t.startswith(_flag):
+            _parts.append(f"{_flag} {_t}")
+        else:
+            _parts.append(_t)
+    _slot = f"{_r['match']} ({_r['date']}, {_r['venue']})"
+    r16_bracket.append({"slot": _slot, "teams": " vs ".join(_parts)})
 
 # --- HTML Template ---
 html = f"""<!DOCTYPE html>
@@ -459,7 +469,7 @@ html += """    </div>
 
 <!-- ===== R16 PATH ===== -->
 <div class="card">
-  <div class="card-header"><span class="icon">🔮</span> Round of 16 — Qualified & Projected Path</div>
+  <div class="card-header"><span class="icon">⚔️</span> Round of 16 — Confirmed Fixtures</div>
   <ul class="r16-list">
 """
 
