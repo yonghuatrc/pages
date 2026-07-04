@@ -73,6 +73,8 @@ def status_badge(m):
         return '<span class="badge badge-ft">✅ FT</span>'
     elif m["status"] == "FT-pens":
         return '<span class="badge badge-pens">⚫ AET/Pens</span>'
+    elif m["status"] == "FT-aet":
+        return '<span class="badge badge-aet">⏱️ AET</span>'
     elif m["status"] == "live":
         return '<span class="badge badge-live">🔴 LIVE</span>'
     else:
@@ -87,7 +89,7 @@ def score_display(m):
         return f'<span class="score">{h}–{a}</span>'
 
 def winner_flag(m):
-    if m["status"] == "FT":
+    if m["status"] in ("FT", "FT-aet"):
         if m["home"]["qualified"]:
             return m["home"]["flag"]
         return m["away"]["flag"]
@@ -262,6 +264,7 @@ html = f"""<!DOCTYPE html>
   .badge {{ font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 4px; text-transform: uppercase; }}
   .badge-ft {{ background: rgba(34,197,94,0.2); color: var(--green); }}
   .badge-pens {{ background: rgba(168,85,247,0.2); color: var(--purple); }}
+  .badge-aet {{ background: rgba(245,158,11,0.2); color: var(--accent2); }}
   .badge-live {{ background: rgba(59,130,246,0.2); color: var(--blue); }}
   .badge-upcoming {{ background: rgba(148,163,184,0.2); color: var(--text2); }}
 
@@ -320,6 +323,7 @@ html = f"""<!DOCTYPE html>
 
 <div class="legend">
   <span>✅ FT — Full Time</span>
+  <span>⏱️ AET — Extra Time (no pens)</span>
   <span>⚫ AET/Pens — Extra Time + Penalties</span>
   <span>⏳ Upcoming — Match not yet played</span>
   <span style="border-left:3px solid var(--accent);padding-left:0.5rem;">⭐ Boss's Team</span>
@@ -344,10 +348,10 @@ for m in top_half_matches:
     h_name = m["home"]["flag"] + " " + m["home"]["name"]
     a_name = m["away"]["flag"] + " " + m["away"]["name"]
     
-    h_win = m["status"] in ("FT", "FT-pens") and m["home"]["qualified"]
-    a_win = m["status"] in ("FT", "FT-pens") and m["away"]["qualified"]
-    h_cls = "winner" if h_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
-    a_cls = "winner" if a_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
+    h_win = m["status"] in ("FT", "FT-pens", "FT-aet") and m["home"]["qualified"]
+    a_win = m["status"] in ("FT", "FT-pens", "FT-aet") and m["away"]["qualified"]
+    h_cls = "winner" if h_win else ("loser" if m["status"] in ("FT","FT-pens","FT-aet") else "")
+    a_cls = "winner" if a_win else ("loser" if m["status"] in ("FT","FT-pens","FT-aet") else "")
 
     # Build match-meta with SGT time for upcoming matches
     sgt_str = ""
@@ -399,10 +403,10 @@ for m in lower_half_matches:
     h_name = m["home"]["flag"] + " " + m["home"]["name"]
     a_name = m["away"]["flag"] + " " + m["away"]["name"]
     
-    h_win = m["status"] in ("FT", "FT-pens") and m["home"]["qualified"]
-    a_win = m["status"] in ("FT", "FT-pens") and m["away"]["qualified"]
-    h_cls = "winner" if h_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
-    a_cls = "winner" if a_win else ("loser" if m["status"] in ("FT","FT-pens") else "")
+    h_win = m["status"] in ("FT", "FT-pens", "FT-aet") and m["home"]["qualified"]
+    a_win = m["status"] in ("FT", "FT-pens", "FT-aet") and m["away"]["qualified"]
+    h_cls = "winner" if h_win else ("loser" if m["status"] in ("FT","FT-pens","FT-aet") else "")
+    a_cls = "winner" if a_win else ("loser" if m["status"] in ("FT","FT-pens","FT-aet") else "")
 
     # Build match-meta with SGT time for upcoming matches
     sgt_str = ""
@@ -491,4 +495,4 @@ with open(OUTPUT_PATH, "w") as f:
     f.write(html)
 
 print(f"✅ Generated {OUTPUT_PATH} ({len(html)} bytes)")
-print(f"   {len(matches)} R32 matches — {sum(1 for m in matches if m['status'] in ('FT','FT-pens'))} completed, {sum(1 for m in matches if m['status']=='upcoming')} upcoming")
+print(f"   {len(matches)} R32 matches — {sum(1 for m in matches if m['status'] in ('FT','FT-pens','FT-aet'))} completed, {sum(1 for m in matches if m['status']=='upcoming')} upcoming")

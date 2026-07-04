@@ -145,6 +145,7 @@
   .badge { font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 4px; text-transform: uppercase; }
   .badge-ft { background: rgba(34,197,94,0.2); color: var(--green); }
   .badge-pens { background: rgba(168,85,247,0.2); color: var(--purple); }
+  .badge-aet { background: rgba(245,158,11,0.2); color: var(--accent2); }
   .badge-live { background: rgba(59,130,246,0.2); color: var(--blue); }
   .badge-upcoming { background: rgba(148,163,184,0.2); color: var(--text2); }
 
@@ -203,6 +204,7 @@
 
 <div class="legend">
   <span>✅ FT — Full Time</span>
+  <span>⏱️ AET — Extra Time (no pens)</span>
   <span>⚫ AET/Pens — Extra Time + Penalties</span>
   <span>⏳ Upcoming — Match not yet played</span>
   <span style="border-left:3px solid var(--accent);padding-left:0.5rem;">⭐ Boss's Team</span>
@@ -349,13 +351,13 @@
     </div>
     <div class="match-card ">
       <div class="match-top">
-        <span class="match-meta">Match 82 · Seattle Stadium, Seattle</span>
-        <span class="badge badge-upcoming">⏳ Upcoming</span>
+        <span class="match-meta">Match 82 · Lumen Field, Seattle</span>
+        <span class="badge badge-aet">⏱️ AET</span>
       </div>
       <div class="match-teams">
-        <span class="team ">🇧🇪 Belgium</span>
+        <span class="team winner">🇧🇪 Belgium</span>
         <span class="score">3–2</span>
-        <span class="team ">🇸🇳 Senegal</span>
+        <span class="team loser">🇸🇳 Senegal</span>
       </div>
 
       <div class="match-scorers">⚽ Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'</div>
@@ -419,29 +421,31 @@
     </div>
     <div class="match-card boss">
       <div class="match-top">
-        <span class="match-meta">Match 87 · Miami Stadium, Miami</span>
-        <span class="badge badge-live">🔴 LIVE</span>
+        <span class="match-meta">Match 87 · Hard Rock Stadium, Miami Gardens</span>
+        <span class="badge badge-aet">⏱️ AET</span>
       </div>
       <div class="match-teams">
-        <span class="team ">🇦🇷 Argentina</span>
-        <span class="score">None–None</span>
-        <span class="team ">🇨🇻 Cape Verde</span>
+        <span class="team winner">🇦🇷 Argentina</span>
+        <span class="score">3–2</span>
+        <span class="team loser">🇨🇻 Cape Verde</span>
       </div>
 
-      <div class="match-detail">⭐ BOSS TEAM. Argentina PERFECT group stage (9/9pts). Cape Verde's historic first R32 — fairy tale continues. Match in progress — awaiting final result.</div>
+      <div class="match-scorers">⚽ Messi 29', Li. Martínez 92', Diney OG 111'; D. Duarte 59', Lopes Cabral 103'</div>
+      <div class="match-detail">⭐ BOSS TEAM. Champions survive MASSIVE upset bid! Cape Verde (smallest-ever WC knockout team) led at half-time after Duarte silenced the crowd. Messi opened scoring with his record-extending 20th WC goal. Lisandro Martínez and an 111' Borges OG (from Romero header) sealed it in extra time. Argentina face Egypt in R16.</div>
     </div>
-    <div class="match-card  upcoming">
+    <div class="match-card ">
       <div class="match-top">
-        <span class="match-meta">Match 88 · Kansas City Stadium, Kansas City · 🕐 Jul 04, 9:30 AM SGT</span>
-        <span class="badge badge-upcoming">⏳ Upcoming</span>
+        <span class="match-meta">Match 88 · Arrowhead Stadium, Kansas City</span>
+        <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
-        <span class="team ">🇨🇴 Colombia</span>
-        <span class="vs">vs</span>
-        <span class="team ">🇬🇭 Ghana</span>
+        <span class="team winner">🇨🇴 Colombia</span>
+        <span class="score">1–0</span>
+        <span class="team loser">🇬🇭 Ghana</span>
       </div>
 
-      <div class="match-detail">Colombia won Group K (7pts). Ghana 2nd in Group L. Kicks off Jul 4 09:30 SGT.</div>
+      <div class="match-scorers">⚽ J. Arias 14';</div>
+      <div class="match-detail">Jhon Arias's 14th-minute flicked finish (assist: Luis Suárez, from Daniel Muñoz pass) was enough. Colombia complete the R32 lineup. Heat management dominated (kickoff in 88°F, hydration breaks). Next: Switzerland in R16 in Vancouver on Tuesday.</div>
     </div>
     </div>
   </div>
@@ -478,7 +482,7 @@
       <span class="gb-flag">🇦🇷</span>
       <span class="gb-name">Lionel Messi</span>
       <span class="gb-country">Argentina</span>
-      <span class="gb-goals">6⚽</span>
+      <span class="gb-goals">7⚽</span>
     </div>
     <div class="gb-row gb-silver">
       <span class="gb-rank">🥉</span>

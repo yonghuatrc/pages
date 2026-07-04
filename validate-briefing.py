@@ -26,8 +26,8 @@ for m in data["matches"]:
     a_goals = m["away"]["goals"]
     
     patterns = [
-        rf'{h_name}.*?(\d+)\s*[–-]\s*(\d+).*?{a_name}',
-        rf'{a_name}.*?(\d+)\s*[–-]\s*(\d+).*?{h_name}',
+        rf'<span class="team[^"]*">[^<]*?{re.escape(h_name)}</span>\s*<span class="score">(\d+)\s*[–-]\s*(\d+)</span>\s*<span class="team[^"]*">[^<]*?{re.escape(a_name)}</span>',
+        rf'<span class="team[^"]*">[^<]*?{re.escape(a_name)}</span>\s*<span class="score">(\d+)\s*[–-]\s*(\d+)</span>\s*<span class="team[^"]*">[^<]*?{re.escape(h_name)}</span>',
     ]
     found = False
     for pat in patterns:
@@ -57,7 +57,7 @@ if errors:
         print(f"❌  {e}")
     sys.exit(1)
 else:
-    completed = sum(1 for m in data['matches'] if m['status'] in ('FT','FT-pens'))
+    completed = sum(1 for m in data['matches'] if m['status'] in ('FT','FT-pens','FT-aet'))
     upcoming = sum(1 for m in data['matches'] if m['status']=='upcoming')
     print(f"✅  ALL {len(data['matches'])} matches verified — scores match data JSON")
     print(f"📄  {size} bytes — valid HTML")

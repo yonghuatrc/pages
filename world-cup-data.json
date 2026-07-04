@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 32",
-  "updated": "2026-07-04T06:00:00+08:00",
+  "updated": "2026-07-04T21:30:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -120,7 +120,7 @@
       "home": {"name": "Belgium", "flag": "🇧🇪", "goals": 3, "qualified": true},
       "away": {"name": "Senegal", "flag": "🇸🇳", "goals": 2, "qualified": false},
       "status": "FT-aet",
-      "venue": "Seattle Stadium, Seattle",
+      "venue": "Lumen Field, Seattle",
       "scorers": "Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'",
       "highlights": "",
       "note": "Belgium produced a stunning extra-time comeback from 2-0 down. Diarra and Sarr had Senegal cruising, but Lukaku's 86th-minute strike and Tielemans' late brace (including a 120+5' penalty) flipped the tie. Senegal eliminated despite leading for most of the match."
@@ -176,23 +176,25 @@
       "id": 87,
       "date": "2026-07-03",
       "kickoff_et": "9:30 PM",
-      "home": {"name": "Argentina", "flag": "🇦🇷", "goals": null, "qualified": null},
-      "away": {"name": "Cape Verde", "flag": "🇨🇻", "goals": null, "qualified": null},
-      "status": "live",
-      "venue": "Miami Stadium, Miami",
-      "scorers": "",
-      "note": "⭐ BOSS TEAM. Argentina PERFECT group stage (9/9pts). Cape Verde's historic first R32 — fairy tale continues. Match in progress — awaiting final result."
+      "home": {"name": "Argentina", "flag": "🇦🇷", "goals": 3, "qualified": true},
+      "away": {"name": "Cape Verde", "flag": "🇨🇻", "goals": 2, "qualified": false},
+      "status": "FT-aet",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "scorers": "Messi 29', Li. Martínez 92', Diney OG 111'; D. Duarte 59', Lopes Cabral 103'",
+      "note": "⭐ BOSS TEAM. Champions survive MASSIVE upset bid! Cape Verde (smallest-ever WC knockout team) led at half-time after Duarte silenced the crowd. Messi opened scoring with his record-extending 20th WC goal. Lisandro Martínez and an 111' Borges OG (from Romero header) sealed it in extra time. Argentina face Egypt in R16.",
+      "sources": ["https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage", "https://apnews.com/article/world-cup-cape-verde-argentina-score-messi-5fc400cd5adfd51747c6a09eed0ed0ad", "https://www.espn.in/football/match/_/gameId/760500/cape-verde-argentina", "https://www.bbc.com/sport/football/videos/cj6gp70g967o"]
     },
     {
       "id": 88,
       "date": "2026-07-03",
       "kickoff_et": "9:30 PM",
-      "home": {"name": "Colombia", "flag": "🇨🇴", "goals": null, "qualified": null},
-      "away": {"name": "Ghana", "flag": "🇬🇭", "goals": null, "qualified": null},
-      "status": "upcoming",
-      "venue": "Kansas City Stadium, Kansas City",
-      "scorers": "",
-      "note": "Colombia won Group K (7pts). Ghana 2nd in Group L. Kicks off Jul 4 09:30 SGT."
+      "home": {"name": "Colombia", "flag": "🇨🇴", "goals": 1, "qualified": true},
+      "away": {"name": "Ghana", "flag": "🇬🇭", "goals": 0, "qualified": false},
+      "status": "FT",
+      "venue": "Arrowhead Stadium, Kansas City",
+      "scorers": "J. Arias 14';",
+      "note": "Jhon Arias's 14th-minute flicked finish (assist: Luis Suárez, from Daniel Muñoz pass) was enough. Colombia complete the R32 lineup. Heat management dominated (kickoff in 88°F, hydration breaks). Next: Switzerland in R16 in Vancouver on Tuesday.",
+      "sources": ["https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage", "https://www.espn.com/soccer/story/_/id/49264513/colombia-ghana-fifa-world-cup-2026-round-32", "https://abcnews.com/Sports/wireStory/jhon-arias-scores-colombia-beats-ghana-1-0-134462799", "https://www.theguardian.com/football/2026/jul/04/colombia-ghana-world-cup-2026-last-32-match-report"]
     }
   ],
   "r16_path": [
@@ -202,12 +204,12 @@
     {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal vs Spain"},
     {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Belgium"},
     {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA"},
-    {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "Switzerland vs TBD"},
-    {"match": "R16-8", "date": "Jul 7", "venue": "Atlanta", "teams": "Argentina/Cape Verde vs Egypt"}
+    {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "Switzerland vs Colombia"},
+    {"match": "R16-8", "date": "Jul 7", "venue": "Atlanta", "teams": "Argentina vs Egypt"}
   ],
   "golden_boot": [
     {"rank": 1, "player": "Kylian Mbappé", "country": "France", "flag": "🇫🇷", "goals": 6, "assists": 2},
-    {"rank": 2, "player": "Lionel Messi", "country": "Argentina", "flag": "🇦🇷", "goals": 6, "assists": 0},
+    {"rank": 2, "player": "Lionel Messi", "country": "Argentina", "flag": "🇦🇷", "goals": 7, "assists": 0},
     {"rank": 3, "player": "Erling Haaland", "country": "Norway", "flag": "🇳🇴", "goals": 5, "assists": 0},
     {"rank": 4, "player": "Ousmane Dembélé", "country": "France", "flag": "🇫🇷", "goals": 4, "assists": 2},
     {"rank": 5, "player": "Vinícius Jr", "country": "Brazil", "flag": "🇧🇷", "goals": 4, "assists": 1},
