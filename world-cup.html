@@ -98,14 +98,22 @@
 
   /* MATCH CARD */
   .match-card {
+    position: relative;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 0.75rem;
+    padding: 0.6rem 0.75rem;
     margin-bottom: 0.6rem;
-    transition: border-color 0.15s;
+    transition: border-color 0.15s, transform 0.15s;
   }
-  .match-card:hover { border-color: var(--accent); }
+  .match-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .match-card a.card-link {
+    position: absolute; inset: 0; z-index: 1;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .match-card > * { position: relative; z-index: 2; pointer-events: none; }
+  .match-card .match-highlights a { pointer-events: auto; }
   .match-card.boss {
     border-left: 3px solid var(--accent);
     background: linear-gradient(135deg, var(--surface) 0%, rgba(232,184,48,0.06) 100%);
@@ -217,6 +225,7 @@
     <div class="bracket-section">
       <h3>🎯 Upper Bracket</h3>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=uv-FSqzHXAo" target="_blank" rel="noopener" aria-label="Watch highlights: South Africa vs Canada"></a>
       <div class="match-top">
         <span class="match-meta">Match 73 · Los Angeles Stadium, Inglewood</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -232,6 +241,7 @@
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=uv-FSqzHXAo" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=-gtI96YhJek" target="_blank" rel="noopener" aria-label="Watch highlights: Germany vs Paraguay"></a>
       <div class="match-top">
         <span class="match-meta">Match 74 · Boston Stadium, Foxborough</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
@@ -247,6 +257,7 @@
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=-gtI96YhJek" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=IVIGSA6N1e8" target="_blank" rel="noopener" aria-label="Watch highlights: Netherlands vs Morocco"></a>
       <div class="match-top">
         <span class="match-meta">Match 75 · Estadio Monterrey, Guadalupe</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
@@ -262,6 +273,7 @@
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=IVIGSA6N1e8" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.foxsports.com/watch/fmc-ee336b37dd7a7bc3" target="_blank" rel="noopener" aria-label="Watch highlights: Brazil vs Japan"></a>
       <div class="match-top">
         <span class="match-meta">Match 76 · Houston Stadium, Houston</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -277,6 +289,7 @@
       <div class="match-highlights"><a href="https://www.foxsports.com/watch/fmc-ee336b37dd7a7bc3" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=A7pgChEIFTg" target="_blank" rel="noopener" aria-label="Watch highlights: France vs Sweden"></a>
       <div class="match-top">
         <span class="match-meta">Match 77 · New York New Jersey Stadium, East Rutherford</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -289,8 +302,10 @@
 
       <div class="match-scorers">⚽ Mbappé 45', 74', Barcola 53'</div>
       <div class="match-detail">France dominated from start to finish. Mbappé opened the scoring with a clinical finish before the break, then doubled his tally after the restart. Barcola added a third to complete a comfortable win.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=A7pgChEIFTg" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=rPebJKCPjK0" target="_blank" rel="noopener" aria-label="Watch highlights: Ivory Coast vs Norway"></a>
       <div class="match-top">
         <span class="match-meta">Match 78 · Dallas Stadium, Arlington</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -303,8 +318,10 @@
 
       <div class="match-scorers">⚽ Diallo 74'; Nusa 39', Haaland 86'</div>
       <div class="match-detail">Haaland's 86th-minute winner sent Norway through to face Brazil in R16. Nusa's curling opener; Diallo's equaliser. Norway's first-ever World Cup knockout win.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=rPebJKCPjK0" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=t-miz8tN7Qw" target="_blank" rel="noopener" aria-label="Watch highlights: Mexico vs Ecuador"></a>
       <div class="match-top">
         <span class="match-meta">Match 79 · Mexico City Stadium, Mexico City</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -317,8 +334,10 @@
 
       <div class="match-scorers">⚽ Quiñones 22', Jiménez 31';</div>
       <div class="match-detail">Mexico's clinical finishing at home secured a comfortable win. Ecuador had no answer to El Tri's attacks in the second half.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=t-miz8tN7Qw" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=TjBOgzJYIlM" target="_blank" rel="noopener" aria-label="Watch highlights: England vs DR Congo"></a>
       <div class="match-top">
         <span class="match-meta">Match 80 · Atlanta Stadium, Atlanta</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -331,11 +350,13 @@
 
       <div class="match-scorers">⚽ Kane 75', 86'; Cipenga 7'</div>
       <div class="match-detail">DR Congo stunned England with an early Cipenga goal. Kane's late brace completed the comeback — DR Congo were seconds from a famous upset.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=TjBOgzJYIlM" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     </div>
     <div class="bracket-section">
       <h3>🎯 Lower Bracket</h3>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=SGQpzA9qcwk" target="_blank" rel="noopener" aria-label="Watch highlights: USA vs Bosnia & Herzegovina"></a>
       <div class="match-top">
         <span class="match-meta">Match 81 · San Francisco Bay Area Stadium, Santa Clara</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -348,8 +369,10 @@
 
       <div class="match-scorers">⚽ Balogun 45', Tillman 82'</div>
       <div class="match-detail">USA's first knockout win since 2002! Balogun's early goal + Tillman seal it. Next: Belgium in R16.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=SGQpzA9qcwk" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=PsPQkfngzV8" target="_blank" rel="noopener" aria-label="Watch highlights: Belgium vs Senegal"></a>
       <div class="match-top">
         <span class="match-meta">Match 82 · Lumen Field, Seattle</span>
         <span class="badge badge-aet">⏱️ AET</span>
@@ -362,8 +385,10 @@
 
       <div class="match-scorers">⚽ Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'</div>
       <div class="match-detail">Belgium produced a stunning extra-time comeback from 2-0 down. Diarra and Sarr had Senegal cruising, but Lukaku's 86th-minute strike and Tielemans' late brace (including a 120+5' penalty) flipped the tie. Senegal eliminated despite leading for most of the match.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=PsPQkfngzV8" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card boss">
+      <a class="card-link" href="https://www.youtube.com/watch?v=jxU1VT5YXXE" target="_blank" rel="noopener" aria-label="Watch highlights: Portugal vs Croatia"></a>
       <div class="match-top">
         <span class="match-meta">Match 83 · Toronto Stadium, Toronto</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -376,8 +401,10 @@
 
       <div class="match-scorers">⚽ Ronaldo 68' (pen), Ramos 90+4'; Perišić 53'</div>
       <div class="match-detail">⭐ BOSS TEAM. Ronaldo's first-ever World Cup knockout goal. Ramos headed stoppage-time winner. VAR controversially disallowed Gvardiol's late equaliser. Portugal faces Spain in R16.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=jxU1VT5YXXE" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card boss">
+      <a class="card-link" href="https://www.youtube.com/watch?v=UZ_8GGldZhk" target="_blank" rel="noopener" aria-label="Watch highlights: Spain vs Austria"></a>
       <div class="match-top">
         <span class="match-meta">Match 84 · Los Angeles Stadium, Inglewood</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -390,8 +417,10 @@
 
       <div class="match-scorers">⚽ Oyarzabal 36', 89', Porro 66'</div>
       <div class="match-detail">⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal in R16 — Nations League final rematch.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=UZ_8GGldZhk" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=-q-nO0sz18s" target="_blank" rel="noopener" aria-label="Watch highlights: Switzerland vs Algeria"></a>
       <div class="match-top">
         <span class="match-meta">Match 85 · BC Place Vancouver, Vancouver</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -404,8 +433,10 @@
 
       <div class="match-scorers">⚽ Embolo 10', Ndoye 46'</div>
       <div class="match-detail">Embolo scored with Manzambi assist. Ndoye blasted in just after HT. Switzerland's first knockout win since 1938. Next: Colombia/Ghana winner.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=-q-nO0sz18s" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=Pi7HdhJd640" target="_blank" rel="noopener" aria-label="Watch highlights: Australia vs Egypt"></a>
       <div class="match-top">
         <span class="match-meta">Match 86 · Dallas Stadium, Arlington</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
@@ -418,8 +449,10 @@
 
       <div class="match-scorers">⚽ Hany OG 55'; Ashour 13' (pens: Australia 2-4 Egypt — Soutar & Herrington missed)</div>
       <div class="match-detail">Egypt won 4-2 on penalties for their first-ever World Cup knockout win. Ashour headed Egypt ahead from a Hafez cross. Hany's 55th-minute OG (becoming first player to score two OGs in one World Cup) levelled for the Socceroos. Soutar skied his pen, Herrington hit the bar; Abdelmaguid clinched for the Pharaohs.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=Pi7HdhJd640" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card boss">
+      <a class="card-link" href="https://www.youtube.com/watch?v=dSbGEHS5Nsg" target="_blank" rel="noopener" aria-label="Watch highlights: Argentina vs Cape Verde"></a>
       <div class="match-top">
         <span class="match-meta">Match 87 · Hard Rock Stadium, Miami Gardens</span>
         <span class="badge badge-aet">⏱️ AET</span>
@@ -432,8 +465,10 @@
 
       <div class="match-scorers">⚽ Messi 29', Li. Martínez 92', Diney OG 111'; D. Duarte 59', Lopes Cabral 103'</div>
       <div class="match-detail">⭐ BOSS TEAM. Champions survive MASSIVE upset bid! Cape Verde (smallest-ever WC knockout team) led at half-time after Duarte silenced the crowd. Messi opened scoring with his record-extending 20th WC goal. Lisandro Martínez and an 111' Borges OG (from Romero header) sealed it in extra time. Argentina face Egypt in R16.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=dSbGEHS5Nsg" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=nFOL2RgZ3as" target="_blank" rel="noopener" aria-label="Watch highlights: Colombia vs Ghana"></a>
       <div class="match-top">
         <span class="match-meta">Match 88 · Arrowhead Stadium, Kansas City</span>
         <span class="badge badge-ft">✅ FT</span>
@@ -446,6 +481,7 @@
 
       <div class="match-scorers">⚽ J. Arias 14';</div>
       <div class="match-detail">Jhon Arias's 14th-minute flicked finish (assist: Luis Suárez, from Daniel Muñoz pass) was enough. Colombia complete the R32 lineup. Heat management dominated (kickoff in 88°F, hydration breaks). Next: Switzerland in R16 in Vancouver on Tuesday.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=nFOL2RgZ3as" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
     </div>
   </div>

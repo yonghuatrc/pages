@@ -217,14 +217,22 @@ html = f"""<!DOCTYPE html>
 
   /* MATCH CARD */
   .match-card {{
+    position: relative;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 0.75rem;
+    padding: 0.6rem 0.75rem;
     margin-bottom: 0.6rem;
-    transition: border-color 0.15s;
+    transition: border-color 0.15s, transform 0.15s;
   }}
-  .match-card:hover {{ border-color: var(--accent); }}
+  .match-card:hover {{ border-color: var(--accent); transform: translateY(-1px); }}
+  .match-card a.card-link {{
+    position: absolute; inset: 0; z-index: 1;
+    border-radius: 8px;
+    text-decoration: none;
+  }}
+  .match-card > * {{ position: relative; z-index: 2; pointer-events: none; }}
+  .match-card .match-highlights a {{ pointer-events: auto; }}
   .match-card.boss {{
     border-left: 3px solid var(--accent);
     background: linear-gradient(135deg, var(--surface) 0%, rgba(232,184,48,0.06) 100%);
@@ -364,6 +372,7 @@ for m in top_half_matches:
             sgt_str = f" · 🕐 {sgt_extra}"
 
     html += f"""    <div class="match-card {cls}">
+      <a class="card-link" href="{m["highlights"]}" target="_blank" rel="noopener" aria-label="Watch highlights: {m["home"]["name"]} vs {m["away"]["name"]}"></a>
       <div class="match-top">
         <span class="match-meta">Match {m["id"]} · {m["venue"]}{sgt_str}</span>
         {status_badge(m)}
@@ -419,6 +428,7 @@ for m in lower_half_matches:
             sgt_str = f" · 🕐 {sgt_extra}"
 
     html += f"""    <div class="match-card {cls}">
+      <a class="card-link" href="{m["highlights"]}" target="_blank" rel="noopener" aria-label="Watch highlights: {m["home"]["name"]} vs {m["away"]["name"]}"></a>
       <div class="match-top">
         <span class="match-meta">Match {m["id"]} · {m["venue"]}{sgt_str}</span>
         {status_badge(m)}

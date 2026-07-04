@@ -7,8 +7,18 @@
       "id": 73,
       "date": "2026-06-28",
       "kickoff_et": "3:00 PM",
-      "home": {"name": "South Africa", "flag": "🇿🇦", "goals": 0, "qualified": false},
-      "away": {"name": "Canada", "flag": "🇨🇦", "goals": 1, "qualified": true},
+      "home": {
+        "name": "South Africa",
+        "flag": "🇿🇦",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Canada",
+        "flag": "🇨🇦",
+        "goals": 1,
+        "qualified": true
+      },
       "status": "FT",
       "venue": "Los Angeles Stadium, Inglewood",
       "scorers": "; Eustáquio 90+2'",
@@ -19,8 +29,18 @@
       "id": 74,
       "date": "2026-06-29",
       "kickoff_et": "4:30 PM",
-      "home": {"name": "Germany", "flag": "🇩🇪", "goals": 1, "qualified": false},
-      "away": {"name": "Paraguay", "flag": "🇵🇾", "goals": 1, "qualified": true},
+      "home": {
+        "name": "Germany",
+        "flag": "🇩🇪",
+        "goals": 1,
+        "qualified": false
+      },
+      "away": {
+        "name": "Paraguay",
+        "flag": "🇵🇾",
+        "goals": 1,
+        "qualified": true
+      },
       "status": "FT-pens",
       "penalty_winner": "Paraguay",
       "venue": "Boston Stadium, Foxborough",
@@ -32,8 +52,18 @@
       "id": 75,
       "date": "2026-06-29",
       "kickoff_et": "9:00 PM",
-      "home": {"name": "Netherlands", "flag": "🇳🇱", "goals": 1, "qualified": false},
-      "away": {"name": "Morocco", "flag": "🇲🇦", "goals": 1, "qualified": true},
+      "home": {
+        "name": "Netherlands",
+        "flag": "🇳🇱",
+        "goals": 1,
+        "qualified": false
+      },
+      "away": {
+        "name": "Morocco",
+        "flag": "🇲🇦",
+        "goals": 1,
+        "qualified": true
+      },
       "status": "FT-pens",
       "penalty_winner": "Morocco",
       "venue": "Estadio Monterrey, Guadalupe",
@@ -45,8 +75,18 @@
       "id": 76,
       "date": "2026-06-29",
       "kickoff_et": "1:00 PM",
-      "home": {"name": "Brazil", "flag": "🇧🇷", "goals": 2, "qualified": true},
-      "away": {"name": "Japan", "flag": "🇯🇵", "goals": 1, "qualified": false},
+      "home": {
+        "name": "Brazil",
+        "flag": "🇧🇷",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "Japan",
+        "flag": "🇯🇵",
+        "goals": 1,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "Houston Stadium, Houston",
       "scorers": "Casemiro 56', Martinelli 90+5'; Sano 29'",
@@ -57,166 +97,415 @@
       "id": 77,
       "date": "2026-06-30",
       "kickoff_et": "5:00 PM",
-      "home": {"name": "France", "flag": "🇫🇷", "goals": 3, "qualified": true},
-      "away": {"name": "Sweden", "flag": "🇸🇪", "goals": 0, "qualified": false},
+      "home": {
+        "name": "France",
+        "flag": "🇫🇷",
+        "goals": 3,
+        "qualified": true
+      },
+      "away": {
+        "name": "Sweden",
+        "flag": "🇸🇪",
+        "goals": 0,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "New York New Jersey Stadium, East Rutherford",
       "scorers": "Mbappé 45', 74', Barcola 53'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=A7pgChEIFTg",
       "note": "France dominated from start to finish. Mbappé opened the scoring with a clinical finish before the break, then doubled his tally after the restart. Barcola added a third to complete a comfortable win."
     },
     {
       "id": 78,
       "date": "2026-06-30",
       "kickoff_et": "1:00 PM",
-      "home": {"name": "Ivory Coast", "flag": "🇨🇮", "goals": 1, "qualified": false},
-      "away": {"name": "Norway", "flag": "🇳🇴", "goals": 2, "qualified": true},
+      "home": {
+        "name": "Ivory Coast",
+        "flag": "🇨🇮",
+        "goals": 1,
+        "qualified": false
+      },
+      "away": {
+        "name": "Norway",
+        "flag": "🇳🇴",
+        "goals": 2,
+        "qualified": true
+      },
       "status": "FT",
       "venue": "Dallas Stadium, Arlington",
       "scorers": "Diallo 74'; Nusa 39', Haaland 86'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=rPebJKCPjK0",
       "note": "Haaland's 86th-minute winner sent Norway through to face Brazil in R16. Nusa's curling opener; Diallo's equaliser. Norway's first-ever World Cup knockout win."
     },
     {
       "id": 79,
       "date": "2026-06-30",
       "kickoff_et": "9:00 PM",
-      "home": {"name": "Mexico", "flag": "🇲🇽", "goals": 2, "qualified": true},
-      "away": {"name": "Ecuador", "flag": "🇪🇨", "goals": 0, "qualified": false},
+      "home": {
+        "name": "Mexico",
+        "flag": "🇲🇽",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "Ecuador",
+        "flag": "🇪🇨",
+        "goals": 0,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "Mexico City Stadium, Mexico City",
       "scorers": "Quiñones 22', Jiménez 31';",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=t-miz8tN7Qw",
       "note": "Mexico's clinical finishing at home secured a comfortable win. Ecuador had no answer to El Tri's attacks in the second half."
     },
     {
       "id": 80,
       "date": "2026-07-01",
       "kickoff_et": "12:00 PM",
-      "home": {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": 2, "qualified": true},
-      "away": {"name": "DR Congo", "flag": "🇨🇩", "goals": 1, "qualified": false},
+      "home": {
+        "name": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "DR Congo",
+        "flag": "🇨🇩",
+        "goals": 1,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "Atlanta Stadium, Atlanta",
       "scorers": "Kane 75', 86'; Cipenga 7'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=TjBOgzJYIlM",
       "note": "DR Congo stunned England with an early Cipenga goal. Kane's late brace completed the comeback — DR Congo were seconds from a famous upset."
     },
     {
       "id": 81,
       "date": "2026-07-01",
       "kickoff_et": "8:00 PM",
-      "home": {"name": "USA", "flag": "🇺🇸", "goals": 2, "qualified": true},
-      "away": {"name": "Bosnia & Herzegovina", "flag": "🇧🇦", "goals": 0, "qualified": false},
+      "home": {
+        "name": "USA",
+        "flag": "🇺🇸",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "Bosnia & Herzegovina",
+        "flag": "🇧🇦",
+        "goals": 0,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "San Francisco Bay Area Stadium, Santa Clara",
       "scorers": "Balogun 45', Tillman 82'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=SGQpzA9qcwk",
       "note": "USA's first knockout win since 2002! Balogun's early goal + Tillman seal it. Next: Belgium in R16."
     },
     {
       "id": 82,
       "date": "2026-07-01",
       "kickoff_et": "4:00 PM",
-      "home": {"name": "Belgium", "flag": "🇧🇪", "goals": 3, "qualified": true},
-      "away": {"name": "Senegal", "flag": "🇸🇳", "goals": 2, "qualified": false},
+      "home": {
+        "name": "Belgium",
+        "flag": "🇧🇪",
+        "goals": 3,
+        "qualified": true
+      },
+      "away": {
+        "name": "Senegal",
+        "flag": "🇸🇳",
+        "goals": 2,
+        "qualified": false
+      },
       "status": "FT-aet",
       "venue": "Lumen Field, Seattle",
       "scorers": "Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=PsPQkfngzV8",
       "note": "Belgium produced a stunning extra-time comeback from 2-0 down. Diarra and Sarr had Senegal cruising, but Lukaku's 86th-minute strike and Tielemans' late brace (including a 120+5' penalty) flipped the tie. Senegal eliminated despite leading for most of the match."
     },
     {
       "id": 83,
       "date": "2026-07-02",
       "kickoff_et": "7:00 PM",
-      "home": {"name": "Portugal", "flag": "🇵🇹", "goals": 2, "qualified": true},
-      "away": {"name": "Croatia", "flag": "🇭🇷", "goals": 1, "qualified": false},
+      "home": {
+        "name": "Portugal",
+        "flag": "🇵🇹",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "Croatia",
+        "flag": "🇭🇷",
+        "goals": 1,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "Toronto Stadium, Toronto",
       "scorers": "Ronaldo 68' (pen), Ramos 90+4'; Perišić 53'",
-      "note": "⭐ BOSS TEAM. Ronaldo's first-ever World Cup knockout goal. Ramos headed stoppage-time winner. VAR controversially disallowed Gvardiol's late equaliser. Portugal faces Spain in R16."
+      "note": "⭐ BOSS TEAM. Ronaldo's first-ever World Cup knockout goal. Ramos headed stoppage-time winner. VAR controversially disallowed Gvardiol's late equaliser. Portugal faces Spain in R16.",
+      "highlights": "https://www.youtube.com/watch?v=jxU1VT5YXXE"
     },
     {
       "id": 84,
       "date": "2026-07-02",
       "kickoff_et": "3:00 PM",
-      "home": {"name": "Spain", "flag": "🇪🇸", "goals": 3, "qualified": true},
-      "away": {"name": "Austria", "flag": "🇦🇹", "goals": 0, "qualified": false},
+      "home": {
+        "name": "Spain",
+        "flag": "🇪🇸",
+        "goals": 3,
+        "qualified": true
+      },
+      "away": {
+        "name": "Austria",
+        "flag": "🇦🇹",
+        "goals": 0,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "Los Angeles Stadium, Inglewood",
       "scorers": "Oyarzabal 36', 89', Porro 66'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=UZ_8GGldZhk",
       "note": "⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal in R16 — Nations League final rematch."
     },
     {
       "id": 85,
       "date": "2026-07-02",
       "kickoff_et": "11:00 PM",
-      "home": {"name": "Switzerland", "flag": "🇨🇭", "goals": 2, "qualified": true},
-      "away": {"name": "Algeria", "flag": "🇩🇿", "goals": 0, "qualified": false},
+      "home": {
+        "name": "Switzerland",
+        "flag": "🇨🇭",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "Algeria",
+        "flag": "🇩🇿",
+        "goals": 0,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "BC Place Vancouver, Vancouver",
       "scorers": "Embolo 10', Ndoye 46'",
-      "note": "Embolo scored with Manzambi assist. Ndoye blasted in just after HT. Switzerland's first knockout win since 1938. Next: Colombia/Ghana winner."
+      "note": "Embolo scored with Manzambi assist. Ndoye blasted in just after HT. Switzerland's first knockout win since 1938. Next: Colombia/Ghana winner.",
+      "highlights": "https://www.youtube.com/watch?v=-q-nO0sz18s"
     },
     {
       "id": 86,
       "date": "2026-07-03",
       "kickoff_et": "6:00 PM",
-      "home": {"name": "Australia", "flag": "🇦🇺", "goals": 1, "qualified": false},
-      "away": {"name": "Egypt", "flag": "🇪🇬", "goals": 1, "qualified": true},
+      "home": {
+        "name": "Australia",
+        "flag": "🇦🇺",
+        "goals": 1,
+        "qualified": false
+      },
+      "away": {
+        "name": "Egypt",
+        "flag": "🇪🇬",
+        "goals": 1,
+        "qualified": true
+      },
       "status": "FT-pens",
       "penalty_winner": "Egypt",
       "venue": "Dallas Stadium, Arlington",
       "scorers": "Hany OG 55'; Ashour 13' (pens: Australia 2-4 Egypt — Soutar & Herrington missed)",
       "note": "Egypt won 4-2 on penalties for their first-ever World Cup knockout win. Ashour headed Egypt ahead from a Hafez cross. Hany's 55th-minute OG (becoming first player to score two OGs in one World Cup) levelled for the Socceroos. Soutar skied his pen, Herrington hit the bar; Abdelmaguid clinched for the Pharaohs.",
-      "sources": ["https://www.espn.com/soccer/report/_/gameId/760499", "https://apnews.com/article/australia-egypt-world-cup-score-f5640adedb40ad59632598610e9382b8", "https://www.aljazeera.com/sports/2026/7/3/egypt-beat-australia-on-penalties-to-win-first-world-cup-knockout-match"]
+      "sources": [
+        "https://www.espn.com/soccer/report/_/gameId/760499",
+        "https://apnews.com/article/australia-egypt-world-cup-score-f5640adedb40ad59632598610e9382b8",
+        "https://www.aljazeera.com/sports/2026/7/3/egypt-beat-australia-on-penalties-to-win-first-world-cup-knockout-match"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=Pi7HdhJd640"
     },
     {
       "id": 87,
       "date": "2026-07-03",
       "kickoff_et": "9:30 PM",
-      "home": {"name": "Argentina", "flag": "🇦🇷", "goals": 3, "qualified": true},
-      "away": {"name": "Cape Verde", "flag": "🇨🇻", "goals": 2, "qualified": false},
+      "home": {
+        "name": "Argentina",
+        "flag": "🇦🇷",
+        "goals": 3,
+        "qualified": true
+      },
+      "away": {
+        "name": "Cape Verde",
+        "flag": "🇨🇻",
+        "goals": 2,
+        "qualified": false
+      },
       "status": "FT-aet",
       "venue": "Hard Rock Stadium, Miami Gardens",
       "scorers": "Messi 29', Li. Martínez 92', Diney OG 111'; D. Duarte 59', Lopes Cabral 103'",
       "note": "⭐ BOSS TEAM. Champions survive MASSIVE upset bid! Cape Verde (smallest-ever WC knockout team) led at half-time after Duarte silenced the crowd. Messi opened scoring with his record-extending 20th WC goal. Lisandro Martínez and an 111' Borges OG (from Romero header) sealed it in extra time. Argentina face Egypt in R16.",
-      "sources": ["https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage", "https://apnews.com/article/world-cup-cape-verde-argentina-score-messi-5fc400cd5adfd51747c6a09eed0ed0ad", "https://www.espn.in/football/match/_/gameId/760500/cape-verde-argentina", "https://www.bbc.com/sport/football/videos/cj6gp70g967o"]
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+        "https://apnews.com/article/world-cup-cape-verde-argentina-score-messi-5fc400cd5adfd51747c6a09eed0ed0ad",
+        "https://www.espn.in/football/match/_/gameId/760500/cape-verde-argentina",
+        "https://www.bbc.com/sport/football/videos/cj6gp70g967o"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=dSbGEHS5Nsg"
     },
     {
       "id": 88,
       "date": "2026-07-03",
       "kickoff_et": "9:30 PM",
-      "home": {"name": "Colombia", "flag": "🇨🇴", "goals": 1, "qualified": true},
-      "away": {"name": "Ghana", "flag": "🇬🇭", "goals": 0, "qualified": false},
+      "home": {
+        "name": "Colombia",
+        "flag": "🇨🇴",
+        "goals": 1,
+        "qualified": true
+      },
+      "away": {
+        "name": "Ghana",
+        "flag": "🇬🇭",
+        "goals": 0,
+        "qualified": false
+      },
       "status": "FT",
       "venue": "Arrowhead Stadium, Kansas City",
       "scorers": "J. Arias 14';",
       "note": "Jhon Arias's 14th-minute flicked finish (assist: Luis Suárez, from Daniel Muñoz pass) was enough. Colombia complete the R32 lineup. Heat management dominated (kickoff in 88°F, hydration breaks). Next: Switzerland in R16 in Vancouver on Tuesday.",
-      "sources": ["https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage", "https://www.espn.com/soccer/story/_/id/49264513/colombia-ghana-fifa-world-cup-2026-round-32", "https://abcnews.com/Sports/wireStory/jhon-arias-scores-colombia-beats-ghana-1-0-134462799", "https://www.theguardian.com/football/2026/jul/04/colombia-ghana-world-cup-2026-last-32-match-report"]
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+        "https://www.espn.com/soccer/story/_/id/49264513/colombia-ghana-fifa-world-cup-2026-round-32",
+        "https://abcnews.com/Sports/wireStory/jhon-arias-scores-colombia-beats-ghana-1-0-134462799",
+        "https://www.theguardian.com/football/2026/jul/04/colombia-ghana-world-cup-2026-last-32-match-report"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=nFOL2RgZ3as"
     }
   ],
   "r16_path": [
-    {"match": "R16-1", "date": "Jul 4", "venue": "Houston", "teams": "Canada vs Morocco"},
-    {"match": "R16-2", "date": "Jul 4", "venue": "Philadelphia", "teams": "Paraguay vs France"},
-    {"match": "R16-3", "date": "Jul 5", "venue": "TBD", "teams": "Brazil vs Norway"},
-    {"match": "R16-4", "date": "Jul 6", "venue": "Arlington", "teams": "Portugal vs Spain"},
-    {"match": "R16-5", "date": "Jul 4", "venue": "TBD", "teams": "England vs Belgium"},
-    {"match": "R16-6", "date": "Jul 5", "venue": "TBD", "teams": "Mexico vs USA"},
-    {"match": "R16-7", "date": "Jul 6", "venue": "Seattle", "teams": "Switzerland vs Colombia"},
-    {"match": "R16-8", "date": "Jul 7", "venue": "Atlanta", "teams": "Argentina vs Egypt"}
+    {
+      "match": "R16-1",
+      "date": "Jul 4",
+      "venue": "Houston",
+      "teams": "Canada vs Morocco"
+    },
+    {
+      "match": "R16-2",
+      "date": "Jul 4",
+      "venue": "Philadelphia",
+      "teams": "Paraguay vs France"
+    },
+    {
+      "match": "R16-3",
+      "date": "Jul 5",
+      "venue": "TBD",
+      "teams": "Brazil vs Norway"
+    },
+    {
+      "match": "R16-4",
+      "date": "Jul 6",
+      "venue": "Arlington",
+      "teams": "Portugal vs Spain"
+    },
+    {
+      "match": "R16-5",
+      "date": "Jul 4",
+      "venue": "TBD",
+      "teams": "England vs Belgium"
+    },
+    {
+      "match": "R16-6",
+      "date": "Jul 5",
+      "venue": "TBD",
+      "teams": "Mexico vs USA"
+    },
+    {
+      "match": "R16-7",
+      "date": "Jul 6",
+      "venue": "Seattle",
+      "teams": "Switzerland vs Colombia"
+    },
+    {
+      "match": "R16-8",
+      "date": "Jul 7",
+      "venue": "Atlanta",
+      "teams": "Argentina vs Egypt"
+    }
   ],
   "golden_boot": [
-    {"rank": 1, "player": "Kylian Mbappé", "country": "France", "flag": "🇫🇷", "goals": 6, "assists": 2},
-    {"rank": 2, "player": "Lionel Messi", "country": "Argentina", "flag": "🇦🇷", "goals": 7, "assists": 0},
-    {"rank": 3, "player": "Erling Haaland", "country": "Norway", "flag": "🇳🇴", "goals": 5, "assists": 0},
-    {"rank": 4, "player": "Ousmane Dembélé", "country": "France", "flag": "🇫🇷", "goals": 4, "assists": 2},
-    {"rank": 5, "player": "Vinícius Jr", "country": "Brazil", "flag": "🇧🇷", "goals": 4, "assists": 1},
-    {"rank": 6, "player": "Deniz Undav", "country": "Germany", "flag": "🇩🇪", "goals": 3, "assists": 2},
-    {"rank": 7, "player": "Johan Manzambi", "country": "Switzerland", "flag": "🇨🇭", "goals": 3, "assists": 1},
-    {"rank": 7, "player": "Ismaila Sarr", "country": "Senegal", "flag": "🇸🇳", "goals": 3, "assists": 1},
-    {"rank": 7, "player": "Cody Gakpo", "country": "Netherlands", "flag": "🇳🇱", "goals": 3, "assists": 1},
-    {"rank": 10, "player": "Harry Kane", "country": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "goals": 5, "assists": 0}
+    {
+      "rank": 1,
+      "player": "Kylian Mbappé",
+      "country": "France",
+      "flag": "🇫🇷",
+      "goals": 6,
+      "assists": 2
+    },
+    {
+      "rank": 2,
+      "player": "Lionel Messi",
+      "country": "Argentina",
+      "flag": "🇦🇷",
+      "goals": 7,
+      "assists": 0
+    },
+    {
+      "rank": 3,
+      "player": "Erling Haaland",
+      "country": "Norway",
+      "flag": "🇳🇴",
+      "goals": 5,
+      "assists": 0
+    },
+    {
+      "rank": 4,
+      "player": "Ousmane Dembélé",
+      "country": "France",
+      "flag": "🇫🇷",
+      "goals": 4,
+      "assists": 2
+    },
+    {
+      "rank": 5,
+      "player": "Vinícius Jr",
+      "country": "Brazil",
+      "flag": "🇧🇷",
+      "goals": 4,
+      "assists": 1
+    },
+    {
+      "rank": 6,
+      "player": "Deniz Undav",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "goals": 3,
+      "assists": 2
+    },
+    {
+      "rank": 7,
+      "player": "Johan Manzambi",
+      "country": "Switzerland",
+      "flag": "🇨🇭",
+      "goals": 3,
+      "assists": 1
+    },
+    {
+      "rank": 7,
+      "player": "Ismaila Sarr",
+      "country": "Senegal",
+      "flag": "🇸🇳",
+      "goals": 3,
+      "assists": 1
+    },
+    {
+      "rank": 7,
+      "player": "Cody Gakpo",
+      "country": "Netherlands",
+      "flag": "🇳🇱",
+      "goals": 3,
+      "assists": 1
+    },
+    {
+      "rank": 10,
+      "player": "Harry Kane",
+      "country": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "goals": 5,
+      "assists": 0
+    }
   ]
 }
