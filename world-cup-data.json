@@ -429,19 +429,19 @@
   "golden_boot": [
     {
       "rank": 1,
-      "player": "Kylian Mbappé",
-      "country": "France",
-      "flag": "🇫🇷",
-      "goals": 6,
-      "assists": 2
-    },
-    {
-      "rank": 2,
       "player": "Lionel Messi",
       "country": "Argentina",
       "flag": "🇦🇷",
       "goals": 7,
       "assists": 0
+    },
+    {
+      "rank": 2,
+      "player": "Kylian Mbappé",
+      "country": "France",
+      "flag": "🇫🇷",
+      "goals": 6,
+      "assists": 2
     },
     {
       "rank": 3,
@@ -453,6 +453,14 @@
     },
     {
       "rank": 4,
+      "player": "Harry Kane",
+      "country": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "goals": 5,
+      "assists": 0
+    },
+    {
+      "rank": 5,
       "player": "Ousmane Dembélé",
       "country": "France",
       "flag": "🇫🇷",
@@ -460,7 +468,7 @@
       "assists": 2
     },
     {
-      "rank": 5,
+      "rank": 6,
       "player": "Vinícius Jr",
       "country": "Brazil",
       "flag": "🇧🇷",
@@ -468,7 +476,7 @@
       "assists": 1
     },
     {
-      "rank": 6,
+      "rank": 7,
       "player": "Deniz Undav",
       "country": "Germany",
       "flag": "🇩🇪",
@@ -476,23 +484,7 @@
       "assists": 2
     },
     {
-      "rank": 7,
-      "player": "Johan Manzambi",
-      "country": "Switzerland",
-      "flag": "🇨🇭",
-      "goals": 3,
-      "assists": 1
-    },
-    {
-      "rank": 7,
-      "player": "Ismaila Sarr",
-      "country": "Senegal",
-      "flag": "🇸🇳",
-      "goals": 3,
-      "assists": 1
-    },
-    {
-      "rank": 7,
+      "rank": 8,
       "player": "Cody Gakpo",
       "country": "Netherlands",
       "flag": "🇳🇱",
@@ -500,12 +492,20 @@
       "assists": 1
     },
     {
+      "rank": 9,
+      "player": "Ismaila Sarr",
+      "country": "Senegal",
+      "flag": "🇸🇳",
+      "goals": 3,
+      "assists": 1
+    },
+    {
       "rank": 10,
-      "player": "Harry Kane",
-      "country": "England",
-      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "goals": 5,
-      "assists": 0
+      "player": "Johan Manzambi",
+      "country": "Switzerland",
+      "flag": "🇨🇭",
+      "goals": 3,
+      "assists": 1
     }
   ]
 }

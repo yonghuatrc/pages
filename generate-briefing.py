@@ -485,7 +485,14 @@ html += """  </ul>
   <div class="card-header"><span class="icon">⚽</span> Golden Boot — Top Scorers</div>
   <div class="gb-grid">
 """
-for p in data.get("golden_boot", []):
+# Sort by goals desc, then assists desc, then name asc — ensures correct
+# ordering even if JSON 'rank' field is stale or out of sync
+gb_list = sorted(data.get("golden_boot", []),
+                 key=lambda p: (-p["goals"], -p["assists"], p["player"]))
+# Reassign rank so rendered medals/cells are consistent
+for _i, _p in enumerate(gb_list, start=1):
+    _p["rank"] = _i
+for p in gb_list:
     rank_cls = "gb-gold" if p["rank"] <= 2 else ("gb-silver" if p["rank"] == 3 else "")
     medal = {"1": "🥇", "2": "🥈", "3": "🥉"}.get(str(p["rank"]), "")
     assists_str = f" ({p['assists']}A)" if p["assists"] else ""
