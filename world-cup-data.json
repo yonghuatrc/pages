@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "phase": "Round of 32",
-  "updated": "2026-07-04T21:30:00+08:00",
+  "phase": "Round of 16",
+  "updated": "2026-07-05T06:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -374,6 +374,34 @@
         "https://www.theguardian.com/football/2026/jul/04/colombia-ghana-world-cup-2026-last-32-match-report"
       ],
       "highlights": "https://www.youtube.com/watch?v=nFOL2RgZ3as"
+    },
+    {
+      "id": 89,
+      "date": "2026-07-04",
+      "kickoff_et": "5:00 PM",
+      "home": {
+        "name": "Canada",
+        "flag": "🇨🇦",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Morocco",
+        "flag": "🇲🇦",
+        "goals": 3,
+        "qualified": true
+      },
+      "status": "FT",
+      "venue": "Houston Stadium, Houston",
+      "scorers": "; Ounahi 50', 82', Rahimi 90+8'",
+      "note": "Ounahi's brace and a stoppage-time Rahimi strike ended Canada's first-ever R16 appearance. Co-hosts out. Morocco through to the quarterfinals — their deepest WC run since 2022's semifinal. Pre-kickoff ceremony commemorated 250th anniversary of US Declaration of Independence.",
+      "sources": [
+        "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021530",
+        "https://www.espn.com/soccer/match/_/gameId/760502/morocco-canada",
+        "https://www.nytimes.com/athletic/live-blogs/canada-vs-morocco-live-updates-world-cup-2026-score-result/rBOtVcE8fduw",
+        "https://www.reddit.com/r/soccer/comments/1unh7i5/postmatch_thread_canada_03_morocco_fifa_world_cup"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=3SLeHHhWPzA"
     }
   ],
   "r16_path": [
@@ -381,7 +409,8 @@
       "match": "R16-1",
       "date": "Jul 4",
       "venue": "Houston",
-      "teams": "Canada vs Morocco"
+      "teams": "Canada vs Morocco",
+      "result": "Morocco won 3-0"
     },
     {
       "match": "R16-2",
@@ -403,20 +432,20 @@
     },
     {
       "match": "R16-5",
-      "date": "Jul 4",
-      "venue": "TBD",
-      "teams": "England vs Belgium"
+      "date": "Jul 6",
+      "venue": "Seattle",
+      "teams": "USA vs Belgium"
     },
     {
       "match": "R16-6",
-      "date": "Jul 5",
-      "venue": "TBD",
-      "teams": "Mexico vs USA"
+      "date": "Jul 6",
+      "venue": "Mexico City (Azteca)",
+      "teams": "Mexico vs England"
     },
     {
       "match": "R16-7",
-      "date": "Jul 6",
-      "venue": "Seattle",
+      "date": "Jul 7",
+      "venue": "Vancouver",
       "teams": "Switzerland vs Colombia"
     },
     {
