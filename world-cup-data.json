@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 16",
-  "updated": "2026-07-05T06:00:00+08:00",
+  "updated": "2026-07-06T07:56:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -402,6 +402,63 @@
         "https://www.reddit.com/r/soccer/comments/1unh7i5/postmatch_thread_canada_03_morocco_fifa_world_cup"
       ],
       "highlights": "https://www.youtube.com/watch?v=3SLeHHhWPzA"
+    },
+    {
+      "id": 90,
+      "date": "2026-07-04",
+      "kickoff_et": "9:00 PM",
+      "home": {
+        "name": "Paraguay",
+        "flag": "🇵🇾",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "France",
+        "flag": "🇫🇷",
+        "goals": 1,
+        "qualified": true
+      },
+      "status": "FT",
+      "venue": "Lincoln Financial Field, Philadelphia",
+      "scorers": "; Mbappé 70' (pen.)",
+      "note": "Mbappé's 70th-minute penalty (won by Doué, awarded after VAR review for an Ajer foul in the box) sent France through to the quarterfinals. Mbappé's 7th WC 2026 goal tied him with Messi in the Golden Boot race. France dominated possession (76%) but Paraguay's resolute five-back defence held firm — Les Bleus managed no goals from open play. France to face Morocco in Boston on July 9. Tchouaméni missed due to groin injury.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-france-match-report-highlights",
+        "https://www.espn.com/soccer/match/_/gameId/760503/france-paraguay",
+        "https://sports.yahoo.com/soccer/article/2026-world-cup-france-secures-frustrating-win-over-paraguay-with-kylian-mbappe-penalty-231047241.html"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=OUYoh7YBhXc"
+    },
+    {
+      "id": 91,
+      "date": "2026-07-05",
+      "kickoff_et": "4:00 PM",
+      "home": {
+        "name": "Brazil",
+        "flag": "🇧🇷",
+        "goals": 1,
+        "qualified": false
+      },
+      "away": {
+        "name": "Norway",
+        "flag": "🇳🇴",
+        "goals": 2,
+        "qualified": true
+      },
+      "status": "FT",
+      "venue": "MetLife Stadium, East Rutherford",
+      "scorers": "Neymar 90+10' (pen.); Haaland 79', 90'",
+      "note": "⭐ MASSIVE UPSET. Norway stun 5-time champions to reach their first-ever WC quarterfinal! Erling Haaland's brace (header 79', left-foot strike 90') — his 6th and 7th tournament goals, tying Messi atop the Golden Boot — sent Brazil home. Nyland saved a Bruno Guimarães penalty in the 1st half and was immense throughout. Neymar came off the bench and scored a 90+10' consolation penalty after Ostigard elbowed Casemiro in the box. Likely Neymar's final World Cup appearance. Brazil's earliest exit since 1990. Norway to face Mexico/England winner on July 11 in Miami.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+        "https://www.theguardian.com/football/2026/jul/05/brazil-norway-world-cup-2026-last-16-match-report",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-norway-match-report-highlights",
+        "https://www.nbcnewyork.com/world-cup/brazil-norway-score-haaland-neymar/6521852",
+        "https://www.cnn.com/2026/07/05/sport/world-cup-round-of-16-sunday"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=2ZwZjkpne0I"
     }
   ],
   "r16_path": [
@@ -416,13 +473,15 @@
       "match": "R16-2",
       "date": "Jul 4",
       "venue": "Philadelphia",
-      "teams": "Paraguay vs France"
+      "teams": "Paraguay vs France",
+      "result": "France won 1-0"
     },
     {
       "match": "R16-3",
       "date": "Jul 5",
-      "venue": "TBD",
-      "teams": "Brazil vs Norway"
+      "venue": "East Rutherford",
+      "teams": "Brazil vs Norway",
+      "result": "Norway won 2-1"
     },
     {
       "match": "R16-4",
@@ -465,20 +524,20 @@
       "assists": 0
     },
     {
-      "rank": 2,
+      "rank": 1,
+      "player": "Erling Haaland",
+      "country": "Norway",
+      "flag": "🇳🇴",
+      "goals": 7,
+      "assists": 1
+    },
+    {
+      "rank": 3,
       "player": "Kylian Mbappé",
       "country": "France",
       "flag": "🇫🇷",
       "goals": 6,
       "assists": 2
-    },
-    {
-      "rank": 3,
-      "player": "Erling Haaland",
-      "country": "Norway",
-      "flag": "🇳🇴",
-      "goals": 5,
-      "assists": 0
     },
     {
       "rank": 4,
