@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 16",
-  "updated": "2026-07-06T07:56:00+08:00",
+  "updated": "2026-07-07T06:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -459,6 +459,118 @@
         "https://www.cnn.com/2026/07/05/sport/world-cup-round-of-16-sunday"
       ],
       "highlights": "https://www.youtube.com/watch?v=2ZwZjkpne0I"
+    },
+    {
+      "id": 92,
+      "date": "2026-07-05",
+      "kickoff_et": "8:00 PM",
+      "home": {
+        "name": "Mexico",
+        "flag": "🇲🇽",
+        "goals": 2,
+        "qualified": false
+      },
+      "away": {
+        "name": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "goals": 3,
+        "qualified": true
+      },
+      "status": "FT",
+      "venue": "Estadio Azteca, Mexico City",
+      "scorers": "Quiñones 42', Jiménez 69' (pen.); Bellingham 36', 38', Kane 60' (pen.)",
+      "highlights": "https://www.youtube.com/watch?v=VVfb5i1Wmag",
+      "note": "England survive a Mexico City thriller! Bellingham's first-half brace put England in control but Mexico struck back through Quiñones and a Jiménez penalty. Kane's 60th-minute penalty restored the lead. England had a man sent off but held on at the Azteca. Next: Norway in the quarterfinal.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+        "https://www.espn.com/soccer/match/_/gameId/760505/england-mexico"
+      ]
+    },
+    {
+      "id": 93,
+      "date": "2026-07-06",
+      "kickoff_et": "3:00 PM",
+      "home": {
+        "name": "Portugal",
+        "flag": "🇵🇹",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Spain",
+        "flag": "🇪🇸",
+        "goals": 1,
+        "qualified": true
+      },
+      "status": "FT",
+      "venue": "AT&T Stadium, Arlington",
+      "scorers": "; Merino 90+1'",
+      "highlights": "https://www.youtube.com/watch?v=niJGbGSbDig",
+      "note": "⭐ BOSS TEAM ELIMINATED. Heartbreak for Portugal! Substitute Mikel Merino's 90+1' strike sent Spain through in a tense Iberian derby. Cristiano Ronaldo's final World Cup ends in the Round of 16. Rodri named Man of the Match. Spain face the winner of USA-Belgium in the quarterfinal.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+        "https://www.espn.com/soccer/match/_/gameId/760506/spain-portugal"
+      ]
+    },
+    {
+      "id": 94,
+      "date": "2026-07-06",
+      "kickoff_et": "8:00 PM",
+      "home": {
+        "name": "USA",
+        "flag": "🇺🇸",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Belgium",
+        "flag": "🇧🇪",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "Lumen Field, Seattle",
+      "note": "8 PM ET / 8 AM SGT kickoff. USA's first R16 appearance since 2014. Balogun available after red card overturned. Belgium survived a Senegal scare (3-2 AET). Winner faces Spain in quarterfinal."
+    },
+    {
+      "id": 95,
+      "date": "2026-07-07",
+      "kickoff_et": "12:00 PM",
+      "home": {
+        "name": "Argentina",
+        "flag": "🇦🇷",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Egypt",
+        "flag": "🇪🇬",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "Atlanta Stadium, Atlanta",
+      "note": "⭐ BOSS TEAM. 12 PM ET / 12 AM SGT kickoff. Defending champions face Egypt in their first-ever R16. Messi leads Golden Boot race with 7 goals."
+    },
+    {
+      "id": 96,
+      "date": "2026-07-07",
+      "kickoff_et": "4:00 PM",
+      "home": {
+        "name": "Switzerland",
+        "flag": "🇨🇭",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Colombia",
+        "flag": "🇨🇴",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "BC Place, Vancouver",
+      "note": "4 PM ET / 4 AM SGT kickoff. Switzerland's first R16 since 1938. Colombia edged Ghana 1-0. Winner faces Argentina/Egypt in quarterfinal."
     }
   ],
   "r16_path": [
@@ -487,7 +599,8 @@
       "match": "R16-4",
       "date": "Jul 6",
       "venue": "Arlington",
-      "teams": "Portugal vs Spain"
+      "teams": "Portugal vs Spain",
+      "result": "Spain won 1-0"
     },
     {
       "match": "R16-5",
@@ -499,7 +612,8 @@
       "match": "R16-6",
       "date": "Jul 6",
       "venue": "Mexico City (Azteca)",
-      "teams": "Mexico vs England"
+      "teams": "Mexico vs England",
+      "result": "England won 3-2"
     },
     {
       "match": "R16-7",
@@ -517,19 +631,19 @@
   "golden_boot": [
     {
       "rank": 1,
-      "player": "Lionel Messi",
-      "country": "Argentina",
-      "flag": "🇦🇷",
-      "goals": 7,
-      "assists": 0
-    },
-    {
-      "rank": 1,
       "player": "Erling Haaland",
       "country": "Norway",
       "flag": "🇳🇴",
       "goals": 7,
       "assists": 1
+    },
+    {
+      "rank": 2,
+      "player": "Lionel Messi",
+      "country": "Argentina",
+      "flag": "🇦🇷",
+      "goals": 7,
+      "assists": 0
     },
     {
       "rank": 3,
@@ -544,7 +658,7 @@
       "player": "Harry Kane",
       "country": "England",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "goals": 5,
+      "goals": 6,
       "assists": 0
     },
     {

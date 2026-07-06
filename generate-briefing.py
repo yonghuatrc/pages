@@ -381,8 +381,10 @@ for m in top_half_matches:
         else:
             sgt_str = f" · 🕐 {sgt_extra}"
 
+    highlights_url = m.get("highlights", "")
+    card_link = f'<a class="card-link" href="{highlights_url}" target="_blank" rel="noopener" aria-label="Watch highlights: {m["home"]["name"]} vs {m["away"]["name"]}"></a>' if highlights_url else ""
     html += f"""    <div class="match-card {cls}">
-      <a class="card-link" href="{m["highlights"]}" target="_blank" rel="noopener" aria-label="Watch highlights: {m["home"]["name"]} vs {m["away"]["name"]}"></a>
+      {card_link}
       <div class="match-top">
         <span class="match-meta">Match {m["id"]} · {m["venue"]}{sgt_str}</span>
         {status_badge(m)}
@@ -437,8 +439,10 @@ for m in lower_half_matches:
         else:
             sgt_str = f" · 🕐 {sgt_extra}"
 
+    highlights_url = m.get("highlights", "")
+    card_link = f'<a class="card-link" href="{highlights_url}" target="_blank" rel="noopener" aria-label="Watch highlights: {m["home"]["name"]} vs {m["away"]["name"]}"></a>' if highlights_url else ""
     html += f"""    <div class="match-card {cls}">
-      <a class="card-link" href="{m["highlights"]}" target="_blank" rel="noopener" aria-label="Watch highlights: {m["home"]["name"]} vs {m["away"]["name"]}"></a>
+      {card_link}
       <div class="match-top">
         <span class="match-meta">Match {m["id"]} · {m["venue"]}{sgt_str}</span>
         {status_badge(m)}
