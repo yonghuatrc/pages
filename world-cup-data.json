@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Round of 16",
-  "updated": "2026-07-07T06:00:00+08:00",
+  "updated": "2026-07-08T06:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -519,18 +519,25 @@
       "home": {
         "name": "USA",
         "flag": "🇺🇸",
-        "goals": 0,
+        "goals": 1,
         "qualified": false
       },
       "away": {
         "name": "Belgium",
         "flag": "🇧🇪",
-        "goals": 0,
-        "qualified": false
+        "goals": 4,
+        "qualified": true
       },
-      "status": "upcoming",
+      "status": "FT",
       "venue": "Lumen Field, Seattle",
-      "note": "8 PM ET / 8 AM SGT kickoff. USA's first R16 appearance since 2014. Balogun available after red card overturned. Belgium survived a Senegal scare (3-2 AET). Winner faces Spain in quarterfinal."
+      "note": "Co-host USA eliminated after Belgium punished repeated defensive lapses. Charles De Ketelaere scored twice inside 33 minutes, Hans Vanaken added a third, and Romelu Lukaku sealed it in stoppage time; Malik Tillman's free-kick was only a consolation. Belgium face Spain in the quarterfinal.",
+      "scorers": "Tillman 31'; De Ketelaere 9', 33', Vanaken 57', Lukaku 90+3'",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage#United_States_vs_Belgium",
+        "https://www.espn.com/soccer/match/_/gameId/760507/belgium-united-states",
+        "https://apnews.com/article/world-cup-united-states-belgium-score-0325e8102be7a88e852079deffd70ca0"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=vzc36wDBdIE"
     },
     {
       "id": 95,
@@ -539,18 +546,25 @@
       "home": {
         "name": "Argentina",
         "flag": "🇦🇷",
-        "goals": 0,
-        "qualified": false
+        "goals": 3,
+        "qualified": true
       },
       "away": {
         "name": "Egypt",
         "flag": "🇪🇬",
-        "goals": 0,
+        "goals": 2,
         "qualified": false
       },
-      "status": "upcoming",
+      "status": "FT",
       "venue": "Atlanta Stadium, Atlanta",
-      "note": "⭐ BOSS TEAM. 12 PM ET / 12 AM SGT kickoff. Defending champions face Egypt in their first-ever R16. Messi leads Golden Boot race with 7 goals."
+      "note": "⭐ BOSS TEAM. Argentina survived a huge Egypt scare: Yasser Ibrahim and Mostafa Ziko had Egypt 2-0 up, but Romero's header, Messi's 83rd-minute volley, and Enzo Fernández's 90+2' header completed a wild comeback. Argentina face Switzerland/Colombia winner in the quarterfinal.",
+      "scorers": "Romero 79', Messi 83', Fernández 90+2'; Ibrahim 15', Ziko 67'",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage#Argentina_vs_Egypt",
+        "https://www.espn.com/soccer/match/_/gameId/760509/egypt-argentina",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528"
+      ],
+      "highlights": "https://www.youtube.com/watch?v=ADzC7sbME9o"
     },
     {
       "id": 96,
@@ -568,9 +582,9 @@
         "goals": 0,
         "qualified": false
       },
-      "status": "upcoming",
+      "status": "live",
       "venue": "BC Place, Vancouver",
-      "note": "4 PM ET / 4 AM SGT kickoff. Switzerland's first R16 since 1938. Colombia edged Ghana 1-0. Winner faces Argentina/Egypt in quarterfinal."
+      "note": "Match in progress/extra time per ESPN; no final score written until two independent sources confirm FT. Winner faces Argentina in the quarterfinal."
     }
   ],
   "r16_path": [
@@ -606,7 +620,8 @@
       "match": "R16-5",
       "date": "Jul 6",
       "venue": "Seattle",
-      "teams": "USA vs Belgium"
+      "teams": "USA vs Belgium",
+      "result": "Belgium won 4-1"
     },
     {
       "match": "R16-6",
@@ -625,25 +640,26 @@
       "match": "R16-8",
       "date": "Jul 7",
       "venue": "Atlanta",
-      "teams": "Argentina vs Egypt"
+      "teams": "Argentina vs Egypt",
+      "result": "Argentina won 3-2"
     }
   ],
   "golden_boot": [
     {
       "rank": 1,
+      "player": "Lionel Messi",
+      "country": "Argentina",
+      "flag": "🇦🇷",
+      "goals": 8,
+      "assists": 0
+    },
+    {
+      "rank": 2,
       "player": "Erling Haaland",
       "country": "Norway",
       "flag": "🇳🇴",
       "goals": 7,
       "assists": 1
-    },
-    {
-      "rank": 2,
-      "player": "Lionel Messi",
-      "country": "Argentina",
-      "flag": "🇦🇷",
-      "goals": 7,
-      "assists": 0
     },
     {
       "rank": 3,
