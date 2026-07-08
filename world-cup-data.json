@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "phase": "Round of 16",
-  "updated": "2026-07-08T06:00:00+08:00",
+  "phase": "Quarter-finals",
+  "updated": "2026-07-09T06:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -574,7 +574,7 @@
         "name": "Switzerland",
         "flag": "🇨🇭",
         "goals": 0,
-        "qualified": false
+        "qualified": true
       },
       "away": {
         "name": "Colombia",
@@ -582,9 +582,17 @@
         "goals": 0,
         "qualified": false
       },
-      "status": "live",
+      "status": "FT-pens",
       "venue": "BC Place, Vancouver",
-      "note": "Match in progress/extra time per ESPN; no final score written until two independent sources confirm FT. Winner faces Argentina in the quarterfinal."
+      "note": "Switzerland reached their first World Cup quarter-final since 1954 after a goalless 120 minutes and a 4-3 penalty shootout win. Gregor Kobel saved Cucho Hernández's penalty and Rubén Vargas converted the decisive kick. Switzerland face Argentina in the quarterfinals.",
+      "penalty_winner": "Switzerland",
+      "scorers": "; (pens: Switzerland 4-3 Colombia)",
+      "sources": [
+        "https://www.espn.com/soccer/match/_/gameId/760508/colombia-switzerland",
+        "https://www.espn.com/soccer/story/_/id/49300023/switzerland-colombia-world-cup-2026-penalty-shootout-argentina",
+        "https://www.theguardian.com/football/2026/jul/08/switzerland-colombia-world-cup-2026-last-16-match-report",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage#Switzerland_vs_Colombia"
+      ]
     }
   ],
   "r16_path": [
@@ -634,7 +642,8 @@
       "match": "R16-7",
       "date": "Jul 7",
       "venue": "Vancouver",
-      "teams": "Switzerland vs Colombia"
+      "teams": "Switzerland vs Colombia",
+      "result": "Switzerland won 0-0 (4-3 pens)"
     },
     {
       "match": "R16-8",
