@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Quarter-finals",
-  "updated": "2026-07-10T08:00:00+08:00",
+  "updated": "2026-07-11T08:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -623,20 +623,25 @@
       "home": {
         "name": "Spain",
         "flag": "🇪🇸",
-        "goals": 0,
-        "qualified": false
+        "goals": 2,
+        "qualified": true
       },
       "away": {
         "name": "Belgium",
         "flag": "🇧🇪",
-        "goals": 0,
+        "goals": 1,
         "qualified": false
       },
-      "status": "upcoming",
+      "status": "FT",
       "venue": "SoFi Stadium, Inglewood",
-      "scorers": "",
-      "highlights": "",
-      "note": "⭐ BOSS TEAM. Spain's Unai Simón has gone 609 minutes without conceding a World Cup goal. Belgium thumped the US 4–1 in R16. Quarterfinal clash at SoFi."
+      "scorers": "Fabián Ruiz 30', Merino 88'; De Ketelaere 41'",
+      "highlights": "https://www.youtube.com/watch?v=mU_2SVbabFY",
+      "note": "⭐ BOSS TEAM. Spain advance to their first World Cup semi since 2010! Mikel Merino's 88th-minute winner (second touch after coming on) punished Belgium after backup GK Senne Lammens spilled Cubarsí's shot. Fabián Ruiz 30' opener; De Ketelaere 41' equaliser. Spain face France in the semi-final on July 14 in Arlington.",
+      "sources": [
+        "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain",
+        "https://www.france24.com/en/sport/20260710-world-cup-2026-merino-s-late-winner-sends-spain-past-belgium-and-into-semi-finals",
+        "https://www.nytimes.com/athletic/live-blogs/spain-vs-belgium-live-updates-world-cup-2026-score-result/ah8Ki22aj3Bn/Vf7b63aG9Kh"
+      ]
     },
     {
       "id": 99,
@@ -685,7 +690,7 @@
     {
       "id": 101,
       "date": "2026-07-14",
-      "kickoff_et": "TBD",
+      "kickoff_et": "8:00 PM",
       "home": {
         "name": "France",
         "flag": "🇫🇷",
@@ -693,16 +698,16 @@
         "qualified": false
       },
       "away": {
-        "name": "W98",
-        "flag": "🏆",
+        "name": "Spain",
+        "flag": "🇪🇸",
         "goals": 0,
         "qualified": false
       },
       "status": "upcoming",
-      "venue": "TBD",
+      "venue": "AT&T Stadium, Arlington",
       "scorers": "",
       "highlights": "",
-      "note": "Semi-final 1: France vs Winner of Spain vs Belgium"
+      "note": "🏅 Semi-final 1: France vs Spain. Mbappé (9 goals) vs Spain's defence (1 goal conceded in 5 matches). Merino's late heroics vs France's firepower. Winner plays in Final on July 19 at MetLife Stadium."
     },
     {
       "id": 102,
@@ -835,7 +840,7 @@
       "player": "Kylian Mbappé",
       "country": "France",
       "flag": "🇫🇷",
-      "goals": 8,
+      "goals": 9,
       "assists": 2
     },
     {
@@ -867,7 +872,7 @@
       "player": "Ousmane Dembélé",
       "country": "France",
       "flag": "🇫🇷",
-      "goals": 5,
+      "goals": 6,
       "assists": 2
     },
     {
