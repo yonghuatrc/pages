@@ -832,19 +832,19 @@
   "golden_boot": [
     {
       "rank": 1,
-      "player": "Lionel Messi",
-      "country": "Argentina",
-      "flag": "🇦🇷",
-      "goals": 8,
-      "assists": 0
-    },
-    {
-      "rank": 2,
       "player": "Kylian Mbappé",
       "country": "France",
       "flag": "🇫🇷",
       "goals": 8,
       "assists": 2
+    },
+    {
+      "rank": 2,
+      "player": "Lionel Messi",
+      "country": "Argentina",
+      "flag": "🇦🇷",
+      "goals": 8,
+      "assists": 0
     },
     {
       "rank": 3,
