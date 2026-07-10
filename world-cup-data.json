@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Quarter-finals",
-  "updated": "2026-07-10T06:00:00+08:00",
+  "updated": "2026-07-10T08:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -593,6 +593,182 @@
         "https://www.theguardian.com/football/2026/jul/08/switzerland-colombia-world-cup-2026-last-16-match-report",
         "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage#Switzerland_vs_Colombia"
       ]
+    },
+    {
+      "id": 97,
+      "date": "2026-07-09",
+      "kickoff_et": "4:00 PM",
+      "home": {
+        "name": "France",
+        "flag": "🇫🇷",
+        "goals": 2,
+        "qualified": true
+      },
+      "away": {
+        "name": "Morocco",
+        "flag": "🇲🇦",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "FT",
+      "venue": "Gillette Stadium, Foxborough",
+      "scorers": "Mbappé 60', Dembélé 66';",
+      "highlights": "https://www.youtube.com/watch?v=J_1iFnRsHG0",
+      "note": "Mbappé atoned for a first-half penalty miss by opening the scoring in the 60th minute. Dembélé followed six minutes later with his fifth goal of the tournament. France into their third consecutive World Cup semifinal."
+    },
+    {
+      "id": 98,
+      "date": "2026-07-10",
+      "kickoff_et": "3:00 PM",
+      "home": {
+        "name": "Spain",
+        "flag": "🇪🇸",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Belgium",
+        "flag": "🇧🇪",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "SoFi Stadium, Inglewood",
+      "scorers": "",
+      "highlights": "",
+      "note": "⭐ BOSS TEAM. Spain's Unai Simón has gone 609 minutes without conceding a World Cup goal. Belgium thumped the US 4–1 in R16. Quarterfinal clash at SoFi."
+    },
+    {
+      "id": 99,
+      "date": "2026-07-11",
+      "kickoff_et": "5:00 PM",
+      "home": {
+        "name": "Norway",
+        "flag": "🇳🇴",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "scorers": "",
+      "highlights": "",
+      "note": "Haaland vs Kane — the Golden Boot battle! Norway stunned Brazil in R16. England survived Mexico City with 10 men."
+    },
+    {
+      "id": 100,
+      "date": "2026-07-11",
+      "kickoff_et": "9:00 PM",
+      "home": {
+        "name": "Argentina",
+        "flag": "🇦🇷",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "Switzerland",
+        "flag": "🇨🇭",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "Arrowhead Stadium, Kansas City",
+      "scorers": "",
+      "highlights": "",
+      "note": "⭐ BOSS TEAM. Messi leads Golden Boot with 8 goals. Switzerland in first QF since 1954 after penalty shootout win over Colombia."
+    },
+    {
+      "id": 101,
+      "date": "2026-07-14",
+      "kickoff_et": "TBD",
+      "home": {
+        "name": "France",
+        "flag": "🇫🇷",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "W98",
+        "flag": "🏆",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "TBD",
+      "scorers": "",
+      "highlights": "",
+      "note": "Semi-final 1: France vs Winner of Spain vs Belgium"
+    },
+    {
+      "id": 102,
+      "date": "2026-07-15",
+      "kickoff_et": "TBD",
+      "home": {
+        "name": "W99",
+        "flag": "🏆",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "W100",
+        "flag": "🏆",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "TBD",
+      "scorers": "",
+      "highlights": "",
+      "note": "Semi-final 2: Winner of Norway vs England vs Winner of Argentina vs Switzerland"
+    },
+    {
+      "id": 103,
+      "date": "2026-07-18",
+      "kickoff_et": "TBD",
+      "home": {
+        "name": "L101",
+        "flag": "",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "L102",
+        "flag": "",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "TBD",
+      "scorers": "",
+      "highlights": "",
+      "note": "Third Place Play-off"
+    },
+    {
+      "id": 104,
+      "date": "2026-07-19",
+      "kickoff_et": "TBD",
+      "home": {
+        "name": "W101",
+        "flag": "🏆",
+        "goals": 0,
+        "qualified": false
+      },
+      "away": {
+        "name": "W102",
+        "flag": "🏆",
+        "goals": 0,
+        "qualified": false
+      },
+      "status": "upcoming",
+      "venue": "MetLife Stadium, East Rutherford",
+      "scorers": "",
+      "highlights": "",
+      "note": "🏆 2026 FIFA World Cup Final"
     }
   ],
   "r16_path": [
@@ -664,19 +840,19 @@
     },
     {
       "rank": 2,
+      "player": "Kylian Mbappé",
+      "country": "France",
+      "flag": "🇫🇷",
+      "goals": 8,
+      "assists": 2
+    },
+    {
+      "rank": 3,
       "player": "Erling Haaland",
       "country": "Norway",
       "flag": "🇳🇴",
       "goals": 7,
       "assists": 1
-    },
-    {
-      "rank": 3,
-      "player": "Kylian Mbappé",
-      "country": "France",
-      "flag": "🇫🇷",
-      "goals": 6,
-      "assists": 2
     },
     {
       "rank": 4,
@@ -691,7 +867,7 @@
       "player": "Ousmane Dembélé",
       "country": "France",
       "flag": "🇫🇷",
-      "goals": 4,
+      "goals": 5,
       "assists": 2
     },
     {

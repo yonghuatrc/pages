@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚽ World Cup 2026 — R32 Knockout Bracket</title>
+<title>⚽ World Cup 2026 — Knockout Bracket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -55,6 +55,7 @@
   .hero h1 { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 0.5rem; }
   .hero h1 .wc { color: var(--accent); }
   .hero .date { font-size: 0.95rem; color: var(--text2); }
+  .hero .phase { font-size: 0.8rem; color: var(--accent); margin-top: 0.25rem; font-weight: 600; }
   .container { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
   .card {
     background: var(--surface);
@@ -71,7 +72,7 @@
   }
   .card-header .icon { font-size: 1.3rem; }
 
-  /* BRACKET GRID — 2-column modern layout */
+  /* BRACKET GRID */
   .bracket-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -157,16 +158,6 @@
   .badge-live { background: rgba(59,130,246,0.2); color: var(--blue); }
   .badge-upcoming { background: rgba(148,163,184,0.2); color: var(--text2); }
 
-  .r16-list { list-style: none; }
-  .r16-list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    font-size: 0.85rem;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-  .r16-list li:last-child { border-bottom: none; }
-  .r16-slot { font-size: 0.7rem; color: var(--text2); min-width: 8rem; }
-
   .footer {
     text-align: center; padding: 1.5rem;
     color: var(--text2); font-size: 0.75rem;
@@ -205,7 +196,8 @@
 <header class="hero">
   <div class="hero-badge">🌍 2026 World Cup</div>
   <h1><span class="wc">⚽ Knockout Bracket</span></h1>
-  <p class="date">Friday, July 10, 2026 (SGT) · Round of 32 underway 🔥</p>
+  <p class="date">Friday, July 10, 2026 (SGT)</p>
+  <p class="phase">🔱 Quarter-finals underway · France through to SF</p>
 </header>
 
 <main class="container">
@@ -217,8 +209,7 @@
   <span>⏳ Upcoming — Match not yet played</span>
   <span style="border-left:3px solid var(--accent);padding-left:0.5rem;">⭐ Boss's Team</span>
 </div>
-
-<!-- ===== BRACKET: TOP HALF ===== -->
+<!-- ===== Round of 32 — Completed Results ===== -->
 <div class="card">
   <div class="card-header"><span class="icon">🏆</span> Round of 32 — Completed Results</div>
   <div class="bracket-grid">
@@ -227,7 +218,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=uv-FSqzHXAo" target="_blank" rel="noopener" aria-label="Watch highlights: South Africa vs Canada"></a>
       <div class="match-top">
-        <span class="match-meta">Match 73 · Los Angeles Stadium, Inglewood</span>
+        <span class="match-meta">🏆 Round of 32 · Los Angeles Stadium, Inglewood</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -235,7 +226,6 @@
         <span class="score">0–1</span>
         <span class="team winner">🇨🇦 Canada</span>
       </div>
-
       <div class="match-scorers">⚽ ; Eustáquio 90+2'</div>
       <div class="match-detail">Canada's first-ever World Cup knockout win. Alphonso Davies returned from injury.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=uv-FSqzHXAo" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -243,7 +233,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=-gtI96YhJek" target="_blank" rel="noopener" aria-label="Watch highlights: Germany vs Paraguay"></a>
       <div class="match-top">
-        <span class="match-meta">Match 74 · Boston Stadium, Foxborough</span>
+        <span class="match-meta">🏆 Round of 32 · Boston Stadium, Foxborough</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
       </div>
       <div class="match-teams">
@@ -251,7 +241,6 @@
         <span class="score">1–1</span>
         <span class="team winner">🇵🇾 Paraguay</span>
       </div>
-
       <div class="match-scorers">⚽ Havertz 54'; Enciso 42' (pens: Germany 3-4 Paraguay — Tah missed)</div>
       <div class="match-detail">Paraguay won 3-4 on penalties. Jonathan Tah missed the decisive spot-kick. Germany's Havertz equaliser cancelled Enciso's opener. VAR disallowed a late Germany winner in extra time.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=-gtI96YhJek" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -259,7 +248,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=IVIGSA6N1e8" target="_blank" rel="noopener" aria-label="Watch highlights: Netherlands vs Morocco"></a>
       <div class="match-top">
-        <span class="match-meta">Match 75 · Estadio Monterrey, Guadalupe</span>
+        <span class="match-meta">🏆 Round of 32 · Estadio Monterrey, Guadalupe</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
       </div>
       <div class="match-teams">
@@ -267,7 +256,6 @@
         <span class="score">1–1</span>
         <span class="team winner">🇲🇦 Morocco</span>
       </div>
-
       <div class="match-scorers">⚽ Gakpo 72'; Diop 90+1' (pens: Netherlands 2-3 Morocco)</div>
       <div class="match-detail">Morocco won 2-3 on penalties. Gakpo scored an emotional goal (recent personal tragedy). Diop's 91st-minute equaliser forced extra time.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=IVIGSA6N1e8" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -275,7 +263,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=Fd_KYjbmws4" target="_blank" rel="noopener" aria-label="Watch highlights: Brazil vs Japan"></a>
       <div class="match-top">
-        <span class="match-meta">Match 76 · Houston Stadium, Houston</span>
+        <span class="match-meta">🏆 Round of 32 · Houston Stadium, Houston</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -283,7 +271,6 @@
         <span class="score">2–1</span>
         <span class="team loser">🇯🇵 Japan</span>
       </div>
-
       <div class="match-scorers">⚽ Casemiro 56', Martinelli 90+5'; Sano 29'</div>
       <div class="match-detail">Japan took a shock lead through Sano's 40-yard solo golazo. Casemiro headed the equaliser. Martinelli's 96th-minute winner saved Brazil.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=Fd_KYjbmws4" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -291,7 +278,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=A7pgChEIFTg" target="_blank" rel="noopener" aria-label="Watch highlights: France vs Sweden"></a>
       <div class="match-top">
-        <span class="match-meta">Match 77 · New York New Jersey Stadium, East Rutherford</span>
+        <span class="match-meta">🏆 Round of 32 · New York New Jersey Stadium, East Rutherford</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -299,7 +286,6 @@
         <span class="score">3–0</span>
         <span class="team loser">🇸🇪 Sweden</span>
       </div>
-
       <div class="match-scorers">⚽ Mbappé 45', 74', Barcola 53'</div>
       <div class="match-detail">France dominated from start to finish. Mbappé opened the scoring with a clinical finish before the break, then doubled his tally after the restart. Barcola added a third to complete a comfortable win.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=A7pgChEIFTg" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -307,7 +293,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=rPebJKCPjK0" target="_blank" rel="noopener" aria-label="Watch highlights: Ivory Coast vs Norway"></a>
       <div class="match-top">
-        <span class="match-meta">Match 78 · Dallas Stadium, Arlington</span>
+        <span class="match-meta">🏆 Round of 32 · Dallas Stadium, Arlington</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -315,7 +301,6 @@
         <span class="score">1–2</span>
         <span class="team winner">🇳🇴 Norway</span>
       </div>
-
       <div class="match-scorers">⚽ Diallo 74'; Nusa 39', Haaland 86'</div>
       <div class="match-detail">Haaland's 86th-minute winner sent Norway through to face Brazil in R16. Nusa's curling opener; Diallo's equaliser. Norway's first-ever World Cup knockout win.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=rPebJKCPjK0" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -323,7 +308,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=t-miz8tN7Qw" target="_blank" rel="noopener" aria-label="Watch highlights: Mexico vs Ecuador"></a>
       <div class="match-top">
-        <span class="match-meta">Match 79 · Mexico City Stadium, Mexico City</span>
+        <span class="match-meta">🏆 Round of 32 · Mexico City Stadium, Mexico City</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -331,7 +316,6 @@
         <span class="score">2–0</span>
         <span class="team loser">🇪🇨 Ecuador</span>
       </div>
-
       <div class="match-scorers">⚽ Quiñones 22', Jiménez 31';</div>
       <div class="match-detail">Mexico's clinical finishing at home secured a comfortable win. Ecuador had no answer to El Tri's attacks in the second half.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=t-miz8tN7Qw" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -339,7 +323,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=TjBOgzJYIlM" target="_blank" rel="noopener" aria-label="Watch highlights: England vs DR Congo"></a>
       <div class="match-top">
-        <span class="match-meta">Match 80 · Atlanta Stadium, Atlanta</span>
+        <span class="match-meta">🏆 Round of 32 · Atlanta Stadium, Atlanta</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -347,7 +331,6 @@
         <span class="score">2–1</span>
         <span class="team loser">🇨🇩 DR Congo</span>
       </div>
-
       <div class="match-scorers">⚽ Kane 75', 86'; Cipenga 7'</div>
       <div class="match-detail">DR Congo stunned England with an early Cipenga goal. Kane's late brace completed the comeback — DR Congo were seconds from a famous upset.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=TjBOgzJYIlM" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -358,7 +341,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=SGQpzA9qcwk" target="_blank" rel="noopener" aria-label="Watch highlights: USA vs Bosnia & Herzegovina"></a>
       <div class="match-top">
-        <span class="match-meta">Match 81 · San Francisco Bay Area Stadium, Santa Clara</span>
+        <span class="match-meta">🏆 Round of 32 · San Francisco Bay Area Stadium, Santa Clara</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -366,7 +349,6 @@
         <span class="score">2–0</span>
         <span class="team loser">🇧🇦 Bosnia & Herzegovina</span>
       </div>
-
       <div class="match-scorers">⚽ Balogun 45', Tillman 82'</div>
       <div class="match-detail">USA's first knockout win since 2002! Balogun's early goal + Tillman seal it. Next: Belgium in R16.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=SGQpzA9qcwk" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -374,7 +356,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=PsPQkfngzV8" target="_blank" rel="noopener" aria-label="Watch highlights: Belgium vs Senegal"></a>
       <div class="match-top">
-        <span class="match-meta">Match 82 · Lumen Field, Seattle</span>
+        <span class="match-meta">🏆 Round of 32 · Lumen Field, Seattle</span>
         <span class="badge badge-aet">⏱️ AET</span>
       </div>
       <div class="match-teams">
@@ -382,7 +364,6 @@
         <span class="score">3–2</span>
         <span class="team loser">🇸🇳 Senegal</span>
       </div>
-
       <div class="match-scorers">⚽ Lukaku 86', Tielemans 89', 120+5' (pen.); Diarra 25', I. Sarr 51'</div>
       <div class="match-detail">Belgium produced a stunning extra-time comeback from 2-0 down. Diarra and Sarr had Senegal cruising, but Lukaku's 86th-minute strike and Tielemans' late brace (including a 120+5' penalty) flipped the tie. Senegal eliminated despite leading for most of the match.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=PsPQkfngzV8" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -390,7 +371,7 @@
     <div class="match-card boss">
       <a class="card-link" href="https://www.youtube.com/watch?v=jxU1VT5YXXE" target="_blank" rel="noopener" aria-label="Watch highlights: Portugal vs Croatia"></a>
       <div class="match-top">
-        <span class="match-meta">Match 83 · Toronto Stadium, Toronto</span>
+        <span class="match-meta">🏆 Round of 32 · Toronto Stadium, Toronto</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -398,7 +379,6 @@
         <span class="score">2–1</span>
         <span class="team loser">🇭🇷 Croatia</span>
       </div>
-
       <div class="match-scorers">⚽ Ronaldo 68' (pen), Ramos 90+4'; Perišić 53'</div>
       <div class="match-detail">⭐ BOSS TEAM. Ronaldo's first-ever World Cup knockout goal. Ramos headed stoppage-time winner. VAR controversially disallowed Gvardiol's late equaliser. Portugal faces Spain in R16.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=jxU1VT5YXXE" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -406,7 +386,7 @@
     <div class="match-card boss">
       <a class="card-link" href="https://www.youtube.com/watch?v=UZ_8GGldZhk" target="_blank" rel="noopener" aria-label="Watch highlights: Spain vs Austria"></a>
       <div class="match-top">
-        <span class="match-meta">Match 84 · Los Angeles Stadium, Inglewood</span>
+        <span class="match-meta">🏆 Round of 32 · Los Angeles Stadium, Inglewood</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -414,7 +394,6 @@
         <span class="score">3–0</span>
         <span class="team loser">🇦🇹 Austria</span>
       </div>
-
       <div class="match-scorers">⚽ Oyarzabal 36', 89', Porro 66'</div>
       <div class="match-detail">⭐ BOSS TEAM. Oyarzabal brace and Porro header give Spain comfortable R16 passage. Next: Portugal in R16 — Nations League final rematch.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=UZ_8GGldZhk" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -422,7 +401,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=-q-nO0sz18s" target="_blank" rel="noopener" aria-label="Watch highlights: Switzerland vs Algeria"></a>
       <div class="match-top">
-        <span class="match-meta">Match 85 · BC Place Vancouver, Vancouver</span>
+        <span class="match-meta">🏆 Round of 32 · BC Place Vancouver, Vancouver</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -430,7 +409,6 @@
         <span class="score">2–0</span>
         <span class="team loser">🇩🇿 Algeria</span>
       </div>
-
       <div class="match-scorers">⚽ Embolo 10', Ndoye 46'</div>
       <div class="match-detail">Embolo scored with Manzambi assist. Ndoye blasted in just after HT. Switzerland's first knockout win since 1938. Next: Colombia/Ghana winner.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=-q-nO0sz18s" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -438,7 +416,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=Pi7HdhJd640" target="_blank" rel="noopener" aria-label="Watch highlights: Australia vs Egypt"></a>
       <div class="match-top">
-        <span class="match-meta">Match 86 · Dallas Stadium, Arlington</span>
+        <span class="match-meta">🏆 Round of 32 · Dallas Stadium, Arlington</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
       </div>
       <div class="match-teams">
@@ -446,7 +424,6 @@
         <span class="score">1–1</span>
         <span class="team winner">🇪🇬 Egypt</span>
       </div>
-
       <div class="match-scorers">⚽ Hany OG 55'; Ashour 13' (pens: Australia 2-4 Egypt — Soutar & Herrington missed)</div>
       <div class="match-detail">Egypt won 4-2 on penalties for their first-ever World Cup knockout win. Ashour headed Egypt ahead from a Hafez cross. Hany's 55th-minute OG (becoming first player to score two OGs in one World Cup) levelled for the Socceroos. Soutar skied his pen, Herrington hit the bar; Abdelmaguid clinched for the Pharaohs.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=Pi7HdhJd640" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -454,7 +431,7 @@
     <div class="match-card boss">
       <a class="card-link" href="https://www.youtube.com/watch?v=dSbGEHS5Nsg" target="_blank" rel="noopener" aria-label="Watch highlights: Argentina vs Cape Verde"></a>
       <div class="match-top">
-        <span class="match-meta">Match 87 · Hard Rock Stadium, Miami Gardens</span>
+        <span class="match-meta">🏆 Round of 32 · Hard Rock Stadium, Miami Gardens</span>
         <span class="badge badge-aet">⏱️ AET</span>
       </div>
       <div class="match-teams">
@@ -462,7 +439,6 @@
         <span class="score">3–2</span>
         <span class="team loser">🇨🇻 Cape Verde</span>
       </div>
-
       <div class="match-scorers">⚽ Messi 29', Li. Martínez 92', Diney OG 111'; D. Duarte 59', Lopes Cabral 103'</div>
       <div class="match-detail">⭐ BOSS TEAM. Champions survive MASSIVE upset bid! Cape Verde (smallest-ever WC knockout team) led at half-time after Duarte silenced the crowd. Messi opened scoring with his record-extending 20th WC goal. Lisandro Martínez and an 111' Borges OG (from Romero header) sealed it in extra time. Argentina face Egypt in R16.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=dSbGEHS5Nsg" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -470,7 +446,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=nFOL2RgZ3as" target="_blank" rel="noopener" aria-label="Watch highlights: Colombia vs Ghana"></a>
       <div class="match-top">
-        <span class="match-meta">Match 88 · Arrowhead Stadium, Kansas City</span>
+        <span class="match-meta">🏆 Round of 32 · Arrowhead Stadium, Kansas City</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -478,15 +454,23 @@
         <span class="score">1–0</span>
         <span class="team loser">🇬🇭 Ghana</span>
       </div>
-
       <div class="match-scorers">⚽ J. Arias 14';</div>
       <div class="match-detail">Jhon Arias's 14th-minute flicked finish (assist: Luis Suárez, from Daniel Muñoz pass) was enough. Colombia complete the R32 lineup. Heat management dominated (kickoff in 88°F, hydration breaks). Next: Switzerland in R16 in Vancouver on Tuesday.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=nFOL2RgZ3as" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
+    </div>
+  </div>
+</div>
+<!-- ===== Round of 16 — Completed Results ===== -->
+<div class="card">
+  <div class="card-header"><span class="icon">⚔️</span> Round of 16 — Completed Results</div>
+  <div class="bracket-grid">
+    <div class="bracket-section">
+      <h3>🎯 Upper Bracket</h3>
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=3SLeHHhWPzA" target="_blank" rel="noopener" aria-label="Watch highlights: Canada vs Morocco"></a>
       <div class="match-top">
-        <span class="match-meta">Match 89 · Houston Stadium, Houston</span>
+        <span class="match-meta">⚔️ Round of 16 · Houston Stadium, Houston</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -494,7 +478,6 @@
         <span class="score">0–3</span>
         <span class="team winner">🇲🇦 Morocco</span>
       </div>
-
       <div class="match-scorers">⚽ ; Ounahi 50', 82', Rahimi 90+8'</div>
       <div class="match-detail">Ounahi's brace and a stoppage-time Rahimi strike ended Canada's first-ever R16 appearance. Co-hosts out. Morocco through to the quarterfinals — their deepest WC run since 2022's semifinal. Pre-kickoff ceremony commemorated 250th anniversary of US Declaration of Independence.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=3SLeHHhWPzA" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -502,7 +485,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=OUYoh7YBhXc" target="_blank" rel="noopener" aria-label="Watch highlights: Paraguay vs France"></a>
       <div class="match-top">
-        <span class="match-meta">Match 90 · Lincoln Financial Field, Philadelphia</span>
+        <span class="match-meta">⚔️ Round of 16 · Lincoln Financial Field, Philadelphia</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -510,7 +493,6 @@
         <span class="score">0–1</span>
         <span class="team winner">🇫🇷 France</span>
       </div>
-
       <div class="match-scorers">⚽ ; Mbappé 70' (pen.)</div>
       <div class="match-detail">Mbappé's 70th-minute penalty (won by Doué, awarded after VAR review for an Ajer foul in the box) sent France through to the quarterfinals. Mbappé's 7th WC 2026 goal tied him with Messi in the Golden Boot race. France dominated possession (76%) but Paraguay's resolute five-back defence held firm — Les Bleus managed no goals from open play. France to face Morocco in Boston on July 9. Tchouaméni missed due to groin injury.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=OUYoh7YBhXc" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -518,7 +500,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=2ZwZjkpne0I" target="_blank" rel="noopener" aria-label="Watch highlights: Brazil vs Norway"></a>
       <div class="match-top">
-        <span class="match-meta">Match 91 · MetLife Stadium, East Rutherford</span>
+        <span class="match-meta">⚔️ Round of 16 · MetLife Stadium, East Rutherford</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -526,7 +508,6 @@
         <span class="score">1–2</span>
         <span class="team winner">🇳🇴 Norway</span>
       </div>
-
       <div class="match-scorers">⚽ Neymar 90+10' (pen.); Haaland 79', 90'</div>
       <div class="match-detail">⭐ MASSIVE UPSET. Norway stun 5-time champions to reach their first-ever WC quarterfinal! Erling Haaland's brace (header 79', left-foot strike 90') — his 6th and 7th tournament goals, tying Messi atop the Golden Boot — sent Brazil home. Nyland saved a Bruno Guimarães penalty in the 1st half and was immense throughout. Neymar came off the bench and scored a 90+10' consolation penalty after Ostigard elbowed Casemiro in the box. Likely Neymar's final World Cup appearance. Brazil's earliest exit since 1990. Norway to face Mexico/England winner on July 11 in Miami.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=2ZwZjkpne0I" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -534,7 +515,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=VVfb5i1Wmag" target="_blank" rel="noopener" aria-label="Watch highlights: Mexico vs England"></a>
       <div class="match-top">
-        <span class="match-meta">Match 92 · Estadio Azteca, Mexico City</span>
+        <span class="match-meta">⚔️ Round of 16 · Estadio Azteca, Mexico City</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -542,15 +523,17 @@
         <span class="score">2–3</span>
         <span class="team winner">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
       </div>
-
       <div class="match-scorers">⚽ Quiñones 42', Jiménez 69' (pen.); Bellingham 36', 38', Kane 60' (pen.)</div>
       <div class="match-detail">England survive a Mexico City thriller! Bellingham's first-half brace put England in control but Mexico struck back through Quiñones and a Jiménez penalty. Kane's 60th-minute penalty restored the lead. England had a man sent off but held on at the Azteca. Next: Norway in the quarterfinal.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=VVfb5i1Wmag" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
     </div>
+    </div>
+    <div class="bracket-section">
+      <h3>🎯 Lower Bracket</h3>
     <div class="match-card boss">
       <a class="card-link" href="https://www.youtube.com/watch?v=niJGbGSbDig" target="_blank" rel="noopener" aria-label="Watch highlights: Portugal vs Spain"></a>
       <div class="match-top">
-        <span class="match-meta">Match 93 · AT&T Stadium, Arlington</span>
+        <span class="match-meta">⚔️ Round of 16 · AT&T Stadium, Arlington</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -558,7 +541,6 @@
         <span class="score">0–1</span>
         <span class="team winner">🇪🇸 Spain</span>
       </div>
-
       <div class="match-scorers">⚽ ; Merino 90+1'</div>
       <div class="match-detail">⭐ BOSS TEAM ELIMINATED. Heartbreak for Portugal! Substitute Mikel Merino's 90+1' strike sent Spain through in a tense Iberian derby. Cristiano Ronaldo's final World Cup ends in the Round of 16. Rodri named Man of the Match. Spain face the winner of USA-Belgium in the quarterfinal.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=niJGbGSbDig" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -566,7 +548,7 @@
     <div class="match-card ">
       <a class="card-link" href="https://www.youtube.com/watch?v=vzc36wDBdIE" target="_blank" rel="noopener" aria-label="Watch highlights: USA vs Belgium"></a>
       <div class="match-top">
-        <span class="match-meta">Match 94 · Lumen Field, Seattle</span>
+        <span class="match-meta">⚔️ Round of 16 · Lumen Field, Seattle</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -574,7 +556,6 @@
         <span class="score">1–4</span>
         <span class="team winner">🇧🇪 Belgium</span>
       </div>
-
       <div class="match-scorers">⚽ Tillman 31'; De Ketelaere 9', 33', Vanaken 57', Lukaku 90+3'</div>
       <div class="match-detail">Co-host USA eliminated after Belgium punished repeated defensive lapses. Charles De Ketelaere scored twice inside 33 minutes, Hans Vanaken added a third, and Romelu Lukaku sealed it in stoppage time; Malik Tillman's free-kick was only a consolation. Belgium face Spain in the quarterfinal.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=vzc36wDBdIE" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -582,7 +563,7 @@
     <div class="match-card boss">
       <a class="card-link" href="https://www.youtube.com/watch?v=ADzC7sbME9o" target="_blank" rel="noopener" aria-label="Watch highlights: Argentina vs Egypt"></a>
       <div class="match-top">
-        <span class="match-meta">Match 95 · Atlanta Stadium, Atlanta</span>
+        <span class="match-meta">⚔️ Round of 16 · Atlanta Stadium, Atlanta</span>
         <span class="badge badge-ft">✅ FT</span>
       </div>
       <div class="match-teams">
@@ -590,7 +571,6 @@
         <span class="score">3–2</span>
         <span class="team loser">🇪🇬 Egypt</span>
       </div>
-
       <div class="match-scorers">⚽ Romero 79', Messi 83', Fernández 90+2'; Ibrahim 15', Ziko 67'</div>
       <div class="match-detail">⭐ BOSS TEAM. Argentina survived a huge Egypt scare: Yasser Ibrahim and Mostafa Ziko had Egypt 2-0 up, but Romero's header, Messi's 83rd-minute volley, and Enzo Fernández's 90+2' header completed a wild comeback. Argentina face Switzerland/Colombia winner in the quarterfinal.</div>
       <div class="match-highlights"><a href="https://www.youtube.com/watch?v=ADzC7sbME9o" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
@@ -598,7 +578,7 @@
     <div class="match-card ">
       
       <div class="match-top">
-        <span class="match-meta">Match 96 · BC Place, Vancouver</span>
+        <span class="match-meta">⚔️ Round of 16 · BC Place, Vancouver</span>
         <span class="badge badge-pens">⚫ AET/Pens</span>
       </div>
       <div class="match-teams">
@@ -606,53 +586,174 @@
         <span class="score">0–0</span>
         <span class="team loser">🇨🇴 Colombia</span>
       </div>
-
       <div class="match-scorers">⚽ ; (pens: Switzerland 4-3 Colombia)</div>
       <div class="match-detail">Switzerland reached their first World Cup quarter-final since 1954 after a goalless 120 minutes and a 4-3 penalty shootout win. Gregor Kobel saved Cucho Hernández's penalty and Rubén Vargas converted the decisive kick. Switzerland face Argentina in the quarterfinals.</div>
     </div>
     </div>
   </div>
 </div>
-
-<!-- ===== R16 PATH ===== -->
+<!-- ===== Quarter-finals ===== -->
 <div class="card">
-  <div class="card-header"><span class="icon">⚔️</span> Round of 16 — Confirmed Fixtures</div>
-  <ul class="r16-list">
-    <li><span class="r16-slot">R16-1 (Jul 4, Houston)</span> 🇨🇦 Canada vs 🇲🇦 Morocco</li>
-    <li><span class="r16-slot">R16-2 (Jul 4, Philadelphia)</span> 🇵🇾 Paraguay vs 🇫🇷 France</li>
-    <li><span class="r16-slot">R16-3 (Jul 5, East Rutherford)</span> 🇧🇷 Brazil vs 🇳🇴 Norway</li>
-    <li><span class="r16-slot">R16-4 (Jul 6, Arlington)</span> 🇵🇹 Portugal vs 🇪🇸 Spain</li>
-    <li><span class="r16-slot">R16-5 (Jul 6, Seattle)</span> 🇺🇸 USA vs 🇧🇪 Belgium</li>
-    <li><span class="r16-slot">R16-6 (Jul 6, Mexico City (Azteca))</span> 🇲🇽 Mexico vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</li>
-    <li><span class="r16-slot">R16-7 (Jul 7, Vancouver)</span> 🇨🇭 Switzerland vs 🇨🇴 Colombia</li>
-    <li><span class="r16-slot">R16-8 (Jul 7, Atlanta)</span> 🇦🇷 Argentina vs 🇪🇬 Egypt</li>
-  </ul>
+  <div class="card-header"><span class="icon">🔱</span> Quarter-finals</div>
+  <div class="bracket-grid">
+    <div class="bracket-section" style="grid-column:1/-1;">
+    <div class="match-card ">
+      <a class="card-link" href="https://www.youtube.com/watch?v=J_1iFnRsHG0" target="_blank" rel="noopener" aria-label="Watch highlights: France vs Morocco"></a>
+      <div class="match-top">
+        <span class="match-meta">🔱 Quarter-finals · Gillette Stadium, Foxborough</span>
+        <span class="badge badge-ft">✅ FT</span>
+      </div>
+      <div class="match-teams">
+        <span class="team winner">🇫🇷 France</span>
+        <span class="score">2–0</span>
+        <span class="team loser">🇲🇦 Morocco</span>
+      </div>
+      <div class="match-scorers">⚽ Mbappé 60', Dembélé 66';</div>
+      <div class="match-detail">Mbappé atoned for a first-half penalty miss by opening the scoring in the 60th minute. Dembélé followed six minutes later with his fifth goal of the tournament. France into their third consecutive World Cup semifinal.</div>
+      <div class="match-highlights"><a href="https://www.youtube.com/watch?v=J_1iFnRsHG0" target="_blank" rel="noopener">🎬 Watch Highlights →</a></div>
+    </div>
+    <div class="match-card boss upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🔱 Quarter-finals · SoFi Stadium, Inglewood · 🕐 Jul 11, 3:00 AM SGT</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team ">🇪🇸 Spain</span>
+        <span class="vs">vs</span>
+        <span class="team ">🇧🇪 Belgium</span>
+      </div>
+      <div class="match-detail">⭐ BOSS TEAM. Spain's Unai Simón has gone 609 minutes without conceding a World Cup goal. Belgium thumped the US 4–1 in R16. Quarterfinal clash at SoFi.</div>
+    </div>
+    <div class="match-card  upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🔱 Quarter-finals · Hard Rock Stadium, Miami Gardens · 🕐 Jul 12, 5:00 AM SGT</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team ">🇳🇴 Norway</span>
+        <span class="vs">vs</span>
+        <span class="team ">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+      </div>
+      <div class="match-detail">Haaland vs Kane — the Golden Boot battle! Norway stunned Brazil in R16. England survived Mexico City with 10 men.</div>
+    </div>
+    <div class="match-card boss upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🔱 Quarter-finals · Arrowhead Stadium, Kansas City · 🕐 Jul 12, 9:00 AM SGT</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team ">🇦🇷 Argentina</span>
+        <span class="vs">vs</span>
+        <span class="team ">🇨🇭 Switzerland</span>
+      </div>
+      <div class="match-detail">⭐ BOSS TEAM. Messi leads Golden Boot with 8 goals. Switzerland in first QF since 1954 after penalty shootout win over Colombia.</div>
+    </div>
+    </div>
+  </div>
 </div>
-
+<!-- ===== Semi-finals ===== -->
+<div class="card">
+  <div class="card-header"><span class="icon">🏅</span> Semi-finals</div>
+  <div class="bracket-grid">
+    <div class="bracket-section" style="grid-column:1/-1;">
+    <div class="match-card  upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🏅 Semi-finals · TBD</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team ">🇫🇷 France</span>
+        <span class="vs">vs</span>
+        <span class="team ">🏆 W98</span>
+      </div>
+      <div class="match-detail">Semi-final 1: France vs Winner of Spain vs Belgium</div>
+    </div>
+    <div class="match-card  upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🏅 Semi-finals · TBD</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team ">🏆 W99</span>
+        <span class="vs">vs</span>
+        <span class="team ">🏆 W100</span>
+      </div>
+      <div class="match-detail">Semi-final 2: Winner of Norway vs England vs Winner of Argentina vs Switzerland</div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- ===== Third Place Play-off ===== -->
+<div class="card">
+  <div class="card-header"><span class="icon">🥉</span> Third Place Play-off</div>
+  <div class="bracket-grid">
+    <div class="bracket-section" style="grid-column:1/-1;">
+    <div class="match-card  upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🥉 Third Place · TBD</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team "> L101</span>
+        <span class="vs">vs</span>
+        <span class="team "> L102</span>
+      </div>
+      <div class="match-detail">Third Place Play-off</div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- ===== Final ===== -->
+<div class="card">
+  <div class="card-header"><span class="icon">🏆</span> Final</div>
+  <div class="bracket-grid">
+    <div class="bracket-section" style="grid-column:1/-1;">
+    <div class="match-card  upcoming">
+      
+      <div class="match-top">
+        <span class="match-meta">🏆 Final · MetLife Stadium, East Rutherford</span>
+        <span class="badge badge-upcoming">⏳ Upcoming</span>
+      </div>
+      <div class="match-teams">
+        <span class="team ">🏆 W101</span>
+        <span class="vs">vs</span>
+        <span class="team ">🏆 W102</span>
+      </div>
+      <div class="match-detail">🏆 2026 FIFA World Cup Final</div>
+    </div>
+    </div>
+  </div>
+</div>
 <!-- ===== GOLDEN BOOT ===== -->
 <div class="card">
   <div class="card-header"><span class="icon">⚽</span> Golden Boot — Top Scorers</div>
   <div class="gb-grid">
     <div class="gb-row gb-gold">
       <span class="gb-rank">🥇</span>
+      <span class="gb-flag">🇫🇷</span>
+      <span class="gb-name">Kylian Mbappé</span>
+      <span class="gb-country">France</span>
+      <span class="gb-goals">8⚽ (2A)</span>
+    </div>
+    <div class="gb-row gb-gold">
+      <span class="gb-rank">🥈</span>
       <span class="gb-flag">🇦🇷</span>
       <span class="gb-name">Lionel Messi</span>
       <span class="gb-country">Argentina</span>
       <span class="gb-goals">8⚽</span>
     </div>
-    <div class="gb-row gb-gold">
-      <span class="gb-rank">🥈</span>
+    <div class="gb-row gb-silver">
+      <span class="gb-rank">🥉</span>
       <span class="gb-flag">🇳🇴</span>
       <span class="gb-name">Erling Haaland</span>
       <span class="gb-country">Norway</span>
       <span class="gb-goals">7⚽ (1A)</span>
-    </div>
-    <div class="gb-row gb-silver">
-      <span class="gb-rank">🥉</span>
-      <span class="gb-flag">🇫🇷</span>
-      <span class="gb-name">Kylian Mbappé</span>
-      <span class="gb-country">France</span>
-      <span class="gb-goals">6⚽ (2A)</span>
     </div>
     <div class="gb-row ">
       <span class="gb-rank">#4</span>
@@ -666,7 +767,7 @@
       <span class="gb-flag">🇫🇷</span>
       <span class="gb-name">Ousmane Dembélé</span>
       <span class="gb-country">France</span>
-      <span class="gb-goals">4⚽ (2A)</span>
+      <span class="gb-goals">5⚽ (2A)</span>
     </div>
     <div class="gb-row ">
       <span class="gb-rank">#6</span>
@@ -709,8 +810,8 @@
 </main>
 
 <footer class="footer">
-  <p>⚽ World Cup 2026 · Data-driven briefing · Updated daily from FIFA.com verified sources</p>
-  <p style="margin-top:0.25rem;">Every score is mechanically cross-referenced — no AI halluncination. ⭐ = Boss's teams: 🇵🇹 Portugal, 🇪🇸 Spain, 🇦🇷 Argentina</p>
+  <p>⚽ World Cup 2026 · Data-driven briefing · Updated daily from verified sources</p>
+  <p style="margin-top:0.25rem;">Every score is mechanically cross-referenced — no AI hallucination. ⭐ = Boss's teams: 🇵🇹 Portugal, 🇪🇸 Spain, 🇦🇷 Argentina</p>
 </footer>
 
 </body>
