@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "phase": "Quarter-finals",
-  "updated": "2026-07-11T08:00:00+08:00",
+  "phase": "Semi-finals",
+  "updated": "2026-07-13T08:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -650,20 +650,20 @@
       "home": {
         "name": "Norway",
         "flag": "🇳🇴",
-        "goals": 0,
+        "goals": 1,
         "qualified": false
       },
       "away": {
         "name": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "goals": 0,
-        "qualified": false
+        "goals": 2,
+        "qualified": true
       },
-      "status": "upcoming",
+      "status": "AET",
       "venue": "Hard Rock Stadium, Miami Gardens",
-      "scorers": "",
+      "scorers": "Schjelderup 36'; Bellingham 45+2', 93'",
       "highlights": "",
-      "note": "Haaland vs Kane — the Golden Boot battle! Norway stunned Brazil in R16. England survived Mexico City with 10 men."
+      "note": "⭐ BOSS TEAM. Bellingham's brace in stoppage time and extra time sent England to their first World Cup semi since 2018! Norway took the lead through Schjelderup (36') but Bellingham equalised in first-half stoppage time and won it in the 93rd minute after a long-range Rogers shot was fumbled. Norway's Haaland was kept quiet. England face Argentina in Atlanta on July 15."
     },
     {
       "id": 100,
@@ -672,20 +672,20 @@
       "home": {
         "name": "Argentina",
         "flag": "🇦🇷",
-        "goals": 0,
-        "qualified": false
+        "goals": 3,
+        "qualified": true
       },
       "away": {
         "name": "Switzerland",
         "flag": "🇨🇭",
-        "goals": 0,
+        "goals": 1,
         "qualified": false
       },
-      "status": "upcoming",
+      "status": "AET",
       "venue": "Arrowhead Stadium, Kansas City",
-      "scorers": "",
+      "scorers": "Mac Allister 10', Álvarez 112', Martínez 120+1'; Ndoye 67'",
       "highlights": "",
-      "note": "⭐ BOSS TEAM. Messi leads Golden Boot with 8 goals. Switzerland in first QF since 1954 after penalty shootout win over Colombia."
+      "note": "⭐ BOSS TEAM. Argentina beat 10-man Switzerland 3-1 after extra time to reach the semi-finals! Mac Allister's early header (10') was cancelled out by Ndoye (67'). After Embolo was sent off (two yellows, VAR mistake identity ruling), Julián Álvarez rifled in a 25-yard screamer (112') and Lautaro Martínez sealed it on the counter (120+1'). First match where Messi didn't score. Argentina face England in Atlanta on July 15."
     },
     {
       "id": 101,
@@ -712,24 +712,24 @@
     {
       "id": 102,
       "date": "2026-07-15",
-      "kickoff_et": "TBD",
+      "kickoff_et": "3:00 PM",
       "home": {
-        "name": "W99",
-        "flag": "🏆",
+        "name": "Argentina",
+        "flag": "🇦🇷",
         "goals": 0,
         "qualified": false
       },
       "away": {
-        "name": "W100",
-        "flag": "🏆",
+        "name": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "goals": 0,
         "qualified": false
       },
       "status": "upcoming",
-      "venue": "TBD",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
       "scorers": "",
       "highlights": "",
-      "note": "Semi-final 2: Winner of Norway vs England vs Winner of Argentina vs Switzerland"
+      "note": "⭐ BOSS TEAM. Second semi-final: Argentina vs England — a rematch of the 2026 quarterfinal and their first World Cup meeting since 2002. Winner faces Spain or France in the Final on July 19 at MetLife Stadium."
     },
     {
       "id": 103,
