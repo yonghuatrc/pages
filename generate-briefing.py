@@ -436,7 +436,7 @@ html = f"""<!DOCTYPE html>
   <div class="hero-badge">🌍 2026 World Cup</div>
   <h1><span class="wc">⚽ Knockout Bracket</span></h1>
   <p class="date">{datetime.datetime.now().strftime("%A, %B %d, %Y")} (SGT)</p>
-  <p class="phase">🔱 Quarter-finals underway · France through to SF</p>
+  <p class="phase">🏅 Semi-finals · France vs Spain today · Argentina vs England tomorrow</p>
 </header>
 
 <main class="container">

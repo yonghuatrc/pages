@@ -18,7 +18,7 @@ if "4-1" in html:
 
 # 2. Every FT match score in HTML matches JSON
 for m in data["matches"]:
-    if m["status"] not in ("FT", "FT-pens"):
+    if m["status"] not in ("FT", "FT-pens", "FT-aet"):
         continue
     h_name = m["home"]["name"]
     a_name = m["away"]["name"]
