@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "phase": "Semi-finals",
-  "updated": "2026-07-13T08:00:00+08:00",
+  "updated": "2026-07-14T06:00:00+08:00",
   "matches": [
     {
       "id": 73,
@@ -659,10 +659,10 @@
         "goals": 2,
         "qualified": true
       },
-      "status": "AET",
+      "status": "FT-aet",
       "venue": "Hard Rock Stadium, Miami Gardens",
       "scorers": "Schjelderup 36'; Bellingham 45+2', 93'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=PnFUiq8m9os",
       "note": "⭐ BOSS TEAM. Bellingham's brace in stoppage time and extra time sent England to their first World Cup semi since 2018! Norway took the lead through Schjelderup (36') but Bellingham equalised in first-half stoppage time and won it in the 93rd minute after a long-range Rogers shot was fumbled. Norway's Haaland was kept quiet. England face Argentina in Atlanta on July 15."
     },
     {
@@ -681,10 +681,10 @@
         "goals": 1,
         "qualified": false
       },
-      "status": "AET",
+      "status": "FT-aet",
       "venue": "Arrowhead Stadium, Kansas City",
       "scorers": "Mac Allister 10', Álvarez 112', Martínez 120+1'; Ndoye 67'",
-      "highlights": "",
+      "highlights": "https://www.youtube.com/watch?v=zZxxDbLxEi4",
       "note": "⭐ BOSS TEAM. Argentina beat 10-man Switzerland 3-1 after extra time to reach the semi-finals! Mac Allister's early header (10') was cancelled out by Ndoye (67'). After Embolo was sent off (two yellows, VAR mistake identity ruling), Julián Álvarez rifled in a 25-yard screamer (112') and Lautaro Martínez sealed it on the counter (120+1'). First match where Messi didn't score. Argentina face England in Atlanta on July 15."
     },
     {
@@ -840,8 +840,8 @@
       "player": "Kylian Mbappé",
       "country": "France",
       "flag": "🇫🇷",
-      "goals": 9,
-      "assists": 2
+      "goals": 8,
+      "assists": 3
     },
     {
       "rank": 2,
@@ -849,7 +849,7 @@
       "country": "Argentina",
       "flag": "🇦🇷",
       "goals": 8,
-      "assists": 0
+      "assists": 1
     },
     {
       "rank": 3,
@@ -857,7 +857,7 @@
       "country": "Norway",
       "flag": "🇳🇴",
       "goals": 7,
-      "assists": 1
+      "assists": 0
     },
     {
       "rank": 4,
@@ -865,18 +865,42 @@
       "country": "England",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "goals": 6,
-      "assists": 0
+      "assists": 1
     },
     {
       "rank": 5,
       "player": "Ousmane Dembélé",
       "country": "France",
       "flag": "🇫🇷",
-      "goals": 6,
+      "goals": 5,
       "assists": 2
     },
     {
       "rank": 6,
+      "player": "Jude Bellingham",
+      "country": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "goals": 4,
+      "assists": 0
+    },
+    {
+      "rank": 7,
+      "player": "Mikel Oyarzabal",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "goals": 4,
+      "assists": 1
+    },
+    {
+      "rank": 8,
+      "player": "Ismaila Sarr",
+      "country": "Senegal",
+      "flag": "🇸🇳",
+      "goals": 4,
+      "assists": 1
+    },
+    {
+      "rank": 9,
       "player": "Vinícius Jr",
       "country": "Brazil",
       "flag": "🇧🇷",
@@ -884,35 +908,11 @@
       "assists": 1
     },
     {
-      "rank": 7,
-      "player": "Deniz Undav",
-      "country": "Germany",
-      "flag": "🇩🇪",
-      "goals": 3,
-      "assists": 2
-    },
-    {
-      "rank": 8,
-      "player": "Cody Gakpo",
-      "country": "Netherlands",
-      "flag": "🇳🇱",
-      "goals": 3,
-      "assists": 1
-    },
-    {
-      "rank": 9,
-      "player": "Ismaila Sarr",
-      "country": "Senegal",
-      "flag": "🇸🇳",
-      "goals": 3,
-      "assists": 1
-    },
-    {
       "rank": 10,
-      "player": "Johan Manzambi",
-      "country": "Switzerland",
-      "flag": "🇨🇭",
-      "goals": 3,
+      "player": "Julián Quiñones",
+      "country": "Mexico",
+      "flag": "🇲🇽",
+      "goals": 4,
       "assists": 1
     }
   ]
