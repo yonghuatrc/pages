@@ -1007,9 +1007,18 @@
       els.loadingState.classList.add('is-visible');
 
       try {
-        const brief = DEMO_MODE
-          ? buildDemoBrief(raw, platform)
+        const response = DEMO_MODE
+          ? { available: true, brief: buildDemoBrief(raw, platform) }
           : await fetchBrief(raw, platform);
+        // fetchBrief() returns the raw API envelope {available, error, transcriptErrors, brief}.
+        // The rest of the app works with the inner Brief object, so unwrap here.
+        const brief = response.brief;
+        if (!brief) {
+          throw new Error(response.error || 'No brief returned from the backend.');
+        }
+        // Carry the unavailable-state metadata on the brief so renderBrief can show it.
+        brief.analysisError = brief.analysisError || response.error;
+        brief.transcriptErrors = brief.transcriptErrors || response.transcriptErrors || [];
         state.brief = brief;
         state.status = 'ready';
         renderBrief(brief);
