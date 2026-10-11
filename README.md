@@ -6,6 +6,7 @@ Personal repo for hosting misc HTML files via GitHub Pages.
 ## Files
 
 - [sgh-visit-guide.html](https://yonghuatrc.github.io/pages/sgh-visit-guide.html)
+- [video-brief.html](https://yonghuatrc.github.io/pages/video-brief.html)
 - [world-cup.html](https://yonghuatrc.github.io/pages/world-cup.html)
 
 <!-- AUTO-LIST-END -->
