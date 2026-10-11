@@ -1141,11 +1141,18 @@
           </p>
         `;
       } else {
+        const reasons = (brief.transcriptErrors || []).map((e) =>
+          `<li><code style="font-family:'DM Mono',monospace; font-size:12px; color:var(--muted);">${escapeHtml(e.source)}</code>: ${escapeHtml((e.error || '').split('\n')[0])}</li>`
+        ).join('');
+        const reasonBlock = reasons
+          ? `<details style="margin-top:10px;"><summary style="color:var(--muted); font-size:12.5px; cursor:pointer;">Why? Show the transcript-source errors</summary><ul style="margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:12.5px;">${reasons}</ul></details>`
+          : '';
         els.coreBody.innerHTML = `
           <div class="callout warning">
             <span class="label">Transcript unavailable</span>
             ${escapeHtml(brief.analysisError || 'No public captions were found for this video.')}
             The page will not invent learning items or quotes without transcript evidence.
+            ${reasonBlock}
           </div>
         `;
       }
