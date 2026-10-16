@@ -547,6 +547,11 @@
       padding: 6px 0;
     }
     .play-btn:hover { text-decoration: underline; }
+    .timestamp-note {
+      display: inline-block; color: var(--muted);
+      font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .02em;
+      padding: 6px 0;
+    }
     .learning-check {
       display: none;
       color: var(--green);
@@ -814,9 +819,7 @@
        =========================================================== */
 
     // -------- runtime config --------
-    // Baked at build time for the public GitHub Pages deployment.
-    // Override locally with ?api=https://your-tunnel.trycloudflare.com.
-    window.VIDEO_BRIEF_API = 'https://ends-recovery-synthesis-taste.trycloudflare.com';
+    window.VIDEO_BRIEF_API = 'https://girls-cap-guild-tender.trycloudflare.com';
     const API_BASE = (() => {
       // 1) Allow override via ?api=...&demo=1
       const params = new URLSearchParams(location.search);
@@ -828,7 +831,7 @@
       // 3) Default: empty (same-origin, only works if a backend is co-served).
       return '';
     })();
-    const DEMO_MODE = new URLSearchParams(location.search).get('demo') === '1' || !API_BASE;
+    const DEMO_MODE = new URLSearchParams(location.search).get('demo') === '1';
 
     // -------- URL / platform parsing (handoff §6) --------
     const supportedDomains = [
@@ -843,7 +846,7 @@
         const u = new URL(rawUrl);
         const host = u.hostname.toLowerCase();
         if (host.includes('youtube') || host === 'youtu.be') return 'YouTube';
-        if (host.includes('facebook') || host === 'fb.watch') return 'Facebook';
+        if (host === 'facebook.com' || host.endsWith('.facebook.com') || host === 'fb.watch') return 'Facebook';
         if (host.includes('instagram')) return 'Instagram';
         if (host.includes('tiktok')) return 'TikTok';
         if (host.includes('twitter') || host === 'x.com') return 'X / Twitter';
@@ -990,8 +993,8 @@
         setError('That does not look like a supported video link. Try YouTube, Facebook, Instagram, TikTok, or X.');
         return;
       }
-      // Per handoff: only YouTube transcripts are extracted for now.
-      if (platform !== 'YouTube') {
+      // Other platforms show metadata/playback only; Facebook is supported by the backend.
+      if (platform !== 'YouTube' && platform !== 'Facebook') {
         setError(`Transcript extraction is currently available for YouTube links. ${platform} links show metadata and platform playback when available.`);
         // We still let it through to render metadata + fallback panel.
       } else if (els.error.classList.contains('is-visible')) {
@@ -1039,11 +1042,21 @@
 
     // -------- backend fetch (skeleton; real backend wired in step 3) --------
     async function fetchBrief(rawUrl, platform) {
-      const res = await fetch(`${API_BASE}/api/analyze`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: rawUrl, platform }),
-      });
+      let res;
+      try {
+        res = await fetch(`${API_BASE}/api/analyze`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: rawUrl, platform }),
+        });
+      } catch (e) {
+        // A bare "Failed to fetch" means the request never reached a backend:
+        // most often the page was opened as a local file (file://) with no API_BASE.
+        const hint = API_BASE
+          ? `The backend at ${API_BASE} is not reachable. Is the server running?`
+          : 'The backend is not reachable. Open this app through the local server (http://127.0.0.1:8787/), not as a local file.';
+        throw new Error(`${hint} (${e?.message || 'network error'})`);
+      }
       if (!res.ok) {
         const text = await res.text().catch(() => '');
         throw new Error(text || `Backend error (${res.status})`);
@@ -1123,9 +1136,12 @@
 
     function renderVideoStage(brief) {
       if (brief.embedUrl) {
-        els.videoStage.innerHTML = `<iframe id="ytPlayer" src="${brief.embedUrl}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        els.videoNote.textContent = `Embedded from the submitted ${brief.platform} link. Platform playback and access rules still apply.`;
-        loadYouTubeApi().then(() => attachYouTubePlayer());
+        const playerId = brief.platform === 'YouTube' ? 'ytPlayer' : 'fbPlayer';
+        els.videoStage.innerHTML = `<iframe id="${playerId}" src="${brief.embedUrl}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        els.videoNote.textContent = brief.platform === 'Facebook'
+          ? 'Facebook playback is embedded. The timestamps below are transcript references; this embed cannot seek from the brief.'
+          : `Embedded from the submitted ${brief.platform} link. Platform playback and access rules still apply.`;
+        if (brief.platform === 'YouTube') loadYouTubeApi().then(() => attachYouTubePlayer());
       } else {
         els.videoStage.classList.add('fallback');
         els.videoStage.innerHTML = `<div>
@@ -1146,7 +1162,7 @@
             ${escapeHtml(brief.analysis.summary)}
           </div>
           <p style="color:var(--muted); margin:12px 0 0; font-size:13.5px;">
-            This summary was generated from the available caption transcript for the video by ${escapeHtml(brief.creator)}.
+            This summary was generated from ${escapeHtml(brief.transcriptSource || 'the available transcript')} for the video by ${escapeHtml(brief.creator)}.
           </p>
         `;
       } else {
@@ -1178,19 +1194,23 @@
         const alt = idx % 3 === 1 ? ' alt-1' : idx % 3 === 2 ? ' alt-2' : '';
         const li = document.createElement('li');
         li.className = `learning-item${alt}`;
+        const timestampControl = brief.timestampSeekAvailable === false
+          ? `<span class="timestamp-note">At ${fmtTime(it.timestamp)} · transcript reference</span>`
+          : `<button class="play-btn" data-ts="${it.timestamp}" type="button">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+              Play from ${fmtTime(it.timestamp)} →
+            </button>`;
         li.innerHTML = `
           <div class="learning-num">${String(idx + 1).padStart(2, '0')}</div>
           <div class="learning-body">
             <p class="title">${escapeHtml(it.title)}</p>
             <p class="text">${escapeHtml(it.text)}</p>
-            <button class="play-btn" data-ts="${it.timestamp}" type="button">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-              Play from ${fmtTime(it.timestamp)} →
-            </button>
+            ${timestampControl}
             <svg class="learning-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
         `;
-        li.querySelector('.play-btn').addEventListener('click', () => jumpTo(it.timestamp));
+        const playButton = li.querySelector('.play-btn');
+        if (playButton) playButton.addEventListener('click', () => jumpTo(it.timestamp));
         els.learningList.appendChild(li);
       });
     }
@@ -1205,15 +1225,19 @@
       quotes.forEach((q) => {
         const card = document.createElement('div');
         card.className = 'quote-card';
+        const timestampControl = brief.timestampSeekAvailable === false
+          ? `<span class="timestamp-note">At ${fmtTime(q.timestamp)} · transcript reference</span>`
+          : `<button class="play-btn" data-ts="${q.timestamp}" type="button">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+              Play from ${fmtTime(q.timestamp)} →
+            </button>`;
         card.innerHTML = `
           <div class="ts">${fmtTime(q.timestamp)}</div>
           <p class="quote">${escapeHtml(q.quote)}</p>
-          <button class="play-btn" data-ts="${q.timestamp}" type="button">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-            Play from ${fmtTime(q.timestamp)} →
-          </button>
+          ${timestampControl}
         `;
-        card.querySelector('.play-btn').addEventListener('click', () => jumpTo(q.timestamp));
+        const playButton = card.querySelector('.play-btn');
+        if (playButton) playButton.addEventListener('click', () => jumpTo(q.timestamp));
         els.quoteGrid.appendChild(card);
       });
     }
